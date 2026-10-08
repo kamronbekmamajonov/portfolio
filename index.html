@@ -1,572 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kamronbek Mamajonov — Digital Marketolog. Content, SMM, Target va Performance Marketing portfolio.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f3ef">
+<meta name="description" content="Kamronbek Mamajonov — Digital Marketolog. Content, SMM, Target va Performance Marketing bo‘yicha portfolio.">
 <title>Kamronbek Mamajonov — Digital Marketolog</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+:root{--bg:#f4f3ef;--paper:#fbfaf7;--ink:#111214;--muted:#747570;--line:rgba(17,18,20,.12);--blue:#143cff;--blue2:#3657ff;--dark:#101114;--white:#fff;--pad:clamp(18px,3vw,52px);--ease:cubic-bezier(.2,.75,.15,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}img{max-width:100%;display:block}.mono{font-family:'Manrope',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:11px;font-weight:700}.serif{font-family:'Manrope',sans-serif}
+.cursor{position:fixed;z-index:1000;width:14px;height:14px;border:1px solid #111;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s,background .2s;display:none}.cursor.big{width:64px;height:64px;background:#fff;border-color:#fff}.progress{position:fixed;z-index:99;left:0;top:0;height:3px;width:0;background:var(--blue)}
+.nav{position:fixed;z-index:90;top:18px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;align-items:center;mix-blend-mode:multiply}.nav-logo{font-family:'Manrope';font-weight:800;font-size:17px;letter-spacing:-.04em}.nav-menu{display:flex;gap:8px;align-items:center}.nav-menu a{padding:10px 14px;border:1px solid transparent;border-radius:999px;font-size:12px;transition:.3s}.nav-menu a:hover{border-color:var(--line);background:rgba(255,255,255,.5)}
+.hero{min-height:100svh;position:relative;padding:110px var(--pad) 42px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.hero-top{display:flex;justify-content:space-between;align-items:flex-start}.hero-kicker{max-width:290px;line-height:1.45;color:var(--muted)}.hero-year{font-size:12px;color:var(--muted)}.hero-title{position:relative;z-index:2;margin:0;font-family:'Manrope';font-size:clamp(70px,14vw,220px);line-height:.78;letter-spacing:-.085em;font-weight:800;max-width:1150px}.hero-title span{display:block;overflow:hidden}.hero-title em{font-style:normal;color:transparent;-webkit-text-stroke:1px var(--ink)}.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:4}.role{font-family:'Manrope';font-size:clamp(22px,3vw,42px);font-weight:600;letter-spacing:-.05em}.hero-copy{max-width:480px;color:#444640;line-height:1.55}.hero-image{position:absolute;right:8%;top:16%;width:min(30vw,390px);height:min(65vh,610px);object-fit:cover;object-position:center top;filter:grayscale(1);mix-blend-mode:multiply;opacity:.95;transform:translateY(40px) rotate(2deg);animation:heroIn 1.2s var(--ease) forwards}.hero-image-wrap{position:absolute;right:5%;top:12%;width:min(34vw,450px);height:min(72vh,680px);border:1px solid var(--line);transform:rotate(2deg);overflow:hidden;background:#e8e7e2}.hero-image-wrap:after{content:'';position:absolute;inset:12px;border:1px solid rgba(255,255,255,.7);pointer-events:none}.hero-image-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1);mix-blend-mode:multiply}.hero-mark{position:absolute;right:3%;bottom:10%;width:110px;height:110px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-family:Manrope;font-size:10px;text-align:center;letter-spacing:.08em;animation:spin 16s linear infinite}.hero-mark:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--blue)}
+@keyframes heroIn{to{transform:translateY(0) rotate(2deg)}}@keyframes spin{to{transform:rotate(360deg)}}
+.intro{padding:13vh var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:8vw;border-top:1px solid var(--line)}.intro-big{font-family:Manrope;font-size:clamp(34px,5vw,74px);line-height:.98;letter-spacing:-.065em;font-weight:600;max-width:900px}.intro-text{max-width:560px;align-self:end;color:#555750;line-height:1.65;font-size:16px}.blue{color:var(--blue)}
+.results{background:var(--dark);color:var(--white);position:relative}.results-head{padding:120px var(--pad) 50px;display:flex;justify-content:space-between;align-items:end}.results-head h2{font-family:Manrope;font-size:clamp(42px,6vw,88px);line-height:.9;letter-spacing:-.07em;margin:0}.results-head p{max-width:260px;color:#9b9ca0;line-height:1.5}.result-stack{height:500vh;position:relative}.result-stage{position:sticky;top:0;height:100svh;display:flex;align-items:center;padding:var(--pad);overflow:hidden}.result-word{position:absolute;left:var(--pad);top:9%;font-family:Manrope;font-size:12px;letter-spacing:.12em;color:#76777c}.result-number{font-family:Manrope;font-size:clamp(86px,15vw,230px);font-weight:800;line-height:.78;letter-spacing:-.1em;position:relative;z-index:2;white-space:nowrap;transform:translateY(30px);transition:transform .8s var(--ease),opacity .8s}.result-unit{font-family:Manrope;font-size:clamp(17px,2vw,28px);letter-spacing:-.04em;margin-left:10px;color:#b9bbc1}.result-index{position:absolute;right:var(--pad);bottom:42px;font-size:12px;color:#85868b}.result-line{position:absolute;left:var(--pad);right:var(--pad);bottom:84px;height:1px;background:rgba(255,255,255,.14)}.result-blue{color:#5772ff}
+.capabilities{padding:15vh var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:8vw}.cap-title{font-family:Manrope;font-size:clamp(42px,6vw,90px);line-height:.86;letter-spacing:-.08em}.cap-list{border-top:1px solid var(--line)}.cap-item{display:grid;grid-template-columns:80px 1fr 80px;gap:20px;padding:27px 0;border-bottom:1px solid var(--line);align-items:center}.cap-item strong{font-family:Manrope;font-size:clamp(20px,2.2vw,32px);letter-spacing:-.05em}.cap-item span:last-child{text-align:right;color:var(--muted)}
+.projects{background:#e9e8e3}.projects-intro{padding:13vh var(--pad) 8vh;display:flex;justify-content:space-between;align-items:flex-end}.projects-intro h2{font-family:Manrope;font-size:clamp(60px,10vw,150px);line-height:.8;letter-spacing:-.09em;margin:0}.projects-intro p{max-width:320px;color:#5e605a;line-height:1.5}.case{min-height:180vh;position:relative}.case-sticky{height:100svh;position:sticky;top:0;overflow:hidden;display:grid;grid-template-columns:40% 60%;align-items:center;padding:var(--pad);gap:3vw}.case-bg{position:absolute;inset:0;background:var(--paper);z-index:0}.case-bg:after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(20,60,255,.09),transparent 30%)}.case-copy,.case-media{position:relative;z-index:2}.case-num{font-size:12px;color:var(--muted);margin-bottom:25px}.case-title{font-family:Manrope;font-size:clamp(45px,6vw,92px);line-height:.85;letter-spacing:-.08em;margin:0 0 24px}.case-type{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.case-desc{max-width:420px;color:#5d5f59;line-height:1.55;margin:25px 0}.case-result{display:flex;gap:30px;margin-top:34px;align-items:end}.case-result strong{font-family:Manrope;font-size:clamp(42px,5vw,78px);line-height:.8;letter-spacing:-.08em}.case-result small{color:var(--muted);font-size:11px;line-height:1.3;text-transform:uppercase;letter-spacing:.08em}.case-media{height:min(75vh,700px);display:flex;align-items:center;justify-content:center}.media-main{width:min(78%,620px);height:78%;object-fit:cover;box-shadow:0 25px 80px rgba(0,0,0,.14);transform:rotate(2deg);transition:transform 1s var(--ease)}.case:hover .media-main{transform:rotate(0) scale(1.025)}.media-small{position:absolute;width:27%;max-height:48%;object-fit:cover;right:4%;bottom:5%;box-shadow:0 20px 55px rgba(0,0,0,.18);transform:rotate(-5deg);border:7px solid #fff}.case-label{position:absolute;left:var(--pad);bottom:35px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#777}
+.case.dark .case-bg{background:#111216}.case.dark .case-title,.case.dark .case-num,.case.dark .case-desc{color:#fff}.case.dark .case-desc{color:#a9aab0}.case.dark .case-type{color:#6d82ff}.case.dark .case-label{color:#999}.case.blue-scene .case-bg{background:#e7f2ef}.case.gold-scene .case-bg{background:#e9e1d4}.case.blue-scene .media-main{box-shadow:0 25px 80px rgba(15,60,55,.18)}
+.before-after{padding:15vh var(--pad);background:var(--dark);color:#fff}.ba-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:55px}.ba-head h2{font-family:Manrope;font-size:clamp(45px,7vw,105px);line-height:.83;letter-spacing:-.09em;margin:0}.ba-head p{max-width:300px;color:#9b9ca0;line-height:1.5}.slider{position:relative;width:min(100%,1100px);margin:auto;aspect-ratio:16/9;overflow:hidden;background:#ddd}.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.slider .after{clip-path:inset(0 0 0 50%)}.slider-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4}.slider-line{position:absolute;top:0;bottom:0;left:50%;width:1px;background:#fff;z-index:3;pointer-events:none}.slider-knob{position:absolute;z-index:3;left:50%;top:50%;width:58px;height:58px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;transform:translate(-50%,-50%);font-size:18px;pointer-events:none}.ba-label{position:absolute;z-index:3;top:20px;padding:8px 11px;background:rgba(0,0,0,.55);font-size:10px;letter-spacing:.1em;text-transform:uppercase}.ba-before{left:20px}.ba-after{right:20px}
+.timeline{padding:15vh var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:8vw}.timeline h2{font-family:Manrope;font-size:clamp(50px,7vw,100px);line-height:.82;letter-spacing:-.09em;margin:0}.timeline-list{border-top:1px solid var(--line)}.timeline-row{display:grid;grid-template-columns:120px 1fr;gap:25px;padding:34px 0;border-bottom:1px solid var(--line)}.timeline-year{font-family:Manrope;font-weight:700;color:var(--blue)}.timeline-row h3{font-family:Manrope;font-size:25px;margin:0 0 8px;letter-spacing:-.04em}.timeline-row p{margin:0;color:#676963;line-height:1.55}
+.education{padding:12vh var(--pad);background:#101114;color:#fff}.education h2{font-family:Manrope;font-size:clamp(48px,7vw,110px);line-height:.82;letter-spacing:-.09em;margin:0 0 70px}.edu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid #2b2c30}.edu{min-height:220px;padding:22px;border-right:1px solid #2b2c30;display:flex;flex-direction:column;justify-content:space-between}.edu:last-child{border-right:0}.edu b{font-family:Manrope;font-size:18px;letter-spacing:-.04em}.edu span{color:#888a91;font-size:11px}
+.contact{padding:15vh var(--pad) 60px;min-height:80vh;display:grid;grid-template-columns:1.2fr .8fr;gap:8vw}.contact h2{font-family:Manrope;font-size:clamp(60px,9vw,145px);line-height:.78;letter-spacing:-.1em;margin:0}.contact-copy{color:#656761;line-height:1.55;max-width:470px;margin-top:28px}.form{border-top:1px solid var(--line);margin-top:25px}.field{padding:18px 0;border-bottom:1px solid var(--line)}.field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#777;margin-bottom:8px}.field input,.field textarea{border:0;outline:0;background:transparent;width:100%;font-size:18px;color:var(--ink)}.field textarea{min-height:120px;resize:vertical}.send{margin-top:24px;border:0;background:var(--ink);color:#fff;padding:15px 20px;border-radius:999px;cursor:pointer;transition:.3s}.send:hover{background:var(--blue);transform:translateY(-2px)}footer{padding:25px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#777;font-size:11px}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.visible{opacity:1;transform:none}.case .case-title,.case .media-main{transition:transform 1s var(--ease),opacity 1s}.case:not(.in-view) .case-title{transform:translateY(45px);opacity:.2}.case:not(.in-view) .media-main{transform:scale(.92) rotate(5deg);opacity:.55}.case.in-view .case-title{transform:none;opacity:1}
+@media(max-width:900px){.nav-menu a:nth-child(1){display:none}.hero{padding-top:100px;min-height:92svh}.hero-image-wrap{right:-8%;top:22%;width:58vw;height:58vh;opacity:.32}.hero-title{font-size:clamp(60px,17vw,120px);margin-top:70px}.hero-bottom{display:block}.hero-copy{margin-top:15px}.hero-mark{display:none}.intro,.capabilities,.timeline,.contact{grid-template-columns:1fr;gap:55px}.results-head,.projects-intro,.ba-head{display:block}.results-head p,.projects-intro p,.ba-head p{margin-top:25px}.result-stack{height:420vh}.result-stage{align-items:center}.result-number{font-size:clamp(70px,17vw,130px)}.case{min-height:145vh}.case-sticky{height:100svh;grid-template-columns:1fr;grid-template-rows:45% 55%;gap:0;padding-top:75px}.case-media{height:100%;align-items:flex-start;padding-top:10px}.media-main{width:68%;height:85%;object-fit:cover}.media-small{width:31%;max-height:45%;right:2%;bottom:3%}.case-title{font-size:clamp(50px,13vw,85px)}.case-result strong{font-size:55px}.edu-grid{grid-template-columns:1fr 1fr}.edu{border-bottom:1px solid #2b2c30}.slider{aspect-ratio:4/5}.slider img{object-fit:cover}.contact{min-height:auto}.hero-top{font-size:10px}}
+@media(pointer:fine){.cursor{display:block}}
+
+/* ===== 2026 LIGHT-BLUE ART DIRECTION OVERRIDES ===== */
 :root{
-  --bg:#eaf5ff;
-  --paper:#f7fbff;
-  --ink:#101827;
-  --muted:#617087;
-  --line:rgba(16,24,39,.12);
-  --blue:#1769ff;
-  --white:#fff;
-  --radius:28px;
-  --max:1440px;
+  --bg:#edf6ff;
+  --paper:#f8fbff;
+  --ink:#0b1b35;
+  --muted:#63738a;
+  --line:rgba(11,27,53,.12);
+  --blue:#2d7ff2;
+  --blue2:#68a5ff;
+  --dark:#e4f0ff;
+  --white:#0b1b35;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:"DM Sans",sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-button{font:inherit}
-::selection{background:#1769ff;color:#fff}
+body{background:var(--bg);color:var(--ink)}
+.progress{background:linear-gradient(90deg,#2d7ff2,#78b5ff)}
+.nav{mix-blend-mode:normal;background:rgba(237,246,255,.72);backdrop-filter:blur(14px);border:1px solid rgba(45,127,242,.10);border-radius:999px;padding:7px 9px 7px 18px;top:14px}
+.nav-menu a:hover{border-color:rgba(45,127,242,.18);background:rgba(255,255,255,.7)}
+.hero{background:radial-gradient(circle at 78% 34%,rgba(102,174,255,.27),transparent 28%),linear-gradient(135deg,#edf6ff 0%,#f7fbff 55%,#e7f2ff 100%)}
+.hero-title{font-size:clamp(48px,7.2vw,112px);line-height:.84;max-width:900px;letter-spacing:-.075em}
+.hero-title em{-webkit-text-stroke:1px #2d7ff2;color:#2d7ff2}
+.hero-image-wrap{right:7%;top:15%;width:min(28vw,380px);height:min(64vh,570px);border-color:rgba(45,127,242,.18);background:#dbeeff;box-shadow:0 30px 90px rgba(42,112,190,.16);transform:rotate(1.5deg)}
+.hero-image-wrap:after{border-color:rgba(255,255,255,.75)}
+.hero-image-wrap img{filter:none;mix-blend-mode:normal;object-position:center top}
+.hero-mark{border-color:rgba(45,127,242,.2);color:#2d7ff2}
+.hero-mark:before{background:#2d7ff2}
+.intro{background:#f7fbff}
+.results{background:linear-gradient(135deg,#e1f0ff,#edf7ff 55%,#d9ecff);color:var(--ink);border-top:1px solid rgba(45,127,242,.12)}
+.results-head p{color:#62748d}.result-word,.result-index{color:#70839b}.result-unit{color:#59708e}.result-blue{color:#2d7ff2}.result-line{background:rgba(11,27,53,.13)}
+.capabilities{background:#f7fbff}
+.projects{background:#eaf4ff}
+.projects-intro{background:linear-gradient(180deg,#eaf4ff,#edf7ff)}
+.case-bg{background:#eef6ff}.case-bg:after{background:radial-gradient(circle at 80% 50%,rgba(45,127,242,.14),transparent 30%)}
+.case-type{color:#2d7ff2}.case-desc{color:#526984}.case-num{color:#68809e}.case-label{color:#6c8099}
+/* Each project has its own art-directed color system. */
+.scene-mm .case-bg{background:linear-gradient(135deg,#e9f3ff,#dcecff)}
+.scene-mm .case-bg:after{background:radial-gradient(circle at 80% 50%,rgba(45,127,242,.25),transparent 34%)}
+.scene-mm .case-type,.scene-mm .case-result strong{color:#2477ed}
+.scene-ustoz .case-bg{background:linear-gradient(135deg,#e8faf5,#d7f1ea)}
+.scene-ustoz .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(26,166,132,.20),transparent 34%)}
+.scene-ustoz .case-type,.scene-ustoz .case-result strong{color:#159b7a}
+.scene-engora .case-bg{background:linear-gradient(135deg,#fff1eb,#ffe1d7)}
+.scene-engora .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(245,103,67,.18),transparent 34%)}
+.scene-engora .case-type,.scene-engora .case-result strong{color:#e85f3d}
+.scene-muxsinzada .case-bg{background:linear-gradient(135deg,#fff0f4,#f7dfe7)}
+.scene-muxsinzada .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(167,56,91,.17),transparent 34%)}
+.scene-muxsinzada .case-type,.scene-muxsinzada .case-result strong{color:#a7375b}
+.scene-zetrik .case-bg{background:linear-gradient(135deg,#eef1f5,#dfe5ec)}
+.scene-zetrik .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(68,84,105,.17),transparent 34%)}
+.scene-zetrik .case-type,.scene-zetrik .case-result strong{color:#43566f}
+.scene-iqibla .case-bg{background:linear-gradient(135deg,#e6fbff,#d5f0f6)}
+.scene-iqibla .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(0,155,184,.20),transparent 34%)}
+.scene-iqibla .case-type,.scene-iqibla .case-result strong{color:#008faa}
+.scene-zamona .case-bg{background:linear-gradient(135deg,#fff7e8,#f4e2bb)}
+.scene-zamona .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(180,120,28,.18),transparent 34%)}
+.scene-zamona .case-type,.scene-zamona .case-result strong{color:#a56d13}
+.scene-water .case-bg{background:linear-gradient(135deg,#e5fbff,#d2f1f7)}
+.scene-water .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(0,157,187,.20),transparent 34%)}
+.scene-water .case-type,.scene-water .case-result strong{color:#008ca9}
+.scene-ibtido .case-bg{background:linear-gradient(135deg,#f1edff,#e2dcff)}
+.scene-ibtido .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(99,72,208,.18),transparent 34%)}
+.scene-ibtido .case-type,.scene-ibtido .case-result strong{color:#684bd4}
+/* no black scenes: keep text dark and backgrounds airy */
+.case.dark .case-title,.case.dark .case-num,.case.dark .case-desc{color:var(--ink)}
+.case.dark .case-desc{color:#526984}.case.dark .case-bg{background:#e6f1ff}.case.dark .case-type{color:#2d7ff2}.case.dark .case-label{color:#6c8099}
+.before-after{background:linear-gradient(135deg,#dcecff,#eaf5ff);color:var(--ink)}
+.ba-head p{color:#61758e}.slider{box-shadow:0 30px 80px rgba(38,94,151,.15)}
+.ba-label{background:rgba(11,27,53,.72)}
+.timeline{background:#f7fbff}.education{background:linear-gradient(135deg,#dfeeff,#eaf5ff);color:var(--ink)}
+.edu-grid{border-color:rgba(11,27,53,.13)}.edu{border-color:rgba(11,27,53,.13)}.edu span{color:#71849b}
+.contact{background:#f7fbff}.send{background:#0b1b35;color:#fff}.send:hover{background:#2d7ff2}
+footer{background:#f7fbff}
+@media(max-width:900px){.nav{left:10px;right:10px}.hero-title{font-size:clamp(50px,14vw,100px)}.hero-image-wrap{right:-5%;top:25%;width:55vw;height:58vh;opacity:.72}.hero-bottom{position:relative;z-index:5}.results{background:#e5f2ff}}
 
-.cursor{
-  position:fixed;width:18px;height:18px;border:1px solid rgba(23,105,255,.8);
-  border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);
-  transition:width .2s,height .2s,background .2s;mix-blend-mode:multiply;
-}
-.progress{position:fixed;top:0;left:0;width:0;height:3px;background:var(--blue);z-index:9998}
-.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-
-.nav{
-  position:fixed;top:18px;left:50%;transform:translateX(-50%);
-  width:min(var(--max),calc(100% - 48px));z-index:100;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:10px 10px 10px 16px;
-  background:rgba(247,251,255,.72);backdrop-filter:blur(18px);
-  border:1px solid rgba(16,24,39,.08);border-radius:999px;
-}
-.logo{font-family:Manrope,sans-serif;font-weight:800;font-size:18px;letter-spacing:-.06em}
-.nav-links{display:flex;gap:8px;align-items:center}
-.nav-links a,.menu-btn{
-  border:0;background:transparent;padding:10px 15px;border-radius:999px;
-  font-size:13px;font-weight:600;cursor:pointer;
-}
-.nav-links a:hover,.menu-btn:hover{background:#fff}
-.menu-btn{background:var(--ink);color:#fff}
-
-.hero{
-  min-height:100svh;display:grid;grid-template-columns:1.25fr .75fr;
-  align-items:center;padding:150px 0 80px;position:relative;
-}
-.hero-copy{position:relative;z-index:2}
-.eyebrow{
-  display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;
-  text-transform:uppercase;letter-spacing:.16em;margin-bottom:26px;
-}
-.eyebrow i{width:7px;height:7px;background:var(--blue);border-radius:50%}
-.hero h1{
-  font-family:Manrope,sans-serif;font-size:clamp(46px,7.2vw,112px);
-  line-height:.9;letter-spacing:-.075em;font-weight:800;max-width:1000px;
-}
-.hero h1 span{display:block;color:var(--blue)}
-.hero-role{font-size:clamp(22px,2.3vw,34px);font-weight:600;margin-top:26px}
-.hero-text{max-width:650px;font-size:18px;line-height:1.65;color:var(--muted);margin-top:20px}
-.hero-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;gap:12px;padding:15px 21px;border-radius:999px;
-  font-weight:700;font-size:14px;border:1px solid var(--ink);transition:.25s;
-}
-.btn.primary{background:var(--ink);color:#fff}
-.btn:hover{transform:translateY(-3px)}
-.hero-portrait{
-  justify-self:end;width:min(28vw,390px);height:min(63vh,580px);
-  border-radius:220px 220px 34px 34px;overflow:hidden;background:#d9eaff;
-  box-shadow:0 30px 80px rgba(26,80,140,.16);position:relative;
-}
-.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.hero-note{
-  position:absolute;right:2%;bottom:9%;background:#fff;border:1px solid var(--line);
-  border-radius:18px;padding:13px 16px;font-size:12px;box-shadow:0 15px 40px rgba(16,24,39,.08);
-}
-.hero-note strong{display:block;font-size:18px}
-
-.marquee{
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  overflow:hidden;padding:18px 0;white-space:nowrap;background:rgba(255,255,255,.25)
-}
-.marquee-track{display:inline-flex;gap:45px;animation:marquee 24s linear infinite}
-.marquee span{font-family:Manrope;font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:#718098}
-@keyframes marquee{to{transform:translateX(-50%)}}
-
-.section{padding:130px 0}
-.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:55px}
-.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
-.section-title{
-  font-family:Manrope;font-size:clamp(42px,6vw,86px);line-height:.94;
-  letter-spacing:-.07em;max-width:800px;margin-top:15px
-}
-.section-intro{max-width:360px;color:var(--muted);line-height:1.65}
-
-.results{
-  padding:90px 0 130px;background:#101827;color:#fff;position:relative;overflow:hidden
-}
-.results .kicker{color:#8fa0bb}
-.result-list{margin-top:55px;border-top:1px solid rgba(255,255,255,.15)}
-.result{
-  min-height:170px;border-bottom:1px solid rgba(255,255,255,.15);
-  display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;
-}
-.result-label{font-size:clamp(18px,2vw,27px);color:#aab5c8}
-.result-number{
-  font-family:Manrope;font-size:clamp(68px,11vw,165px);line-height:.8;
-  letter-spacing:-.09em;font-weight:800
-}
-.result-number small{font-size:.35em;letter-spacing:-.04em}
-
-.projects{background:#f7fbff}
-.project{
-  --accent:#1769ff;
-  min-height:100svh;display:grid;grid-template-columns:.38fr 1.62fr;
-  gap:45px;align-items:center;padding:90px 0;
-  border-top:1px solid var(--line);position:relative;overflow:hidden;
-}
-.project-meta{align-self:start;padding-top:30px;position:sticky;top:110px}
-.project-no{font-family:Manrope;font-size:13px;color:var(--accent);font-weight:800}
-.project-name{font-family:Manrope;font-size:clamp(34px,4vw,66px);line-height:.94;letter-spacing:-.07em;margin-top:14px}
-.project-service{margin-top:22px;color:var(--muted);font-size:13px;line-height:1.5}
-.project-tag{display:inline-block;margin-top:20px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
-.project-stage{min-height:650px;position:relative;display:flex;align-items:center;justify-content:center}
-.project-stage .main-img{
-  width:min(80%,920px);max-height:72vh;object-fit:contain;border-radius:24px;
-  box-shadow:0 30px 80px rgba(16,24,39,.13);position:relative;z-index:2;
-  transition:transform .7s cubic-bezier(.2,.8,.2,1)
-}
-.project:hover .main-img{transform:scale(1.025)}
-.project-copy{
-  position:absolute;left:0;bottom:15px;z-index:3;background:rgba(247,251,255,.9);
-  backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:22px;
-  padding:22px 25px;max-width:430px
-}
-.project-copy strong{font-family:Manrope;font-size:18px}
-.project-copy p{font-size:13px;color:var(--muted);line-height:1.55;margin-top:7px}
-
-.project.hilol{--accent:#159a78}
-.project.mm{--accent:#2458ff}
-.hilol-gallery{width:min(94%,1050px);display:grid;grid-template-columns:1.35fr .8fr;grid-template-rows:1fr 1fr;gap:16px}
-.hilol-gallery img{width:100%;height:270px;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
-.hilol-gallery img:first-child{grid-row:1 / 3;height:556px}
-.hilol-gallery img:nth-child(2),.hilol-gallery img:nth-child(3){object-position:center top}
-@media(max-width:560px){.hilol-gallery{grid-template-columns:1fr;grid-template-rows:auto}.hilol-gallery img:first-child{grid-row:auto;height:330px}.hilol-gallery img{height:300px}}
-.project.ustoz{--accent:#a23cff}
-.project.engora{--accent:#00a67e}
-.project.mux{--accent:#ff6b35}
-.project.zetric{--accent:#e08b16}
-.project.iqibla{--accent:#0d6bff}
-.project.zamona{--accent:#a03d62}
-.project.water{--accent:#0089b7}
-.project.ibtido{--accent:#7257e8}
-
-.dual{width:min(88%,980px);display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative}
-.dual img{width:100%;height:510px;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
-.dual img:last-child{transform:translateY(45px)}
-.stage-collage{width:min(88%,980px);display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-.stage-collage img{height:570px;width:100%;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
-.stage-collage img:last-child{height:430px;align-self:end}
-.stage-row{width:min(94%,1050px);display:flex;gap:20px;overflow:hidden}
-.stage-row img{width:70%;height:510px;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
-.stage-row img:last-child{width:30%;height:400px;align-self:end}
-.metric-stage{width:min(90%,1000px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.metric-box{
-  background:#101827;color:#fff;border-radius:28px;padding:40px;min-height:240px;
-  display:flex;flex-direction:column;justify-content:end
-}
-.metric-box b{font-family:Manrope;font-size:clamp(55px,7vw,100px);line-height:.8;letter-spacing:-.08em}
-.metric-box span{color:#9ba8bb;margin-top:18px}
-.metric-box.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
-
-.about{background:#fff}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}
-.about-text{font-size:19px;line-height:1.8;color:#445166}
-.about-text p+p{margin-top:24px}
-.timeline{border-top:1px solid var(--line)}
-.t-row{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:27px 0;border-bottom:1px solid var(--line)}
-.t-year{font-family:Manrope;font-weight:800}
-.t-row h3{font-family:Manrope;font-size:20px}
-.t-row p{color:var(--muted);font-size:14px;margin-top:6px;line-height:1.5}
-
-.edu{margin-top:80px;padding-top:80px;border-top:1px solid var(--line)}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.edu-list{list-style:none;border-top:1px solid var(--line)}
-.edu-list li{padding:18px 0;border-bottom:1px solid var(--line);font-weight:600}
-.edu-list li span{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:5px}
-
-.contact{padding:150px 0;background:#dceeff;position:relative;overflow:hidden}
-.contact h2{font-family:Manrope;font-size:clamp(60px,10vw,150px);line-height:.82;letter-spacing:-.09em;max-width:1100px}
-.contact h2 span{color:var(--blue)}
-.contact-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:65px;gap:30px}
-.contact-bottom p{color:var(--muted);max-width:400px;line-height:1.6}
-.email{font-family:Manrope;font-size:clamp(20px,3vw,38px);font-weight:700;letter-spacing:-.04em}
-
-footer{padding:30px 0;background:#dceeff;border-top:1px solid var(--line);color:#68758a;font-size:12px}
-footer .wrap{display:flex;justify-content:space-between}
-
-@media(max-width:900px){
-  .wrap{width:min(100% - 30px,700px)}
-  .nav{width:calc(100% - 30px)}
-  .nav-links{display:none}
-  .hero{grid-template-columns:1fr;padding-top:130px;gap:55px}
-  .hero-portrait{justify-self:start;width:min(60vw,330px);height:470px}
-  .section{padding:90px 0}
-  .section-head{display:block}
-  .section-intro{margin-top:25px}
-  .project{grid-template-columns:1fr;padding:70px 0;min-height:auto;gap:30px}
-  .project-meta{position:static;padding-top:0}
-  .project-stage{min-height:500px}
-  .project-stage .main-img{width:100%;max-height:62vh}
-  .project-copy{position:relative;left:auto;bottom:auto;margin-top:-80px;width:90%}
-  .dual,.metric-stage,.stage-collage{width:100%}
-  .dual img{height:360px}
-  .stage-collage img{height:400px}
-  .stage-collage img:last-child{height:300px}
-  .stage-row img{height:380px}
-  .about-grid,.edu-grid{grid-template-columns:1fr;gap:55px}
-  .contact{padding:100px 0}
-  .contact-bottom{display:block}
-  .email{display:block;margin-top:25px}
-}
-@media(max-width:560px){
-  .hero h1{font-size:clamp(44px,13vw,70px)}
-  .hero-text{font-size:16px}
-  .hero-portrait{width:72vw;height:430px}
-  .result{min-height:125px;grid-template-columns:1fr}
-  .result-number{font-size:74px;margin-bottom:25px}
-  .project-stage{min-height:430px}
-  .dual{grid-template-columns:1fr}
-  .dual img{height:330px}
-  .dual img:last-child{transform:none}
-  .metric-stage{grid-template-columns:1fr}
-  .stage-collage{grid-template-columns:1fr}
-  .stage-collage img,.stage-collage img:last-child{height:360px}
-  .stage-row{width:100%}
-  .stage-row img{width:78%!important;height:350px}
-  .stage-row img:last-child{width:40%!important;margin-left:-40%;opacity:.95}
-  .t-row{grid-template-columns:1fr;gap:8px}
-  footer .wrap{display:block}
-  footer span+span{display:block;margin-top:8px}
-}
+.scene-hilol .case-bg{background:linear-gradient(135deg,#eefaf0,#d9f0dd)}
+.scene-hilol .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(46,160,90,.20),transparent 34%)}
+.scene-hilol .case-type,.scene-hilol .case-result strong{color:#2a9457}
+.scene-hilol .media-small.s2{bottom:auto;top:6%;right:auto;left:2%;transform:rotate(4deg)}
+.result-stack{height:600vh}
+@media(max-width:900px){.result-stack{height:500vh}}
 </style>
 </head>
-
 <body>
-<div class="cursor"></div>
-<div class="progress"></div>
-
-<nav class="nav">
-  <a class="logo" href="#top">KM</a>
-  <div class="nav-links">
-    <a href="#projects">Loyihalar</a>
-    <a href="#about">Men haqimda</a>
-    <a href="#contact">Aloqa</a>
-  </div>
-  <a class="menu-btn" href="#contact">Bog‘lanish</a>
-</nav>
-
+<div class="cursor"></div><div class="progress"></div>
+<nav class="nav"><a class="nav-logo" href="#top">KM.</a><div class="nav-menu"><a href="#work">Loyihalar</a><a href="#about">Men haqimda</a><a href="#contact">Bog‘lanish</a></div></nav>
 <main id="top">
-<section class="wrap hero">
-  <div class="hero-copy">
-    <div class="eyebrow"><i></i> Digital Marketing · Content · Performance</div>
-    <h1>KAMRONBEK<br><span>MAMAJONOV</span></h1>
-    <div class="hero-role">Digital Marketolog</div>
-    <p class="hero-text">
-      Marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Bugungi kunda esa
-      Kontent, SMM va Performance Marketing yo‘nalishlarini birlashtirib,
-      biznes uchun marketingni tizimli ravishda boshqarish ustida ishlayman.
-    </p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#projects">Loyihalarim ↗</a>
-      <a class="btn" href="#about">Men haqimda ↓</a>
-    </div>
-  </div>
-  <div class="hero-portrait">
-    <img src="assets/portrait.png" alt="Kamronbek Mamajonov">
-  </div>
+<section class="hero">
+  <div class="hero-top"><div class="hero-kicker mono">Personal portfolio / 2026<br>Content × SMM × Performance</div><div class="hero-year mono">Tashkent / Uzbekistan</div></div>
+  <div><h1 class="hero-title"><span>KAMRONBEK</span><span><em>MAMAJONOV</em></span></h1></div>
+  <div class="hero-image-wrap"><img src="portrait.png" alt="Kamronbek Mamajonov"></div>
+  <div class="hero-mark">CONTENT<br>→<br>PERFORMANCE</div>
+  <div class="hero-bottom"><div class="role">Digital Marketolog</div><p class="hero-copy">Marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Bugungi kunda esa Kontent, SMM va Performance Marketing yo‘nalishlarini birlashtirib, biznes uchun marketingni tizimli ravishda boshqarish ustida ishlayman.</p></div>
 </section>
-
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Content Marketing</span><span>•</span><span>SMM</span><span>•</span>
-    <span>Performance Marketing</span><span>•</span><span>Target</span><span>•</span>
-    <span>Lead Generation</span><span>•</span><span>Marketing Strategy</span><span>•</span>
-    <span>Content Marketing</span><span>•</span><span>SMM</span><span>•</span>
-    <span>Performance Marketing</span><span>•</span><span>Target</span><span>•</span>
-  </div>
-</div>
-
-<section class="results">
-  <div class="wrap">
-    <div class="kicker">01 — Selected impact</div>
-    <div class="section-title" style="color:#fff">Marketing faqat kontent emas.<br>Natija ham muhim.</div>
-    <div class="result-list">
-      <div class="result"><div class="result-label">Hilol Med — selected Reels</div><div class="result-number">239K<small>+</small></div></div>
-      <div class="result"><div class="result-label">Marketing Maximum — selected Reels</div><div class="result-number">322K<small>+</small></div></div>
-      <div class="result"><div class="result-label">Ustoz Akademiyasi — asosiy Reels</div><div class="result-number">5.4M</div></div>
-      <div class="result"><div class="result-label">Ibtido Ta’lim — leads</div><div class="result-number">754</div></div>
-      <div class="result"><div class="result-label">Ibtido Ta’lim — CPL</div><div class="result-number">$0.22</div></div>
-    </div>
-  </div>
+<section class="intro" id="about"><div class="mono">01 / Positioning</div><div><div class="intro-big reveal">Bu shunchaki Instagram yuritish emas.<br><span class="blue">Kontent → SMM → Target → Performance → Business result.</span></div><p class="intro-text reveal">Men marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Keyinchalik Project Manager va Target yo‘nalishlarida ishlab, marketingni faqat kontent emas, balki biznes maqsadi bilan bog‘lashga fokuslandim.</p></div></section>
+<section class="results" id="results"><div class="results-head"><h2>Raqamlar<br>gapiradi.</h2><p>Portfolio ichidagi eng muhim ko‘rsatkichlar. Ular turli loyihalarda turli vazifalar va jamoalar bilan erishilgan natijalarni ko‘rsatadi.</p></div><div class="result-stack"><div class="result-stage"><div class="result-word">NATIJA / 01</div><div><span class="result-number result-blue">239K+<span class="result-unit">VIEWS</span></span></div><div class="result-index">01 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 02</div><div><span class="result-number">322K<span class="result-unit">VIEWS</span></span></div><div class="result-index">02 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 03</div><div><span class="result-number result-blue">5.4M<span class="result-unit">VIEWS</span></span></div><div class="result-index">03 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 04</div><div><span class="result-number">1,006<span class="result-unit">FOLLOWERS</span></span></div><div class="result-index">04 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 05</div><div><span class="result-number result-blue">754<span class="result-unit">LEADS</span></span></div><div class="result-index">05 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 06</div><div><span class="result-number">$0.22<span class="result-unit">CPL</span></span></div><div class="result-index">06 / 06</div><div class="result-line"></div></div></div></section>
+<section class="capabilities"><div class="cap-title">Nima<br>qilaman?</div><div class="cap-list"><div class="cap-item"><span class="mono">01</span><strong>Content Marketing</strong><span>Strategiya / Script</span></div><div class="cap-item"><span class="mono">02</span><strong>SMM</strong><span>Content / Stories / Reels</span></div><div class="cap-item"><span class="mono">03</span><strong>Target</strong><span>Meta Ads / Lead Gen</span></div><div class="cap-item"><span class="mono">04</span><strong>Performance Marketing</strong><span>Offer / Funnel / Analytics</span></div><div class="cap-item"><span class="mono">05</span><strong>Project Management</strong><span>Team / Reporting</span></div></div></section>
+<section class="projects" id="work"><div class="projects-intro"><h2>Tanlangan<br>loyihalar.</h2><p>Har bir loyiha alohida vazifa, alohida kontekst va alohida visual story sifatida qurilgan.</p></div>
+<!-- 01 -->
+<!-- 01 Hilol Med -->
+<article class="case scene-hilol" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">01 / 10</div><div class="case-type">Content Manager / SMM</div><h3 class="case-title">Hilol<br>Med</h3><p class="case-desc">Kontent strategiyasi, Reels va Stories, YouTube, shooting jarayonlari, ekspert kontenti va auditoriya pain-pointlariga asoslangan rubrikalar ustida ishladim. 2026-yildagi eng uzoq davom etgan asosiy loyihalardan biri.</p><div class="case-result"><strong>239K+</strong><small>Reels<br>views</small></div></div><div class="case-media"><img class="media-main" src="hilol-building.jpg" alt="Hilol Med klinikasi"><img class="media-small" src="hilol-profile.png" alt="Hilol Med Instagram profili"><img class="media-small s2" src="hilol-youtube.png" alt="Hilol Med YouTube analytics"></div><div class="case-label">Healthcare / content production · 7+ oy</div></div></article>
+<article class="case scene-mm" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">02 / 10</div><div class="case-type">SMM / Content Marketing</div><h3 class="case-title">Marketing<br>Maximum</h3><p class="case-desc">Profilni qayta packaging qilish, kontent yo‘nalishlarini ishlab chiqish, Stories va Reels tizimini kuchaytirish hamda ekspert kontentini formatlash.</p><div class="case-result"><strong>322K</strong><small>views<br>Reels</small></div></div><div class="case-media"><img class="media-main" src="mm-reel.png" alt="Marketing Maximum Reels analytics"><img class="media-small" src="mm-profile.png" alt="Marketing Maximum Instagram profile"></div><div class="case-label">Transformation / content system</div></div></article>
+<!-- 02 -->
+<article class="case scene-ustoz" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">03 / 10</div><div class="case-type">Content Marketing</div><h3 class="case-title">Ustoz<br>Akademiyasi</h3><p class="case-desc">Kontent yo‘nalishini qayta ishlab, rubrikalar, Stories va ekspertga asoslangan Reels formatlarini test qilish.</p><div class="case-result"><strong>5.4M</strong><small>views<br>Reels</small></div></div><div class="case-media"><img class="media-main" src="ustoz-reel.png" alt="Ustoz Akademiyasi Reels analytics"></div><div class="case-label">Organic content / reach</div></div></article>
+<!-- 03 -->
+<article class="case scene-engora" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">04 / 10</div><div class="case-type">Content Manager</div><h3 class="case-title">Engora</h3><p class="case-desc">Noldan content direction, competitor analysis, rubrikalar, lead magnetlar va Stories tizimini ishlab chiqish.</p><div class="case-result"><strong>0 → 1,006</strong><small>followers<br>in the project</small></div></div><div class="case-media"><img class="media-main" src="engora-after.png" alt="Engora after profile"><img class="media-small" src="engora-before.png" alt="Engora before profile"></div><div class="case-label">0 → 1,006 / profile transformation</div></div></article>
+<!-- 04 -->
+<article class="case scene-muxsinzada" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">05 / 10</div><div class="case-type">Content Manager</div><h3 class="case-title">Muxsinzada<br>Perfumes</h3><p class="case-desc">Competitor analysis, values-aligned scripts, content plan, Stories va Reels formatlarini test qilish.</p><div class="case-result"><strong>01</strong><small>content<br>direction</small></div></div><div class="case-media"><img class="media-main" src="muxsinzada.png" alt="Muxsinzada Perfumes profile"></div><div class="case-label">Positioning / content direction</div></div></article>
+<!-- 05 -->
+<article class="case scene-zetrik" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">06 / 10</div><div class="case-type">Content Manager</div><h3 class="case-title">Zetric</h3><p class="case-desc">Industrial loyiha uchun yangi content direction, rubrikalar, lead magnetlar va production jarayonini kontentga aylantirish.</p><div class="case-result"><strong>1–2K</strong><small>followers / month<br>including target</small></div></div><div class="case-media"><img class="media-main" src="zetrik.png" alt="Zetric Instagram profile"></div><div class="case-label">B2B / production storytelling</div></div></article>
+<!-- 06 -->
+<article class="case scene-iqibla" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">07 / 10</div><div class="case-type">SMM / Product Content</div><h3 class="case-title">IQibla</h3><p class="case-desc">Product content, carousel formats, shooting va product positioning orqali smart device brendining Instagram kommunikatsiyasini rivojlantirish.</p><div class="case-result"><strong>284K</strong><small>profile views<br>30 days</small></div></div><div class="case-media"><img class="media-main" src="iqibla.png" alt="IQibla Instagram profile"><img class="media-small" src="iqibla-carousel.png" alt="IQibla product carousel"></div><div class="case-label">Product / visual storytelling</div></div></article>
+<!-- 07 -->
+<article class="case scene-zamona" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">08 / 10</div><div class="case-type">Target / Lead Generation</div><h3 class="case-title">Zamona</h3><p class="case-desc">Target orqali restoran uchun lead va buyurtmalarni jalb qilish, creative testlar va reklama kommunikatsiyasini boshqarish.</p><div class="case-result"><strong>10–15</strong><small>orders<br>during campaign</small></div></div><div class="case-media"><img class="media-main" src="zamona.png" alt="Zamona Restaurant profile"></div><div class="case-label">Performance / acquisition</div></div></article>
+<!-- 08 -->
+<article class="case scene-water" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">09 / 10</div><div class="case-type">SMM / Target</div><h3 class="case-title">Suv filtri<br>loyihasi</h3><p class="case-desc">Mahsulot foydasini kontent orqali tushuntirish, audience pain asosidagi Reels va Target kommunikatsiyasini birlashtirish.</p><div class="case-result"><strong>102+</strong><small>sales<br>1st month</small></div></div><div class="case-media"><img class="media-main" src="water.png" alt="Suv filtri loyihasi content"></div><div class="case-label">Content × Performance</div></div></article>
+<!-- 09 -->
+<article class="case scene-ibtido" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">10 / 10</div><div class="case-type">Target / Lead Generation</div><h3 class="case-title">Ibtido<br>Ta’lim</h3><p class="case-desc">Noldan Target loyihasi: audience research, offer, creative testlar va lead generation orqali birinchi sotuvlarni yo‘lga qo‘yish.</p><div class="case-result"><strong>754</strong><small>leads<br>$0.22 CPL</small></div></div><div class="case-media"><img class="media-main" src="ibtido-ads.png" alt="Ibtido Ta'lim Ads Manager"><img class="media-small" src="ibtido-profile.png" alt="Ibtido Ta'lim Instagram profile"></div><div class="case-label">Lead generation / Meta Ads</div></div></article>
 </section>
-
-<section class="projects" id="projects">
-  <div class="wrap">
-    <div class="section-head" style="padding-top:110px">
-      <div>
-        <div class="kicker">02 — Selected projects</div>
-        <h2 class="section-title">Loyihalar.<br>Jarayon. Natija.</h2>
-      </div>
-      <p class="section-intro">
-        Kontent, SMM va Performance Marketing’ni birlashtirgan loyihalardan tanlangan ishlar. Hilol Med — 2026-yildagi eng uzoq davom etgan asosiy loyihalardan biri.
-      </p>
-    </div>
-
-    <article class="project hilol">
-      <div class="project-meta">
-        <div class="project-no">01 / 10</div>
-        <h3 class="project-name">Hilol<br>Med</h3>
-        <p class="project-service">Content Manager · SMM · Content Production</p>
-        <span class="project-tag">Healthcare Content</span>
-      </div>
-      <div class="project-stage">
-        <div class="hilol-gallery">
-          <img src="assets/hilol-building.jpg" alt="Hilol Med building">
-          <img src="assets/hilol-profile.png" alt="Hilol Med Instagram profile">
-          <img src="assets/hilol-youtube.png" alt="Hilol Med YouTube analytics">
-        </div>
-        <div class="project-copy"><strong>7+ oy · Content & SMM</strong><p>Kontent strategiyasi, Reels va Stories, YouTube, shooting jarayonlari, ekspert kontenti va auditoriya pain-pointlariga asoslangan rubrikalar ustida ishladim.</p></div>
-      </div>
-    </article>
-
-    <article class="project mm">
-      <div class="project-meta">
-        <div class="project-no">02 / 10</div>
-        <h3 class="project-name">Marketing<br>Maximum</h3>
-        <p class="project-service">SMM · Content · Profile Packaging</p>
-        <span class="project-tag">Transformation</span>
-      </div>
-      <div class="project-stage">
-        <div class="dual">
-          <img src="assets/mm-before.png" alt="Marketing Maximum oldingi holati">
-          <img src="assets/mm-profile.png" alt="Marketing Maximum keyingi holati">
-        </div>
-        <div class="project-copy"><strong>Before → After · 322K+ views</strong><p>Profil upakovkasi, 3 xil dizayn stilistikasi, Highlights, Stories, podcastlardan Reels va o‘quvchilar natijalariga asoslangan kontent tizimi ishlab chiqildi.</p></div>
-      </div>
-    </article>
-
-    <article class="project ustoz">
-      <div class="project-meta">
-        <div class="project-no">03 / 10</div>
-        <h3 class="project-name">Ustoz<br>Akademiyasi</h3>
-        <p class="project-service">Content Strategy · SMM</p>
-        <span class="project-tag">Organic Growth</span>
-      </div>
-      <div class="project-stage">
-        <img class="main-img" src="assets/ustoz-reel.png" alt="Ustoz Akademiyasi Reels">
-        <div class="project-copy"><strong>5.4M views</strong><p>Kontent yo‘nalishi, rubrikalar va auditoriya uchun foydali formatlar qayta ishlab chiqildi.</p></div>
-      </div>
-    </article>
-
-    <article class="project engora">
-      <div class="project-meta">
-        <div class="project-no">04 / 10</div>
-        <h3 class="project-name">Engora</h3>
-        <p class="project-service">Content Manager · SMM</p>
-        <span class="project-tag">0 → 1,006</span>
-      </div>
-      <div class="project-stage">
-        <div class="dual">
-          <img src="assets/engora-before.png" alt="Engora oldingi holati">
-          <img src="assets/engora-after.png" alt="Engora keyingi holati">
-        </div>
-        <div class="project-copy"><strong>0 → 1,006</strong><p>Business profile, customer profile, competitor analysis, content plan va lead magnetlar bilan yangi kontent yo‘nalishi yaratildi.</p></div>
-      </div>
-    </article>
-
-    <article class="project mux">
-      <div class="project-meta">
-        <div class="project-no">05 / 10</div>
-        <h3 class="project-name">Muxsinzada<br>Perfumes</h3>
-        <p class="project-service">Content Strategy · SMM</p>
-        <span class="project-tag">Creative Direction</span>
-      </div>
-      <div class="project-stage">
-        <img class="main-img" src="assets/muxsinzada.png" alt="Muxsinzada Perfumes">
-        <div class="project-copy"><strong>Creative content system</strong><p>Competitor analysis, values-aligned scripts, content plan, Stories va yangi formatlar ustida ishlash.</p></div>
-      </div>
-    </article>
-
-    <article class="project zetric">
-      <div class="project-meta">
-        <div class="project-no">06 / 10</div>
-        <h3 class="project-name">Zetric</h3>
-        <p class="project-service">Content Manager · SMM</p>
-        <span class="project-tag">B2B Content</span>
-      </div>
-      <div class="project-stage">
-        <img class="main-img" src="assets/zetrik.png" alt="Zetric production content">
-        <div class="project-copy"><strong>Production → Content</strong><p>Kontent yo‘nalishi yangilandi, rubrikalar, lead magnetlar va ishlab chiqarish jarayonlarini ko‘rsatadigan formatlar yaratildi.</p></div>
-      </div>
-    </article>
-
-    <article class="project iqibla">
-      <div class="project-meta">
-        <div class="project-no">07 / 10</div>
-        <h3 class="project-name">IQibla</h3>
-        <p class="project-service">SMM · Content · Product Marketing</p>
-        <span class="project-tag">Product Content</span>
-      </div>
-      <div class="project-stage">
-        <div class="stage-collage">
-          <img src="assets/iqibla.png" alt="IQibla product content">
-          <img src="assets/iqibla-carousel.png" alt="IQibla carousel">
-        </div>
-        <div class="project-copy"><strong>Product → Content</strong><p>Mahsulot xususiyatlarini auditoriyaga sodda yetkazadigan carousel, product creative va shooting jarayonlari ishlab chiqildi.</p></div>
-      </div>
-    </article>
-
-    <article class="project zamona">
-      <div class="project-meta">
-        <div class="project-no">08 / 10</div>
-        <h3 class="project-name">Zamona<br>To‘yxonasi</h3>
-        <p class="project-service">Target · Lead Generation</p>
-        <span class="project-tag">Performance</span>
-      </div>
-      <div class="project-stage">
-        <img class="main-img" src="assets/zamona.png" alt="Zamona To'yxonasi">
-        <div class="project-copy"><strong>Lead Generation</strong><p>Offer va target creative’lari bilan reklama kampaniyalarini boshqarish va lead oqimini optimizatsiya qilish.</p></div>
-      </div>
-    </article>
-
-    <article class="project water">
-      <div class="project-meta">
-        <div class="project-no">09 / 10</div>
-        <h3 class="project-name">Suv filtri<br>loyihasi</h3>
-        <p class="project-service">SMM · Target · Performance</p>
-        <span class="project-tag">Sales System</span>
-      </div>
-      <div class="project-stage">
-        <div class="metric-stage">
-          <div class="metric-box"><b>102+</b><span>1-oydagi sotuvlar</span></div>
-          <div class="metric-box light"><b>693</b><span>murojaatlar</span></div>
-          <div class="metric-box light"><b>43.27</b><span>ROAS</span></div>
-          <div class="metric-box"><b>$436</b><span>Target spend</span></div>
-        </div>
-        <div class="project-copy"><strong>Performance + Content</strong><p>Offer, target creative, product benefits, reviews va auditoriya pain-pointlariga asoslangan Reels orqali savdo jarayoni kuchaytirildi.</p></div>
-      </div>
-    </article>
-
-    <article class="project ibtido">
-      <div class="project-meta">
-        <div class="project-no">10 / 10</div>
-        <h3 class="project-name">Ibtido<br>Ta’lim</h3>
-        <p class="project-service">Target · Lead Generation</p>
-        <span class="project-tag">Ads</span>
-      </div>
-      <div class="project-stage">
-        <img class="main-img" src="assets/ibtido-ads.png" alt="Ibtido Ta'lim Ads Manager">
-        <div class="project-copy"><strong>754 leads · $0.22 CPL</strong><p>Target-only loyiha. Audience, creative va offer testlari orqali lead generation kampaniyasi ishga tushirildi.</p></div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap section">
-    <div class="section-head">
-      <div>
-        <div class="kicker">03 — About</div>
-        <h2 class="section-title">Marketingdagi yo‘lim<br>qanday boshlandi?</h2>
-      </div>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Marketingdagi yo‘lim 2020-yilda bu sohaga qiziqishimdan boshlandi. 2021-yil oxirida esa bu qiziqishni professional yo‘nalishga aylantirish uchun Najot Ta’lim’da SMM Pro kursida o‘qishni boshladim.</p>
-        <p>2022-yilda ta’limni yakunlab, Otlichno o‘quv markazida faoliyatimni boshladim. Dastlab Account Manager sifatida ishladim, keyinchalik kontent yo‘nalishida ham faoliyat olib bordim.</p>
-        <p>2024-yilda ScholarHUB loyihasida marketingning kontent va SMM qismini mustaqil ravishda olib bordim. Keyinchalik marketingga bo‘lgan qiziqishimni Performance Marketing yo‘nalishida ham rivojlantirishga qaror qildim.</p>
-        <p>2025-yilda Mohir Marketing’da Project Manager, SMM va Target yo‘nalishlarida ishladim. 2026-yilda esa Obsess Marketing jamoasida faoliyat olib, marketing bo‘yicha tajribamni yanada kengaytirdim.</p>
-        <p>Bugungi kunda asosiy fokusim — Kontent, SMM va Performance Marketing’ni birlashtirib, bizneslar uchun tizimli marketing jarayonlarini qurish.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="t-row"><div class="t-year">2026</div><div><h3>Obsess Marketing</h3><p>Content Manager · Marketing projects</p></div></div>
-        <div class="t-row"><div class="t-year">2025–2026</div><div><h3>Mohir Marketing</h3><p>Project Manager · SMM · Target</p></div></div>
-        <div class="t-row"><div class="t-year">2024–2025</div><div><h3>ScholarHUB</h3><p>SMM · Content</p></div></div>
-        <div class="t-row"><div class="t-year">2022–2023</div><div><h3>Otlichno</h3><p>Account Manager → Content Manager</p></div></div>
-      </div>
-    </div>
-
-    <div class="edu">
-      <div class="edu-grid">
-        <div>
-          <div class="kicker">Education</div>
-          <h2 class="section-title" style="font-size:clamp(35px,4vw,58px)">Ta’lim va<br>professional rivojlanish</h2>
-          <p class="section-intro" style="margin-top:25px">Formal ta’lim va marketing bo‘yicha amaliy kurslar.</p>
-        </div>
-        <div>
-          <ul class="edu-list">
-            <li>Toshkent Axborot Texnologiyalari Universiteti<span>Iqtisodiyot va menejment · 2024</span></li>
-            <li>Najot Ta’lim<span>SMM Pro kursi</span></li>
-            <li>Xayot Sharapov<span>Target Pro kursi</span></li>
-            <li>Mikhail Timochko<span>Kontent va Zapusk</span></li>
-            <li>Danil Matukhno<span>Zapusk · Product</span></li>
-            <li>Aziz Abdumajitov<span>Performance Marketing + Media Production</span></li>
-            <li>Aziz Axtamov<span>Tujjor Akademiyasi · Digital Marketolog</span></li>
-            <li>Altair Abduraxmonov<span>Kreativ va Strategik Kontent</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="kicker">04 — Contact</div>
-    <h2>Birgalikda<br><span>ishlaymiz.</span></h2>
-    <div class="contact-bottom">
-      <p>Marketing loyihangiz uchun Content, SMM yoki Performance Marketing yo‘nalishida hamkorlik qilishni istasangiz, bog‘lanishingiz mumkin.</p>
-      <a class="email" href="mailto:hello@kamronbek.uz">hello@kamronbek.uz ↗</a>
-    </div>
-  </div>
-</section>
+<section class="before-after"><div class="ba-head"><h2>Before.<br>After.</h2><p>Marketing Maximum uchun real profil materiallari asosida transformationni slider orqali ko‘ring.</p></div><div class="slider"><img src="mm-before.png" alt="Before profile"><img class="after" src="mm-profile.png" alt="After profile"><input class="slider-range" type="range" min="0" max="100" value="50" aria-label="Before va After slider"><div class="slider-line"></div><div class="slider-knob">↔</div><span class="ba-label ba-before">Before</span><span class="ba-label ba-after">After</span></div></section>
+<section class="timeline" id="experience"><div><div class="mono">02 / Experience</div><h2>Yo‘l.<br>Tizim.<br>Tajriba.</h2></div><div class="timeline-list"><div class="timeline-row"><div class="timeline-year">2026</div><div><h3>Obsess Marketing — Content Manager</h3><p>Content direction, Reels, Stories, project communication, shooting va marketing loyihalari bilan ishlash.</p></div></div><div class="timeline-row"><div class="timeline-year">2025–26</div><div><h3>Mohir Marketing — Project Manager / SMM / Target</h3><p>Target, SMM, Project Management, reporting, creative testing va Performance Marketing loyihalari.</p></div></div><div class="timeline-row"><div class="timeline-year">2024–25</div><div><h3>ScholarHUB — SMM / Content</h3><p>Kontent, Stories, Reels, blogger collaborations va SAT platformasi uchun marketing kommunikatsiyasi.</p></div></div><div class="timeline-row"><div class="timeline-year">2022–23</div><div><h3>Otlichno — Account Manager → Content Manager</h3><p>Real loyihalar, audience pain research, content va jamoa bilan ishlash. Faoliyatning katta qismi jamoa bilan bajarilgan.</p></div></div></div></section>
+<section class="education"><h2>Ta’lim &amp;<br>professional growth.</h2><div class="edu-grid"><div class="edu"><span>UNIVERSITY</span><b>TATU</b><span>Iqtisodiyot va menejment · 2024</span></div><div class="edu"><span>01</span><b>Najot Ta’lim</b><span>SMM Pro</span></div><div class="edu"><span>02</span><b>Xayot Sharapov</b><span>Target Pro</span></div><div class="edu"><span>03</span><b>Mikhail Timochko</b><span>Kontent va Zapusk</span></div><div class="edu"><span>04</span><b>Danil Matukhno</b><span>Zapusk · Product</span></div><div class="edu"><span>05</span><b>Aziz Abdumajitov</b><span>Performance Marketing + Media Production</span></div><div class="edu"><span>06</span><b>Aziz Axtamov</b><span>Tujjor Akademiyasi</span></div><div class="edu"><span>07</span><b>Altair Abduraxmonov</b><span>Kreativ va Strategik Kontent</span></div></div></section>
+<section class="contact" id="contact"><div><div class="mono">03 / Contact</div><h2>Biror<br>loyiha<br>bormi?</h2><p class="contact-copy">Kontent, SMM, Target yoki Performance Marketing bo‘yicha loyiha haqida gaplashmoqchi bo‘lsangiz, xabar qoldiring.</p></div><form class="form" name="contact" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="contact"><div class="field"><label>Ism</label><input name="name" placeholder="Ismingiz" required></div><div class="field"><label>Email</label><input type="email" name="email" placeholder="email@example.com" required></div><div class="field"><label>Loyiha</label><textarea name="message" placeholder="Qanday loyiha ustida ishlamoqchisiz?" required></textarea></div><button class="send" type="submit">Xabar yuborish ↗</button></form></section>
+<footer><span>© 2026 Kamronbek Mamajonov</span><span>Digital Marketolog / Tashkent</span></footer>
 </main>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 Kamronbek Mamajonov</span>
-    <span>Digital Marketolog · Tashkent, Uzbekistan</span>
-  </div>
-</footer>
-
 <script>
 const cursor=document.querySelector('.cursor');
-window.addEventListener('mousemove',e=>{
-  cursor.style.left=e.clientX+'px';
-  cursor.style.top=e.clientY+'px';
-});
-document.querySelectorAll('a,.btn,.menu-btn').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cursor.style.width='34px';cursor.style.height='34px'});
-  el.addEventListener('mouseleave',()=>{cursor.style.width='18px';cursor.style.height='18px'});
-});
-window.addEventListener('scroll',()=>{
-  const h=document.documentElement.scrollHeight-window.innerHeight;
-  document.querySelector('.progress').style.width=(window.scrollY/h*100)+'%';
+if(cursor&&matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,button,.slider-range').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
+const progress=document.querySelector('.progress');window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(scrollY/h*100)+'%'},{passive:true});
+const revealObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>revealObs.observe(e));
+const caseObs=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting)),{threshold:.42});document.querySelectorAll('[data-case]').forEach(e=>caseObs.observe(e));
+const stack=document.querySelector('.result-stack');const stages=[...document.querySelectorAll('.result-stage')];window.addEventListener('scroll',()=>{if(!stack)return;const r=stack.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight-r.top)/(r.height)));const i=Math.min(stages.length-1,Math.floor(p*stages.length));stages.forEach((s,k)=>{const active=k===i;s.style.opacity=active?'1':(Math.abs(k-i)===1?'.2':'0');s.querySelector('.result-number').style.transform=active?'translateY(0) scale(1)':'translateY(35px) scale(.96)'})},{passive:true});
+const range=document.querySelector('.slider-range'),after=document.querySelector('.slider .after'),line=document.querySelector('.slider-line'),knob=document.querySelector('.slider-knob');function slide(){const v=range.value;after.style.clipPath=`inset(0 0 0 ${v}%)`;line.style.left=v+'%';knob.style.left=v+'%'}range?.addEventListener('input',slide);slide();
+
+/* Rasm topilmasa: boshqa kengaytma yoki assets/ papkani sinab ko'radi */
+document.querySelectorAll('img').forEach(img=>{
+  const orig=img.getAttribute('src');if(!orig)return;
+  const base=orig.replace(/\.[^.]+$/,''),ext=orig.split('.').pop().toLowerCase();
+  const q=[];[ext,'png','jpg','jpeg','webp'].filter((e,k,a)=>a.indexOf(e)===k).forEach(e=>['','assets/'].forEach(d=>q.push(d+base+'.'+e)));
+  const queue=q.filter(t=>t!==orig);let i=0;
+  img.addEventListener('error',()=>{if(i<queue.length)img.src=queue[i++];else console.warn('Rasm topilmadi:',orig)});
 });
 </script>
-</body>
-</html>
+</body></html>
