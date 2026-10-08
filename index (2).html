@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kamronbek Mamajonov — Digital Marketolog. Content, SMM, Target va Performance Marketing portfolio.">
+<title>Kamronbek Mamajonov — Digital Marketolog</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#eaf5ff;
+  --paper:#f7fbff;
+  --ink:#101827;
+  --muted:#617087;
+  --line:rgba(16,24,39,.12);
+  --blue:#1769ff;
+  --white:#fff;
+  --radius:28px;
+  --max:1440px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"DM Sans",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit}
+::selection{background:#1769ff;color:#fff}
+
+.cursor{
+  position:fixed;width:18px;height:18px;border:1px solid rgba(23,105,255,.8);
+  border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);
+  transition:width .2s,height .2s,background .2s;mix-blend-mode:multiply;
+}
+.progress{position:fixed;top:0;left:0;width:0;height:3px;background:var(--blue);z-index:9998}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+
+.nav{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);
+  width:min(var(--max),calc(100% - 48px));z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 10px 10px 16px;
+  background:rgba(247,251,255,.72);backdrop-filter:blur(18px);
+  border:1px solid rgba(16,24,39,.08);border-radius:999px;
+}
+.logo{font-family:Manrope,sans-serif;font-weight:800;font-size:18px;letter-spacing:-.06em}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-links a,.menu-btn{
+  border:0;background:transparent;padding:10px 15px;border-radius:999px;
+  font-size:13px;font-weight:600;cursor:pointer;
+}
+.nav-links a:hover,.menu-btn:hover{background:#fff}
+.menu-btn{background:var(--ink);color:#fff}
+
+.hero{
+  min-height:100svh;display:grid;grid-template-columns:1.25fr .75fr;
+  align-items:center;padding:150px 0 80px;position:relative;
+}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{
+  display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;
+  text-transform:uppercase;letter-spacing:.16em;margin-bottom:26px;
+}
+.eyebrow i{width:7px;height:7px;background:var(--blue);border-radius:50%}
+.hero h1{
+  font-family:Manrope,sans-serif;font-size:clamp(46px,7.2vw,112px);
+  line-height:.9;letter-spacing:-.075em;font-weight:800;max-width:1000px;
+}
+.hero h1 span{display:block;color:var(--blue)}
+.hero-role{font-size:clamp(22px,2.3vw,34px);font-weight:600;margin-top:26px}
+.hero-text{max-width:650px;font-size:18px;line-height:1.65;color:var(--muted);margin-top:20px}
+.hero-actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:15px 21px;border-radius:999px;
+  font-weight:700;font-size:14px;border:1px solid var(--ink);transition:.25s;
+}
+.btn.primary{background:var(--ink);color:#fff}
+.btn:hover{transform:translateY(-3px)}
+.hero-portrait{
+  justify-self:end;width:min(28vw,390px);height:min(63vh,580px);
+  border-radius:220px 220px 34px 34px;overflow:hidden;background:#d9eaff;
+  box-shadow:0 30px 80px rgba(26,80,140,.16);position:relative;
+}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-note{
+  position:absolute;right:2%;bottom:9%;background:#fff;border:1px solid var(--line);
+  border-radius:18px;padding:13px 16px;font-size:12px;box-shadow:0 15px 40px rgba(16,24,39,.08);
+}
+.hero-note strong{display:block;font-size:18px}
+
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;padding:18px 0;white-space:nowrap;background:rgba(255,255,255,.25)
+}
+.marquee-track{display:inline-flex;gap:45px;animation:marquee 24s linear infinite}
+.marquee span{font-family:Manrope;font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:#718098}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.section{padding:130px 0}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:55px}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+.section-title{
+  font-family:Manrope;font-size:clamp(42px,6vw,86px);line-height:.94;
+  letter-spacing:-.07em;max-width:800px;margin-top:15px
+}
+.section-intro{max-width:360px;color:var(--muted);line-height:1.65}
+
+.results{
+  padding:90px 0 130px;background:#101827;color:#fff;position:relative;overflow:hidden
+}
+.results .kicker{color:#8fa0bb}
+.result-list{margin-top:55px;border-top:1px solid rgba(255,255,255,.15)}
+.result{
+  min-height:170px;border-bottom:1px solid rgba(255,255,255,.15);
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;
+}
+.result-label{font-size:clamp(18px,2vw,27px);color:#aab5c8}
+.result-number{
+  font-family:Manrope;font-size:clamp(68px,11vw,165px);line-height:.8;
+  letter-spacing:-.09em;font-weight:800
+}
+.result-number small{font-size:.35em;letter-spacing:-.04em}
+
+.projects{background:#f7fbff}
+.project{
+  --accent:#1769ff;
+  min-height:100svh;display:grid;grid-template-columns:.38fr 1.62fr;
+  gap:45px;align-items:center;padding:90px 0;
+  border-top:1px solid var(--line);position:relative;overflow:hidden;
+}
+.project-meta{align-self:start;padding-top:30px;position:sticky;top:110px}
+.project-no{font-family:Manrope;font-size:13px;color:var(--accent);font-weight:800}
+.project-name{font-family:Manrope;font-size:clamp(34px,4vw,66px);line-height:.94;letter-spacing:-.07em;margin-top:14px}
+.project-service{margin-top:22px;color:var(--muted);font-size:13px;line-height:1.5}
+.project-tag{display:inline-block;margin-top:20px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.project-stage{min-height:650px;position:relative;display:flex;align-items:center;justify-content:center}
+.project-stage .main-img{
+  width:min(80%,920px);max-height:72vh;object-fit:contain;border-radius:24px;
+  box-shadow:0 30px 80px rgba(16,24,39,.13);position:relative;z-index:2;
+  transition:transform .7s cubic-bezier(.2,.8,.2,1)
+}
+.project:hover .main-img{transform:scale(1.025)}
+.project-copy{
+  position:absolute;left:0;bottom:15px;z-index:3;background:rgba(247,251,255,.9);
+  backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:22px;
+  padding:22px 25px;max-width:430px
+}
+.project-copy strong{font-family:Manrope;font-size:18px}
+.project-copy p{font-size:13px;color:var(--muted);line-height:1.55;margin-top:7px}
+
+.project.hilol{--accent:#159a78}
+.project.mm{--accent:#2458ff}
+.hilol-gallery{width:min(94%,1050px);display:grid;grid-template-columns:1.35fr .8fr;grid-template-rows:1fr 1fr;gap:16px}
+.hilol-gallery img{width:100%;height:270px;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
+.hilol-gallery img:first-child{grid-row:1 / 3;height:556px}
+.hilol-gallery img:nth-child(2),.hilol-gallery img:nth-child(3){object-position:center top}
+@media(max-width:560px){.hilol-gallery{grid-template-columns:1fr;grid-template-rows:auto}.hilol-gallery img:first-child{grid-row:auto;height:330px}.hilol-gallery img{height:300px}}
+.project.ustoz{--accent:#a23cff}
+.project.engora{--accent:#00a67e}
+.project.mux{--accent:#ff6b35}
+.project.zetric{--accent:#e08b16}
+.project.iqibla{--accent:#0d6bff}
+.project.zamona{--accent:#a03d62}
+.project.water{--accent:#0089b7}
+.project.ibtido{--accent:#7257e8}
+
+.dual{width:min(88%,980px);display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative}
+.dual img{width:100%;height:510px;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
+.dual img:last-child{transform:translateY(45px)}
+.stage-collage{width:min(88%,980px);display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.stage-collage img{height:570px;width:100%;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
+.stage-collage img:last-child{height:430px;align-self:end}
+.stage-row{width:min(94%,1050px);display:flex;gap:20px;overflow:hidden}
+.stage-row img{width:70%;height:510px;object-fit:cover;border-radius:24px;box-shadow:0 25px 60px rgba(16,24,39,.12)}
+.stage-row img:last-child{width:30%;height:400px;align-self:end}
+.metric-stage{width:min(90%,1000px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.metric-box{
+  background:#101827;color:#fff;border-radius:28px;padding:40px;min-height:240px;
+  display:flex;flex-direction:column;justify-content:end
+}
+.metric-box b{font-family:Manrope;font-size:clamp(55px,7vw,100px);line-height:.8;letter-spacing:-.08em}
+.metric-box span{color:#9ba8bb;margin-top:18px}
+.metric-box.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
+
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+.about-text{font-size:19px;line-height:1.8;color:#445166}
+.about-text p+p{margin-top:24px}
+.timeline{border-top:1px solid var(--line)}
+.t-row{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:27px 0;border-bottom:1px solid var(--line)}
+.t-year{font-family:Manrope;font-weight:800}
+.t-row h3{font-family:Manrope;font-size:20px}
+.t-row p{color:var(--muted);font-size:14px;margin-top:6px;line-height:1.5}
+
+.edu{margin-top:80px;padding-top:80px;border-top:1px solid var(--line)}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.edu-list{list-style:none;border-top:1px solid var(--line)}
+.edu-list li{padding:18px 0;border-bottom:1px solid var(--line);font-weight:600}
+.edu-list li span{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:5px}
+
+.contact{padding:150px 0;background:#dceeff;position:relative;overflow:hidden}
+.contact h2{font-family:Manrope;font-size:clamp(60px,10vw,150px);line-height:.82;letter-spacing:-.09em;max-width:1100px}
+.contact h2 span{color:var(--blue)}
+.contact-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:65px;gap:30px}
+.contact-bottom p{color:var(--muted);max-width:400px;line-height:1.6}
+.email{font-family:Manrope;font-size:clamp(20px,3vw,38px);font-weight:700;letter-spacing:-.04em}
+
+footer{padding:30px 0;background:#dceeff;border-top:1px solid var(--line);color:#68758a;font-size:12px}
+footer .wrap{display:flex;justify-content:space-between}
+
+@media(max-width:900px){
+  .wrap{width:min(100% - 30px,700px)}
+  .nav{width:calc(100% - 30px)}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding-top:130px;gap:55px}
+  .hero-portrait{justify-self:start;width:min(60vw,330px);height:470px}
+  .section{padding:90px 0}
+  .section-head{display:block}
+  .section-intro{margin-top:25px}
+  .project{grid-template-columns:1fr;padding:70px 0;min-height:auto;gap:30px}
+  .project-meta{position:static;padding-top:0}
+  .project-stage{min-height:500px}
+  .project-stage .main-img{width:100%;max-height:62vh}
+  .project-copy{position:relative;left:auto;bottom:auto;margin-top:-80px;width:90%}
+  .dual,.metric-stage,.stage-collage{width:100%}
+  .dual img{height:360px}
+  .stage-collage img{height:400px}
+  .stage-collage img:last-child{height:300px}
+  .stage-row img{height:380px}
+  .about-grid,.edu-grid{grid-template-columns:1fr;gap:55px}
+  .contact{padding:100px 0}
+  .contact-bottom{display:block}
+  .email{display:block;margin-top:25px}
+}
+@media(max-width:560px){
+  .hero h1{font-size:clamp(44px,13vw,70px)}
+  .hero-text{font-size:16px}
+  .hero-portrait{width:72vw;height:430px}
+  .result{min-height:125px;grid-template-columns:1fr}
+  .result-number{font-size:74px;margin-bottom:25px}
+  .project-stage{min-height:430px}
+  .dual{grid-template-columns:1fr}
+  .dual img{height:330px}
+  .dual img:last-child{transform:none}
+  .metric-stage{grid-template-columns:1fr}
+  .stage-collage{grid-template-columns:1fr}
+  .stage-collage img,.stage-collage img:last-child{height:360px}
+  .stage-row{width:100%}
+  .stage-row img{width:78%!important;height:350px}
+  .stage-row img:last-child{width:40%!important;margin-left:-40%;opacity:.95}
+  .t-row{grid-template-columns:1fr;gap:8px}
+  footer .wrap{display:block}
+  footer span+span{display:block;margin-top:8px}
+}
+</style>
+</head>
+
+<body>
+<div class="cursor"></div>
+<div class="progress"></div>
+
+<nav class="nav">
+  <a class="logo" href="#top">KM</a>
+  <div class="nav-links">
+    <a href="#projects">Loyihalar</a>
+    <a href="#about">Men haqimda</a>
+    <a href="#contact">Aloqa</a>
+  </div>
+  <a class="menu-btn" href="#contact">Bog‘lanish</a>
+</nav>
+
+<main id="top">
+<section class="wrap hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><i></i> Digital Marketing · Content · Performance</div>
+    <h1>KAMRONBEK<br><span>MAMAJONOV</span></h1>
+    <div class="hero-role">Digital Marketolog</div>
+    <p class="hero-text">
+      Marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Bugungi kunda esa
+      Kontent, SMM va Performance Marketing yo‘nalishlarini birlashtirib,
+      biznes uchun marketingni tizimli ravishda boshqarish ustida ishlayman.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#projects">Loyihalarim ↗</a>
+      <a class="btn" href="#about">Men haqimda ↓</a>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <img src="assets/portrait.png" alt="Kamronbek Mamajonov">
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Content Marketing</span><span>•</span><span>SMM</span><span>•</span>
+    <span>Performance Marketing</span><span>•</span><span>Target</span><span>•</span>
+    <span>Lead Generation</span><span>•</span><span>Marketing Strategy</span><span>•</span>
+    <span>Content Marketing</span><span>•</span><span>SMM</span><span>•</span>
+    <span>Performance Marketing</span><span>•</span><span>Target</span><span>•</span>
+  </div>
+</div>
+
+<section class="results">
+  <div class="wrap">
+    <div class="kicker">01 — Selected impact</div>
+    <div class="section-title" style="color:#fff">Marketing faqat kontent emas.<br>Natija ham muhim.</div>
+    <div class="result-list">
+      <div class="result"><div class="result-label">Hilol Med · Views</div><div class="result-number">239K<small>+</small></div></div>
+      <div class="result"><div class="result-label">Marketing Maximum · Views</div><div class="result-number">322K<small>+</small></div></div>
+      <div class="result"><div class="result-label">Ustoz Akademiyasi · Views</div><div class="result-number">5.4M</div></div>
+      <div class="result"><div class="result-label">Ibtido Ta’lim · Leads</div><div class="result-number">754</div></div>
+      <div class="result"><div class="result-label">Ibtido Ta’lim · CPL</div><div class="result-number">$0.22</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head" style="padding-top:110px">
+      <div>
+        <div class="kicker">02 — Selected projects</div>
+        <h2 class="section-title">Loyihalar.<br>Jarayon. Natija.</h2>
+      </div>
+      <p class="section-intro">
+        Kontent, SMM va Performance Marketing’ni birlashtirgan loyihalardan tanlangan ishlar. Hilol Med — 2026-yildagi eng uzoq davom etgan asosiy loyihalardan biri.
+      </p>
+    </div>
+
+    <article class="project hilol">
+      <div class="project-meta">
+        <div class="project-no">01 / 10</div>
+        <h3 class="project-name">Hilol<br>Med</h3>
+        <p class="project-service">Content Manager · SMM · Content Production</p>
+        <span class="project-tag">Healthcare Content</span>
+      </div>
+      <div class="project-stage">
+        <div class="hilol-gallery">
+          <img src="assets/hilol-building.jpg" alt="Hilol Med building">
+          <img src="assets/hilol-profile.png" alt="Hilol Med Instagram profile">
+          <img src="assets/hilol-youtube.png" alt="Hilol Med YouTube analytics">
+        </div>
+        <div class="project-copy"><strong>7+ oy · Content & SMM</strong><p>Kontent strategiyasi, Reels va Stories, YouTube, shooting jarayonlari, ekspert kontenti va auditoriya pain-pointlariga asoslangan rubrikalar ustida ishladim.</p></div>
+      </div>
+    </article>
+
+    <article class="project mm">
+      <div class="project-meta">
+        <div class="project-no">02 / 10</div>
+        <h3 class="project-name">Marketing<br>Maximum</h3>
+        <p class="project-service">SMM · Content · Profile Packaging</p>
+        <span class="project-tag">Transformation</span>
+      </div>
+      <div class="project-stage">
+        <div class="dual">
+          <img src="assets/mm-before.png" alt="Marketing Maximum oldingi holati">
+          <img src="assets/mm-profile.png" alt="Marketing Maximum keyingi holati">
+        </div>
+        <div class="project-copy"><strong>Before → After · 322K+ views</strong><p>Profil upakovkasi, 3 xil dizayn stilistikasi, Highlights, Stories, podcastlardan Reels va o‘quvchilar natijalariga asoslangan kontent tizimi ishlab chiqildi.</p></div>
+      </div>
+    </article>
+
+    <article class="project ustoz">
+      <div class="project-meta">
+        <div class="project-no">03 / 10</div>
+        <h3 class="project-name">Ustoz<br>Akademiyasi</h3>
+        <p class="project-service">Content Strategy · SMM</p>
+        <span class="project-tag">Organic Growth</span>
+      </div>
+      <div class="project-stage">
+        <img class="main-img" src="assets/ustoz-reel.png" alt="Ustoz Akademiyasi Reels">
+        <div class="project-copy"><strong>5.4M views</strong><p>Kontent yo‘nalishi, rubrikalar va auditoriya uchun foydali formatlar qayta ishlab chiqildi.</p></div>
+      </div>
+    </article>
+
+    <article class="project engora">
+      <div class="project-meta">
+        <div class="project-no">04 / 10</div>
+        <h3 class="project-name">Engora</h3>
+        <p class="project-service">Content Manager · SMM</p>
+        <span class="project-tag">0 → 1,006</span>
+      </div>
+      <div class="project-stage">
+        <div class="dual">
+          <img src="assets/engora-before.png" alt="Engora oldingi holati">
+          <img src="assets/engora-after.png" alt="Engora keyingi holati">
+        </div>
+        <div class="project-copy"><strong>0 → 1,006</strong><p>Business profile, customer profile, competitor analysis, content plan va lead magnetlar bilan yangi kontent yo‘nalishi yaratildi.</p></div>
+      </div>
+    </article>
+
+    <article class="project mux">
+      <div class="project-meta">
+        <div class="project-no">05 / 10</div>
+        <h3 class="project-name">Muxsinzada<br>Perfumes</h3>
+        <p class="project-service">Content Strategy · SMM</p>
+        <span class="project-tag">Creative Direction</span>
+      </div>
+      <div class="project-stage">
+        <img class="main-img" src="assets/muxsinzada.png" alt="Muxsinzada Perfumes">
+        <div class="project-copy"><strong>Creative content system</strong><p>Competitor analysis, values-aligned scripts, content plan, Stories va yangi formatlar ustida ishlash.</p></div>
+      </div>
+    </article>
+
+    <article class="project zetric">
+      <div class="project-meta">
+        <div class="project-no">06 / 10</div>
+        <h3 class="project-name">Zetric</h3>
+        <p class="project-service">Content Manager · SMM</p>
+        <span class="project-tag">B2B Content</span>
+      </div>
+      <div class="project-stage">
+        <img class="main-img" src="assets/zetrik.png" alt="Zetric production content">
+        <div class="project-copy"><strong>Production → Content</strong><p>Kontent yo‘nalishi yangilandi, rubrikalar, lead magnetlar va ishlab chiqarish jarayonlarini ko‘rsatadigan formatlar yaratildi.</p></div>
+      </div>
+    </article>
+
+    <article class="project iqibla">
+      <div class="project-meta">
+        <div class="project-no">07 / 10</div>
+        <h3 class="project-name">IQibla</h3>
+        <p class="project-service">SMM · Content · Product Marketing</p>
+        <span class="project-tag">Product Content</span>
+      </div>
+      <div class="project-stage">
+        <div class="stage-collage">
+          <img src="assets/iqibla.png" alt="IQibla product content">
+          <img src="assets/iqibla-carousel.png" alt="IQibla carousel">
+        </div>
+        <div class="project-copy"><strong>Product → Content</strong><p>Mahsulot xususiyatlarini auditoriyaga sodda yetkazadigan carousel, product creative va shooting jarayonlari ishlab chiqildi.</p></div>
+      </div>
+    </article>
+
+    <article class="project zamona">
+      <div class="project-meta">
+        <div class="project-no">08 / 10</div>
+        <h3 class="project-name">Zamona<br>To‘yxonasi</h3>
+        <p class="project-service">Target · Lead Generation</p>
+        <span class="project-tag">Performance</span>
+      </div>
+      <div class="project-stage">
+        <img class="main-img" src="assets/zamona.png" alt="Zamona To'yxonasi">
+        <div class="project-copy"><strong>Lead Generation</strong><p>Offer va target creative’lari bilan reklama kampaniyalarini boshqarish va lead oqimini optimizatsiya qilish.</p></div>
+      </div>
+    </article>
+
+    <article class="project water">
+      <div class="project-meta">
+        <div class="project-no">09 / 10</div>
+        <h3 class="project-name">Suv filtri<br>loyihasi</h3>
+        <p class="project-service">SMM · Target · Performance</p>
+        <span class="project-tag">Sales System</span>
+      </div>
+      <div class="project-stage">
+        <div class="metric-stage">
+          <div class="metric-box"><b>102+</b><span>1-oydagi sotuvlar</span></div>
+          <div class="metric-box light"><b>693</b><span>murojaatlar</span></div>
+          <div class="metric-box light"><b>43.27</b><span>ROAS</span></div>
+          <div class="metric-box"><b>$436</b><span>Target spend</span></div>
+        </div>
+        <div class="project-copy"><strong>Performance + Content</strong><p>Offer, target creative, product benefits, reviews va auditoriya pain-pointlariga asoslangan Reels orqali savdo jarayoni kuchaytirildi.</p></div>
+      </div>
+    </article>
+
+    <article class="project ibtido">
+      <div class="project-meta">
+        <div class="project-no">10 / 10</div>
+        <h3 class="project-name">Ibtido<br>Ta’lim</h3>
+        <p class="project-service">Target · Lead Generation</p>
+        <span class="project-tag">Ads</span>
+      </div>
+      <div class="project-stage">
+        <img class="main-img" src="assets/ibtido-ads.png" alt="Ibtido Ta'lim Ads Manager">
+        <div class="project-copy"><strong>754 leads · $0.22 CPL</strong><p>Target-only loyiha. Audience, creative va offer testlari orqali lead generation kampaniyasi ishga tushirildi.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap section">
+    <div class="section-head">
+      <div>
+        <div class="kicker">03 — About</div>
+        <h2 class="section-title">Marketingdagi yo‘lim<br>qanday boshlandi?</h2>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Marketingdagi yo‘lim 2020-yilda bu sohaga qiziqishimdan boshlandi. 2021-yil oxirida esa bu qiziqishni professional yo‘nalishga aylantirish uchun Najot Ta’lim’da SMM Pro kursida o‘qishni boshladim.</p>
+        <p>2022-yilda ta’limni yakunlab, Otlichno o‘quv markazida faoliyatimni boshladim. Dastlab Account Manager sifatida ishladim, keyinchalik kontent yo‘nalishida ham faoliyat olib bordim.</p>
+        <p>2024-yilda ScholarHUB loyihasida marketingning kontent va SMM qismini mustaqil ravishda olib bordim. Keyinchalik marketingga bo‘lgan qiziqishimni Performance Marketing yo‘nalishida ham rivojlantirishga qaror qildim.</p>
+        <p>2025-yilda Mohir Marketing’da Project Manager, SMM va Target yo‘nalishlarida ishladim. 2026-yilda esa Obsess Marketing jamoasida faoliyat olib, marketing bo‘yicha tajribamni yanada kengaytirdim.</p>
+        <p>Bugungi kunda asosiy fokusim — Kontent, SMM va Performance Marketing’ni birlashtirib, bizneslar uchun tizimli marketing jarayonlarini qurish.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="t-row"><div class="t-year">2026</div><div><h3>Obsess Marketing</h3><p>Content Manager · Marketing projects</p></div></div>
+        <div class="t-row"><div class="t-year">2025–2026</div><div><h3>Mohir Marketing</h3><p>Project Manager · SMM · Target</p></div></div>
+        <div class="t-row"><div class="t-year">2024–2025</div><div><h3>ScholarHUB</h3><p>SMM · Content</p></div></div>
+        <div class="t-row"><div class="t-year">2022–2023</div><div><h3>Otlichno</h3><p>Account Manager → Content Manager</p></div></div>
+      </div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-grid">
+        <div>
+          <div class="kicker">Education</div>
+          <h2 class="section-title" style="font-size:clamp(35px,4vw,58px)">Ta’lim va<br>professional rivojlanish</h2>
+          <p class="section-intro" style="margin-top:25px">Formal ta’lim va marketing bo‘yicha amaliy kurslar.</p>
+        </div>
+        <div>
+          <ul class="edu-list">
+            <li>Toshkent Axborot Texnologiyalari Universiteti<span>Iqtisodiyot va menejment · 2024</span></li>
+            <li>Najot Ta’lim<span>SMM Pro kursi</span></li>
+            <li>Xayot Sharapov<span>Target Pro kursi</span></li>
+            <li>Mikhail Timochko<span>Kontent va Zapusk</span></li>
+            <li>Danil Matukhno<span>Zapusk · Product</span></li>
+            <li>Aziz Abdumajitov<span>Performance Marketing + Media Production</span></li>
+            <li>Aziz Axtamov<span>Tujjor Akademiyasi · Digital Marketolog</span></li>
+            <li>Altair Abduraxmonov<span>Kreativ va Strategik Kontent</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker">04 — Contact</div>
+    <h2>Birgalikda<br><span>ishlaymiz.</span></h2>
+    <div class="contact-bottom">
+      <p>Marketing loyihangiz uchun Content, SMM yoki Performance Marketing yo‘nalishida hamkorlik qilishni istasangiz, bog‘lanishingiz mumkin.</p>
+      <a class="email" href="mailto:hello@kamronbek.uz">hello@kamronbek.uz ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kamronbek Mamajonov</span>
+    <span>Digital Marketolog · Tashkent, Uzbekistan</span>
+  </div>
+</footer>
+
+<script>
+const cursor=document.querySelector('.cursor');
+window.addEventListener('mousemove',e=>{
+  cursor.style.left=e.clientX+'px';
+  cursor.style.top=e.clientY+'px';
+});
+document.querySelectorAll('a,.btn,.menu-btn').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='34px';cursor.style.height='34px'});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='18px';cursor.style.height='18px'});
+});
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  document.querySelector('.progress').style.width=(window.scrollY/h*100)+'%';
+});
+</script>
+</body>
+</html>
