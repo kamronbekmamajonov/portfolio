@@ -88,7 +88,6 @@
       display: block;
     }
 
-    /* Container Utility */
     .container {
       width: 100%;
       max-width: 1240px;
@@ -326,7 +325,6 @@
       color: var(--ink);
     }
 
-    /* Mobile Drawer */
     .mobile-menu {
       display: none;
       position: fixed;
@@ -374,7 +372,7 @@
     }
 
     /* ==========================================================================
-       HERO SECTION
+       HERO SECTION — CLEAN PORTRAIT DISPLAY (NO CLUTTER / NO FLOATING BADGES)
        ========================================================================== */
     .hero {
       position: relative;
@@ -448,7 +446,6 @@
       margin-bottom: 40px;
     }
 
-    /* Hero Quick KPI Ribbon */
     .hero-stats-ribbon {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -476,7 +473,7 @@
       margin-top: 4px;
     }
 
-    /* Hero Portrait / Showcase Card */
+    /* Pure, Clean Portrait Showcase Card (No floating badges!) */
     .hero-card-showcase {
       position: relative;
     }
@@ -512,59 +509,6 @@
       transform: scale(1.02);
     }
 
-    /* Floating badges */
-    .floating-badge {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      border-radius: var(--radius-md);
-      padding: 12px 16px;
-      box-shadow: var(--shadow-lg);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 10;
-    }
-
-    .floating-badge.badge-top {
-      top: 32px;
-      right: -15px;
-    }
-
-    .floating-badge.badge-bottom {
-      bottom: 24px;
-      left: -15px;
-    }
-
-    .floating-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-
-    .floating-icon.blue { background: var(--blue-subtle); color: var(--blue-primary); }
-    .floating-icon.green { background: var(--emerald-subtle); color: var(--emerald); }
-
-    .floating-text .badge-val {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.15rem;
-      line-height: 1.1;
-      color: var(--ink);
-    }
-
-    .floating-text .badge-lbl {
-      font-size: 0.75rem;
-      color: var(--ink-subtle);
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
     .hero-fallback-avatar {
       width: 100%;
       height: 100%;
@@ -594,7 +538,7 @@
     }
 
     /* ==========================================================================
-       SECTION 01: RAQAMLAR GAPIRADI (METRICS DASHBOARD)
+       SECTION 01: RAQAMLAR GAPIRADI
        ========================================================================== */
     .section-metrics {
       padding: clamp(70px, 12vh, 120px) 0;
@@ -663,9 +607,7 @@
       color: var(--blue-primary);
     }
 
-    .metric-number-wrap {
-      margin-bottom: 12px;
-    }
+    .metric-number-wrap { margin-bottom: 12px; }
 
     .metric-val {
       font-family: var(--font-display);
@@ -676,9 +618,7 @@
       color: var(--ink);
     }
 
-    .metric-card.featured .metric-val {
-      color: var(--blue-primary);
-    }
+    .metric-card.featured .metric-val { color: var(--blue-primary); }
 
     .metric-unit {
       font-size: 1rem;
@@ -815,7 +755,7 @@
     }
 
     /* ==========================================================================
-       SECTION 03: CASE STUDIES (10 TA LOYIHA — BRIEF TARTIBI)
+       SECTION 03: CASE STUDIES (10 TA LOYIHA)
        ========================================================================== */
     .section-projects {
       padding: clamp(70px, 12vh, 120px) 0;
@@ -905,7 +845,6 @@
       background: linear-gradient(135deg, #eefaf0 0%, #dcfce7 100%);
     }
 
-    /* Mockup Display Card */
     .mockup-display {
       position: relative;
       width: 100%;
@@ -919,9 +858,7 @@
       cursor: pointer;
     }
 
-    .case-card:hover .mockup-display {
-      transform: scale(1.02);
-    }
+    .case-card:hover .mockup-display { transform: scale(1.02); }
 
     .mockup-header {
       background: #f8fafc;
@@ -966,7 +903,7 @@
       display: block;
     }
 
-    /* Hilol Med Multi-Asset Showcase inside Featured Case */
+    /* Hilol Med Multi-Asset Collage */
     .featured-multi-assets {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1442,9 +1379,7 @@
       transition: transform 0.3s var(--ease);
     }
 
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg);
-    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
 
     .faq-answer {
       display: none;
@@ -1809,7 +1744,6 @@
       .timeline-year { text-align: left; padding-right: 0; }
       .timeline-year::after { left: -22px; right: auto; }
       .comparison-container { height: 340px; }
-      .floating-badge { display: none; }
       .featured-multi-assets { grid-template-columns: 1fr; }
       .f-asset-card.span2 { grid-column: span 1; }
     }
@@ -1864,7 +1798,7 @@
   <main id="top">
 
     <!-- ======================================================================
-         HERO SECTION
+         HERO SECTION — CLEAN PORTRAIT DISPLAY (NO CLUTTER / NO FLOATING BADGES)
          ====================================================================== -->
     <section class="hero">
       <div class="container">
@@ -1908,28 +1842,12 @@
             </div>
           </div>
 
+          <!-- Clean Portrait Card (Floating badges removed as requested) -->
           <div class="hero-card-showcase">
             <div class="hero-card-frame">
               <div class="hero-img-container">
-                <img src="assets/portrait.png" alt="Kamronbek Mamajonov" onerror="handleImageFallback(this, 'Kamronbek Mamajonov', 'Digital Marketolog', 'portrait')">
+                <img src="portrait.png" data-file="portrait.png" alt="Kamronbek Mamajonov" onerror="handleImageFallback(this, 'Kamronbek Mamajonov', 'Digital Marketolog', 'portrait')">
               </div>
-
-              <div class="floating-badge badge-top">
-                <div class="floating-icon blue">⚡</div>
-                <div class="floating-text">
-                  <div class="badge-val">5.4M Views</div>
-                  <div class="badge-lbl">Ustoz Akademiyasi</div>
-                </div>
-              </div>
-
-              <div class="floating-badge badge-bottom">
-                <div class="floating-icon green">🎯</div>
-                <div class="floating-text">
-                  <div class="badge-val">754 Leads</div>
-                  <div class="badge-lbl">Ibtido Ta’lim ($0.22 CPL)</div>
-                </div>
-              </div>
-
             </div>
           </div>
 
@@ -1938,7 +1856,7 @@
     </section>
 
     <!-- ======================================================================
-         SECTION 01: RAQAMLAR GAPIRADI (METRICS DASHBOARD)
+         SECTION 01: RAQAMLAR GAPIRADI
          ====================================================================== -->
     <section class="section-metrics" id="results">
       <div class="container">
@@ -2094,9 +2012,9 @@
       </div>
     </section>
 
-    <!-- ======================================================================
-         SECTION 02: CAPABILITIES / NIMA QILAMAN?
-         ====================================================================== -->
+    <!-- ==========================================================================
+       SECTION 02: CAPABILITIES / NIMA QILAMAN?
+       ========================================================================== */
     <section class="section-capabilities" id="capabilities">
       <div class="container">
         
@@ -2220,7 +2138,7 @@
     </section>
 
     <!-- ======================================================================
-         SECTION 03: CASE STUDIES (10 TA LOYIHA — BRIEF TARTIBIDA)
+         SECTION 03: CASE STUDIES (10 TA LOYIHA)
          ====================================================================== -->
     <section class="section-projects" id="work">
       <div class="container">
@@ -2233,7 +2151,6 @@
           </p>
         </div>
 
-        <!-- Filter Buttons -->
         <div class="filter-wrapper">
           <button class="filter-btn active" data-filter="all">Barchasi (10)</button>
           <button class="filter-btn" data-filter="smm">SMM & Content (5)</button>
@@ -2241,31 +2158,30 @@
           <button class="filter-btn" data-filter="performance">Performance & B2B (2)</button>
         </div>
 
-        <!-- 10 Case Studies Grid -->
         <div class="cases-grid">
 
           <!-- CASE 01: Hilol Med (Asosiy va 1-o‘rinda) -->
           <article class="case-card featured-case" data-category="smm">
             <div class="case-visual-frame">
               <div class="featured-multi-assets">
-                <div class="f-asset-card span2" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'assets/hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
-                  <img src="assets/hilol-reel.png" alt="Hilol Med Reels" onerror="handleImageFallback(this, 'Hilol Med', '239,099 Views Reels', 'reel')">
+                <div class="f-asset-card span2" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
+                  <img src="hilol-reel.png" data-file="hilol-reel.png" alt="Hilol Med Reels" onerror="handleImageFallback(this, 'Hilol Med', '239,099 Views Reels', 'reel')">
                   <div class="f-asset-pill"><span>Tanlangan Reels</span><span>239,099 views 🔍</span></div>
                 </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Instagram Profili', 'assets/hilol-profile.png', '63K → 100K Obunachi', '7 oy davomida qadoqlash, Stories va organik + target o‘sishi')">
-                  <img src="assets/hilol-profile.png" alt="Hilol Med Instagram" onerror="handleImageFallback(this, 'Hilol Med', 'Instagram 100K', 'profile')">
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Instagram Profili', 'hilol-profile.png', '63K → 100K Obunachi', '7 oy davomida qadoqlash, Stories va organik + target o‘sishi')">
+                  <img src="hilol-profile.png" data-file="hilol-profile.png" alt="Hilol Med Instagram" onerror="handleImageFallback(this, 'Hilol Med', 'Instagram 100K', 'profile')">
                   <div class="f-asset-pill"><span>Instagram 100K</span><span>🔍</span></div>
                 </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — YouTube Analytics', 'assets/hilol-youtube.png', '10K+ Views & Shorts 600K', 'Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600-1,200)')">
-                  <img src="assets/hilol-youtube.png" alt="Hilol Med YouTube" onerror="handleImageFallback(this, 'Hilol Med', 'YouTube Analytics', 'youtube')">
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — YouTube Analytics', 'hilol-youtube.png', '10K+ Views & Shorts 600K', 'Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600-1,200)')">
+                  <img src="hilol-youtube.png" data-file="hilol-youtube.png" alt="Hilol Med YouTube" onerror="handleImageFallback(this, 'Hilol Med', 'YouTube Analytics', 'youtube')">
                   <div class="f-asset-pill"><span>YouTube 10K+</span><span>🔍</span></div>
                 </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Shifokor Jarayoni', 'assets/hilol-doctor-process.png', 'Shooting & Ekspert Jarayoni', 'Shifokorlar bilan ishonchli vizual va video production')">
-                  <img src="assets/hilol-doctor-process.png" alt="Hilol Med Doctor" onerror="handleImageFallback(this, 'Hilol Med', 'Doctor Process', 'process')">
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Shifokor Jarayoni', 'hilol-doctor-process.png', 'Shooting & Ekspert Jarayoni', 'Shifokorlar bilan ishonchli vizual va video production')">
+                  <img src="hilol-doctor-process.png" data-file="hilol-doctor-process.png" alt="Hilol Med Doctor" onerror="handleImageFallback(this, 'Hilol Med', 'Doctor Process', 'process')">
                   <div class="f-asset-pill"><span>Ekspert jarayoni</span><span>🔍</span></div>
                 </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Klinika Binosi', 'assets/hilol-building.jpg', 'Klinika Binosi', 'Toshkentdagi zamonaviy ko‘p tarmoqli klinika')">
-                  <img src="assets/hilol-building.jpg" alt="Hilol Med Binosi" onerror="handleImageFallback(this, 'Hilol Med', 'Klinika Binosi', 'building')">
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Klinika Binosi', 'hilol-building.jpg', 'Klinika Binosi', 'Toshkentdagi zamonaviy ko‘p tarmoqli klinika')">
+                  <img src="hilol-building.jpg" data-file="hilol-building.jpg" alt="Hilol Med Binosi" onerror="handleImageFallback(this, 'Hilol Med', 'Klinika Binosi', 'building')">
                   <div class="f-asset-pill"><span>Klinika binosi</span><span>🔍</span></div>
                 </div>
               </div>
@@ -2291,7 +2207,7 @@
                   <strong>239,099</strong>
                   <span>Tanlangan Reels Ko‘rishi</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'assets/hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
+                <button class="case-zoom-btn" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
                   Kattaroq ko‘rish 🔍
                 </button>
               </div>
@@ -2301,7 +2217,7 @@
           <!-- CASE 02: Marketing Maximum -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Marketing Maximum', 'assets/mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
+              <div class="mockup-display" onclick="openLightbox('Marketing Maximum', 'mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2309,7 +2225,7 @@
                   <span class="mockup-header-title">Reels Analytics · Marketing Maximum</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/mm-reel.png" alt="Marketing Maximum Reel" onerror="handleImageFallback(this, 'Marketing Maximum', '322K Views Reel', 'reel')">
+                  <img src="mm-reel.png" data-file="mm-reel.png" alt="Marketing Maximum Reel" onerror="handleImageFallback(this, 'Marketing Maximum', '322K Views Reel', 'reel')">
                 </div>
               </div>
             </div>
@@ -2329,7 +2245,7 @@
                   <strong>322K Views</strong>
                   <span>Selected Expert Reel</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Marketing Maximum', 'assets/mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
+                <button class="case-zoom-btn" onclick="openLightbox('Marketing Maximum', 'mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2339,7 +2255,7 @@
           <!-- CASE 03: Ustoz Akademiyasi -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Ustoz Akademiyasi', 'assets/ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
+              <div class="mockup-display" onclick="openLightbox('Ustoz Akademiyasi', 'ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2347,7 +2263,7 @@
                   <span class="mockup-header-title">Instagram Reels · Ustoz Akademiyasi</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/ustoz-reel.png" alt="Ustoz Akademiyasi Reels" onerror="handleImageFallback(this, 'Ustoz Akademiyasi', '5.4M Views Reel', 'reel')">
+                  <img src="ustoz-reel.png" data-file="ustoz-reel.png" alt="Ustoz Akademiyasi Reels" onerror="handleImageFallback(this, 'Ustoz Akademiyasi', '5.4M Views Reel', 'reel')">
                 </div>
               </div>
             </div>
@@ -2367,7 +2283,7 @@
                   <strong>5.4M</strong>
                   <span>Asosiy Reels Qamrovi</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Ustoz Akademiyasi', 'assets/ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
+                <button class="case-zoom-btn" onclick="openLightbox('Ustoz Akademiyasi', 'ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2377,7 +2293,7 @@
           <!-- CASE 04: Engora -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Engora', 'assets/engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
+              <div class="mockup-display" onclick="openLightbox('Engora', 'engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2385,7 +2301,7 @@
                   <span class="mockup-header-title">Profile Growth · Engora</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/engora-after.png" alt="Engora After Profile" onerror="handleImageFallback(this, 'Engora', '1,006 Followers (After)', 'profile')">
+                  <img src="engora-after.png" data-file="engora-after.png" alt="Engora After Profile" onerror="handleImageFallback(this, 'Engora', '1,006 Followers (After)', 'profile')">
                 </div>
               </div>
             </div>
@@ -2405,7 +2321,7 @@
                   <strong>0 → 1,006</strong>
                   <span>Loyihada Noldan O‘sish</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Engora', 'assets/engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
+                <button class="case-zoom-btn" onclick="openLightbox('Engora', 'engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2415,7 +2331,7 @@
           <!-- CASE 05: Muxsinzada Perfumes -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Muxsinzada Perfumes', 'assets/muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
+              <div class="mockup-display" onclick="openLightbox('Muxsinzada Perfumes', 'muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2423,7 +2339,7 @@
                   <span class="mockup-header-title">Brand Aesthetics · Muxsinzada</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/muxsinzada.png" alt="Muxsinzada Perfumes Profile" onerror="handleImageFallback(this, 'Muxsinzada Perfumes', 'Brand Profile & Aesthetics', 'profile')">
+                  <img src="muxsinzada.png" data-file="muxsinzada.png" alt="Muxsinzada Perfumes Profile" onerror="handleImageFallback(this, 'Muxsinzada Perfumes', 'Brand Profile & Aesthetics', 'profile')">
                 </div>
               </div>
             </div>
@@ -2443,7 +2359,7 @@
                   <strong>01</strong>
                   <span>Content Direction & Aesthetics</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Muxsinzada Perfumes', 'assets/muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
+                <button class="case-zoom-btn" onclick="openLightbox('Muxsinzada Perfumes', 'muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2453,7 +2369,7 @@
           <!-- CASE 06: Zetric -->
           <article class="case-card" data-category="performance">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Zetric Industrial', 'assets/zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
+              <div class="mockup-display" onclick="openLightbox('Zetric Industrial', 'zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2461,7 +2377,7 @@
                   <span class="mockup-header-title">B2B Production · Zetric</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/zetrik.png" alt="Zetric Instagram" onerror="handleImageFallback(this, 'Zetric Industrial', 'B2B Production Content', 'profile')">
+                  <img src="zetrik.png" data-file="zetrik.png" alt="Zetric Instagram" onerror="handleImageFallback(this, 'Zetric Industrial', 'B2B Production Content', 'profile')">
                 </div>
               </div>
             </div>
@@ -2481,7 +2397,7 @@
                   <strong>1–2K / oy</strong>
                   <span>Target Bilan Birga O‘sish</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Zetric Industrial', 'assets/zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
+                <button class="case-zoom-btn" onclick="openLightbox('Zetric Industrial', 'zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2491,15 +2407,21 @@
           <!-- CASE 07: IQibla -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('IQibla Smart Devices', 'assets/iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
-                <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">Smart Devices · IQibla</span>
+              <div style="width:100%; display:flex; flex-direction:column; gap:12px;">
+                <div class="mockup-display" onclick="openLightbox('IQibla Smart Devices — Profil', 'iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
+                  <div class="mockup-header">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-header-title">Smart Devices · IQibla Profil 🔍</span>
+                  </div>
+                  <div class="mockup-body">
+                    <img src="iqibla.png" data-file="iqibla.png" alt="IQibla Profile" onerror="handleImageFallback(this, 'IQibla', '284K Profile Views', 'profile')">
+                  </div>
                 </div>
-                <div class="mockup-body">
-                  <img src="assets/iqibla.png" alt="IQibla Profile" onerror="handleImageFallback(this, 'IQibla', '284K Profile Views', 'profile')">
+                <div style="background:#ffffff; padding:10px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.08); display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:var(--shadow-sm);" onclick="openLightbox('IQibla — Mahsulot Karuseli', 'iqibla-carousel.png', 'Mahsulot Karuseli', 'Konversiyani oshiruvchi vizual karusel formati')">
+                  <span style="font-size:0.82rem; font-weight:700; color:var(--ink);">📱 Mahsulot Karusel Posti</span>
+                  <span style="font-size:0.75rem; font-weight:700; color:var(--blue-primary);">Ko‘rish 🔍</span>
                 </div>
               </div>
             </div>
@@ -2519,7 +2441,7 @@
                   <strong>284K</strong>
                   <span>30 Kunlik Profil Qamrovi</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('IQibla Smart Devices', 'assets/iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
+                <button class="case-zoom-btn" onclick="openLightbox('IQibla Smart Devices', 'iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2529,7 +2451,7 @@
           <!-- CASE 08: Zamona To‘yxonasi -->
           <article class="case-card" data-category="target">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Zamona To‘yxonasi', 'assets/zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
+              <div class="mockup-display" onclick="openLightbox('Zamona To‘yxonasi', 'zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2537,7 +2459,7 @@
                   <span class="mockup-header-title">HoReCa Target · Zamona</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/zamona.png" alt="Zamona To'yxonasi" onerror="handleImageFallback(this, 'Zamona To‘yxonasi', 'Targeting & Orders', 'profile')">
+                  <img src="zamona.png" data-file="zamona.png" alt="Zamona To'yxonasi" onerror="handleImageFallback(this, 'Zamona To‘yxonasi', 'Targeting & Orders', 'profile')">
                 </div>
               </div>
             </div>
@@ -2557,7 +2479,7 @@
                   <strong>10–15</strong>
                   <span>Kampaniyadagi Buyurtmalar</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Zamona To‘yxonasi', 'assets/zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
+                <button class="case-zoom-btn" onclick="openLightbox('Zamona To‘yxonasi', 'zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2567,7 +2489,7 @@
           <!-- CASE 09: Suv filtri loyihasi (NO EVORA NAME!) -->
           <article class="case-card" data-category="performance">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Suv filtri loyihasi', 'assets/water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
+              <div class="mockup-display" onclick="openLightbox('Suv filtri loyihasi', 'water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
                 <div class="mockup-header">
                   <span class="mockup-dot red"></span>
                   <span class="mockup-dot yellow"></span>
@@ -2575,7 +2497,7 @@
                   <span class="mockup-header-title">E-commerce Funnel · Suv Filtri</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="assets/water.png" alt="Suv filtri loyihasi" onerror="handleImageFallback(this, 'Suv filtri loyihasi', '102+ Sales / $436.39 Spend', 'sales')">
+                  <img src="water.png" data-file="water.png" alt="Suv filtri loyihasi" onerror="handleImageFallback(this, 'Suv filtri loyihasi', '102+ Sales / $436.39 Spend', 'sales')">
                 </div>
               </div>
             </div>
@@ -2598,7 +2520,7 @@
                   <strong>102+</strong>
                   <span>1-Oydagi To‘g‘ridan-To‘g‘ri Sotuv</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Suv filtri loyihasi', 'assets/water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
+                <button class="case-zoom-btn" onclick="openLightbox('Suv filtri loyihasi', 'water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2608,15 +2530,21 @@
           <!-- CASE 10: Ibtido Ta’lim -->
           <article class="case-card" data-category="target">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'assets/ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
-                <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">Meta Ads Manager · Ibtido Ta’lim</span>
+              <div style="width:100%; display:flex; flex-direction:column; gap:12px;">
+                <div class="mockup-display" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
+                  <div class="mockup-header">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-header-title">Meta Ads Manager · Ibtido Ta’lim 🔍</span>
+                  </div>
+                  <div class="mockup-body">
+                    <img src="ibtido-ads.png" data-file="ibtido-ads.png" alt="Ibtido Ta'lim Ads" onerror="handleImageFallback(this, 'Ibtido Ta’lim', '754 Leads @ $0.22 CPL', 'ads')">
+                  </div>
                 </div>
-                <div class="mockup-body">
-                  <img src="assets/ibtido-ads.png" alt="Ibtido Ta'lim Ads" onerror="handleImageFallback(this, 'Ibtido Ta’lim', '754 Leads @ $0.22 CPL', 'ads')">
+                <div style="background:#ffffff; padding:10px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.08); display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:var(--shadow-sm);" onclick="openLightbox('Ibtido Ta’lim — Instagram Profili', 'ibtido-profile.png', 'Instagram Profili', 'Reklama orqali kelgan auditoriyani qabul qiluvchi sahifa')">
+                  <span style="font-size:0.82rem; font-weight:700; color:var(--ink);">📸 Instagram Sahifasi</span>
+                  <span style="font-size:0.75rem; font-weight:700; color:var(--blue-primary);">Ko‘rish 🔍</span>
                 </div>
               </div>
             </div>
@@ -2636,7 +2564,7 @@
                   <strong>754 Leads</strong>
                   <span>$0.22 O‘rtacha CPL Narxi</span>
                 </div>
-                <button class="case-zoom-btn" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'assets/ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
+                <button class="case-zoom-btn" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
                   Ko‘rish 🔍
                 </button>
               </div>
@@ -2670,11 +2598,11 @@
 
           <div class="comparison-container" id="comparisonSlider">
             <div class="comparison-slide slide-before">
-              <img id="baBeforeImg" src="assets/mm-before.png" alt="Before profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Avvalgi Profil (500 sub)', 'profile')">
+              <img id="baBeforeImg" src="mm-before.png" data-file="mm-before.png" alt="Before profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Avvalgi Profil (500 sub)', 'profile')">
             </div>
 
             <div class="comparison-slide slide-after" id="afterSlide">
-              <img id="baAfterImg" src="assets/mm-profile.png" alt="After profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Yangi Profil (2,500+ sub)', 'profile')">
+              <img id="baAfterImg" src="mm-profile.png" data-file="mm-profile.png" alt="After profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Yangi Profil (2,500+ sub)', 'profile')">
             </div>
 
             <span class="comparison-label label-before" id="baLabelBefore">Eski Holat</span>
@@ -3037,7 +2965,7 @@
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
       </div>
       <div class="lightbox-body">
-        <img id="lightboxImg" src="" alt="Case Proof">
+        <img id="lightboxImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Case Proof">
         <div class="lightbox-details">
           <strong id="lightboxStat">Statistika</strong>
           <p id="lightboxDesc">Tavsif</p>
@@ -3160,8 +3088,10 @@
       if (project === 'mm') {
         tabMM.classList.add('active');
         tabEngora.classList.remove('active');
-        beforeImg.src = 'assets/mm-before.png';
-        afterImg.src = 'assets/mm-profile.png';
+        beforeImg.src = 'mm-before.png';
+        beforeImg.setAttribute('data-file', 'mm-before.png');
+        afterImg.src = 'mm-profile.png';
+        afterImg.setAttribute('data-file', 'mm-profile.png');
         lBefore.innerText = 'Marketing Max · Avval (500)';
         lAfter.innerText = 'Marketing Max · Yangi (2,500+)';
         capTitle.innerText = 'Marketing Maximum Profil Transformatsiyasi';
@@ -3169,8 +3099,10 @@
       } else {
         tabEngora.classList.add('active');
         tabMM.classList.remove('active');
-        beforeImg.src = 'assets/engora-before.png';
-        afterImg.src = 'assets/engora-after.png';
+        beforeImg.src = 'engora-before.png';
+        beforeImg.setAttribute('data-file', 'engora-before.png');
+        afterImg.src = 'engora-after.png';
+        afterImg.setAttribute('data-file', 'engora-after.png');
         lBefore.innerText = 'Engora · Avval (0 sub)';
         lAfter.innerText = 'Engora · Yangi (1,006 sub)';
         capTitle.innerText = 'Engora Profil Transformatsiyasi';
@@ -3194,10 +3126,10 @@
 
     // 7. Lightbox Zoom
     function openLightbox(title, imgSrc, stat, desc) {
-      document.getElementById('lightboxTitle').innerText = title;
-      document.getElementById('lightboxImg').src = imgSrc;
-      document.getElementById('lightboxStat').innerText = stat;
-      document.getElementById('lightboxDesc').innerText = desc;
+      document.getElementById('lbTitle').innerText = title;
+      document.getElementById('lbImg').src = imgSrc;
+      document.getElementById('lbStat').innerText = stat;
+      document.getElementById('lbText').innerText = desc;
       document.getElementById('lightboxModal').classList.add('active');
     }
 
@@ -3235,8 +3167,18 @@
       }, 5000);
     }
 
-    // 10. Fallback SVG for images
+    // 10. Dual-Path Image Fallback: First tries assets/ if in root, then renders clean SVG
     function handleImageFallback(img, project, label, type) {
+      const originalFile = img.getAttribute('data-file') || img.src.split('/').pop().split('?')[0];
+      
+      // If currently trying root, attempt assets/ path next
+      if (!img.dataset.triedAssets && !img.src.includes('assets/')) {
+        img.dataset.triedAssets = "1";
+        img.src = 'assets/' + originalFile;
+        return;
+      }
+
+      // If both fail, render SVG mockup card so site never looks broken
       img.onerror = null;
       const colors = {
         reel: ['#2563eb', '#1d4ed8'],
