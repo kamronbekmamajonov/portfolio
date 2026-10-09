@@ -1,172 +1,3270 @@
 <!doctype html>
 <html lang="uz">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4f3ef">
-<meta name="description" content="Kamronbek Mamajonov — Digital Marketolog. Content, SMM, Target va Performance Marketing bo‘yicha portfolio.">
-<title>Kamronbek Mamajonov — Digital Marketolog</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#f4f3ef;--paper:#fbfaf7;--ink:#111214;--muted:#747570;--line:rgba(17,18,20,.12);--blue:#143cff;--blue2:#3657ff;--dark:#101114;--white:#fff;--pad:clamp(18px,3vw,52px);--ease:cubic-bezier(.2,.75,.15,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}img{max-width:100%;display:block}.mono{font-family:'Manrope',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:11px;font-weight:700}.serif{font-family:'Manrope',sans-serif}
-.cursor{position:fixed;z-index:1000;width:14px;height:14px;border:1px solid #111;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s,background .2s;display:none}.cursor.big{width:64px;height:64px;background:#fff;border-color:#fff}.progress{position:fixed;z-index:99;left:0;top:0;height:3px;width:0;background:var(--blue)}
-.nav{position:fixed;z-index:90;top:18px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;align-items:center;mix-blend-mode:multiply}.nav-logo{font-family:'Manrope';font-weight:800;font-size:17px;letter-spacing:-.04em}.nav-menu{display:flex;gap:8px;align-items:center}.nav-menu a{padding:10px 14px;border:1px solid transparent;border-radius:999px;font-size:12px;transition:.3s}.nav-menu a:hover{border-color:var(--line);background:rgba(255,255,255,.5)}
-.hero{min-height:100svh;position:relative;padding:110px var(--pad) 42px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.hero-top{display:flex;justify-content:space-between;align-items:flex-start}.hero-kicker{max-width:290px;line-height:1.45;color:var(--muted)}.hero-year{font-size:12px;color:var(--muted)}.hero-title{position:relative;z-index:2;margin:0;font-family:'Manrope';font-size:clamp(70px,14vw,220px);line-height:.78;letter-spacing:-.085em;font-weight:800;max-width:1150px}.hero-title span{display:block;overflow:hidden}.hero-title em{font-style:normal;color:transparent;-webkit-text-stroke:1px var(--ink)}.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:4}.role{font-family:'Manrope';font-size:clamp(22px,3vw,42px);font-weight:600;letter-spacing:-.05em}.hero-copy{max-width:480px;color:#444640;line-height:1.55}.hero-image{position:absolute;right:8%;top:16%;width:min(30vw,390px);height:min(65vh,610px);object-fit:cover;object-position:center top;filter:grayscale(1);mix-blend-mode:multiply;opacity:.95;transform:translateY(40px) rotate(2deg);animation:heroIn 1.2s var(--ease) forwards}.hero-image-wrap{position:absolute;right:5%;top:12%;width:min(34vw,450px);height:min(72vh,680px);border:1px solid var(--line);transform:rotate(2deg);overflow:hidden;background:#e8e7e2}.hero-image-wrap:after{content:'';position:absolute;inset:12px;border:1px solid rgba(255,255,255,.7);pointer-events:none}.hero-image-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1);mix-blend-mode:multiply}.hero-mark{position:absolute;right:3%;bottom:10%;width:110px;height:110px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-family:Manrope;font-size:10px;text-align:center;letter-spacing:.08em;animation:spin 16s linear infinite}.hero-mark:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--blue)}
-@keyframes heroIn{to{transform:translateY(0) rotate(2deg)}}@keyframes spin{to{transform:rotate(360deg)}}
-.intro{padding:13vh var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:8vw;border-top:1px solid var(--line)}.intro-big{font-family:Manrope;font-size:clamp(34px,5vw,74px);line-height:.98;letter-spacing:-.065em;font-weight:600;max-width:900px}.intro-text{max-width:560px;align-self:end;color:#555750;line-height:1.65;font-size:16px}.blue{color:var(--blue)}
-.results{background:var(--dark);color:var(--white);position:relative}.results-head{padding:120px var(--pad) 50px;display:flex;justify-content:space-between;align-items:end}.results-head h2{font-family:Manrope;font-size:clamp(42px,6vw,88px);line-height:.9;letter-spacing:-.07em;margin:0}.results-head p{max-width:260px;color:#9b9ca0;line-height:1.5}.result-stack{height:500vh;position:relative}.result-stage{position:sticky;top:0;height:100svh;display:flex;align-items:center;padding:var(--pad);overflow:hidden}.result-word{position:absolute;left:var(--pad);top:9%;font-family:Manrope;font-size:12px;letter-spacing:.12em;color:#76777c}.result-number{font-family:Manrope;font-size:clamp(86px,15vw,230px);font-weight:800;line-height:.78;letter-spacing:-.1em;position:relative;z-index:2;white-space:nowrap;transform:translateY(30px);transition:transform .8s var(--ease),opacity .8s}.result-unit{font-family:Manrope;font-size:clamp(17px,2vw,28px);letter-spacing:-.04em;margin-left:10px;color:#b9bbc1}.result-index{position:absolute;right:var(--pad);bottom:42px;font-size:12px;color:#85868b}.result-line{position:absolute;left:var(--pad);right:var(--pad);bottom:84px;height:1px;background:rgba(255,255,255,.14)}.result-blue{color:#5772ff}
-.capabilities{padding:15vh var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:8vw}.cap-title{font-family:Manrope;font-size:clamp(42px,6vw,90px);line-height:.86;letter-spacing:-.08em}.cap-list{border-top:1px solid var(--line)}.cap-item{display:grid;grid-template-columns:80px 1fr 80px;gap:20px;padding:27px 0;border-bottom:1px solid var(--line);align-items:center}.cap-item strong{font-family:Manrope;font-size:clamp(20px,2.2vw,32px);letter-spacing:-.05em}.cap-item span:last-child{text-align:right;color:var(--muted)}
-.projects{background:#e9e8e3}.projects-intro{padding:13vh var(--pad) 8vh;display:flex;justify-content:space-between;align-items:flex-end}.projects-intro h2{font-family:Manrope;font-size:clamp(60px,10vw,150px);line-height:.8;letter-spacing:-.09em;margin:0}.projects-intro p{max-width:320px;color:#5e605a;line-height:1.5}.case{min-height:180vh;position:relative}.case-sticky{height:100svh;position:sticky;top:0;overflow:hidden;display:grid;grid-template-columns:40% 60%;align-items:center;padding:var(--pad);gap:3vw}.case-bg{position:absolute;inset:0;background:var(--paper);z-index:0}.case-bg:after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(20,60,255,.09),transparent 30%)}.case-copy,.case-media{position:relative;z-index:2}.case-num{font-size:12px;color:var(--muted);margin-bottom:25px}.case-title{font-family:Manrope;font-size:clamp(45px,6vw,92px);line-height:.85;letter-spacing:-.08em;margin:0 0 24px}.case-type{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.case-desc{max-width:420px;color:#5d5f59;line-height:1.55;margin:25px 0}.case-result{display:flex;gap:30px;margin-top:34px;align-items:end}.case-result strong{font-family:Manrope;font-size:clamp(42px,5vw,78px);line-height:.8;letter-spacing:-.08em}.case-result small{color:var(--muted);font-size:11px;line-height:1.3;text-transform:uppercase;letter-spacing:.08em}.case-media{height:min(75vh,700px);display:flex;align-items:center;justify-content:center}.media-main{width:min(78%,620px);height:78%;object-fit:cover;box-shadow:0 25px 80px rgba(0,0,0,.14);transform:rotate(2deg);transition:transform 1s var(--ease)}.case:hover .media-main{transform:rotate(0) scale(1.025)}.media-small{position:absolute;width:27%;max-height:48%;object-fit:cover;right:4%;bottom:5%;box-shadow:0 20px 55px rgba(0,0,0,.18);transform:rotate(-5deg);border:7px solid #fff}.case-label{position:absolute;left:var(--pad);bottom:35px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#777}
-.case.dark .case-bg{background:#111216}.case.dark .case-title,.case.dark .case-num,.case.dark .case-desc{color:#fff}.case.dark .case-desc{color:#a9aab0}.case.dark .case-type{color:#6d82ff}.case.dark .case-label{color:#999}.case.blue-scene .case-bg{background:#e7f2ef}.case.gold-scene .case-bg{background:#e9e1d4}.case.blue-scene .media-main{box-shadow:0 25px 80px rgba(15,60,55,.18)}
-.before-after{padding:15vh var(--pad);background:var(--dark);color:#fff}.ba-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:55px}.ba-head h2{font-family:Manrope;font-size:clamp(45px,7vw,105px);line-height:.83;letter-spacing:-.09em;margin:0}.ba-head p{max-width:300px;color:#9b9ca0;line-height:1.5}.slider{position:relative;width:min(100%,1100px);margin:auto;aspect-ratio:16/9;overflow:hidden;background:#ddd}.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.slider .after{clip-path:inset(0 0 0 50%)}.slider-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4}.slider-line{position:absolute;top:0;bottom:0;left:50%;width:1px;background:#fff;z-index:3;pointer-events:none}.slider-knob{position:absolute;z-index:3;left:50%;top:50%;width:58px;height:58px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;transform:translate(-50%,-50%);font-size:18px;pointer-events:none}.ba-label{position:absolute;z-index:3;top:20px;padding:8px 11px;background:rgba(0,0,0,.55);font-size:10px;letter-spacing:.1em;text-transform:uppercase}.ba-before{left:20px}.ba-after{right:20px}
-.timeline{padding:15vh var(--pad);display:grid;grid-template-columns:1fr 2fr;gap:8vw}.timeline h2{font-family:Manrope;font-size:clamp(50px,7vw,100px);line-height:.82;letter-spacing:-.09em;margin:0}.timeline-list{border-top:1px solid var(--line)}.timeline-row{display:grid;grid-template-columns:120px 1fr;gap:25px;padding:34px 0;border-bottom:1px solid var(--line)}.timeline-year{font-family:Manrope;font-weight:700;color:var(--blue)}.timeline-row h3{font-family:Manrope;font-size:25px;margin:0 0 8px;letter-spacing:-.04em}.timeline-row p{margin:0;color:#676963;line-height:1.55}
-.education{padding:12vh var(--pad);background:#101114;color:#fff}.education h2{font-family:Manrope;font-size:clamp(48px,7vw,110px);line-height:.82;letter-spacing:-.09em;margin:0 0 70px}.edu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid #2b2c30}.edu{min-height:220px;padding:22px;border-right:1px solid #2b2c30;display:flex;flex-direction:column;justify-content:space-between}.edu:last-child{border-right:0}.edu b{font-family:Manrope;font-size:18px;letter-spacing:-.04em}.edu span{color:#888a91;font-size:11px}
-.contact{padding:15vh var(--pad) 60px;min-height:80vh;display:grid;grid-template-columns:1.2fr .8fr;gap:8vw}.contact h2{font-family:Manrope;font-size:clamp(60px,9vw,145px);line-height:.78;letter-spacing:-.1em;margin:0}.contact-copy{color:#656761;line-height:1.55;max-width:470px;margin-top:28px}.form{border-top:1px solid var(--line);margin-top:25px}.field{padding:18px 0;border-bottom:1px solid var(--line)}.field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#777;margin-bottom:8px}.field input,.field textarea{border:0;outline:0;background:transparent;width:100%;font-size:18px;color:var(--ink)}.field textarea{min-height:120px;resize:vertical}.send{margin-top:24px;border:0;background:var(--ink);color:#fff;padding:15px 20px;border-radius:999px;cursor:pointer;transition:.3s}.send:hover{background:var(--blue);transform:translateY(-2px)}footer{padding:25px var(--pad);border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#777;font-size:11px}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.visible{opacity:1;transform:none}.case .case-title,.case .media-main{transition:transform 1s var(--ease),opacity 1s}.case:not(.in-view) .case-title{transform:translateY(45px);opacity:.2}.case:not(.in-view) .media-main{transform:scale(.92) rotate(5deg);opacity:.55}.case.in-view .case-title{transform:none;opacity:1}
-@media(max-width:900px){.nav-menu a:nth-child(1){display:none}.hero{padding-top:100px;min-height:92svh}.hero-image-wrap{right:-8%;top:22%;width:58vw;height:58vh;opacity:.32}.hero-title{font-size:clamp(60px,17vw,120px);margin-top:70px}.hero-bottom{display:block}.hero-copy{margin-top:15px}.hero-mark{display:none}.intro,.capabilities,.timeline,.contact{grid-template-columns:1fr;gap:55px}.results-head,.projects-intro,.ba-head{display:block}.results-head p,.projects-intro p,.ba-head p{margin-top:25px}.result-stack{height:420vh}.result-stage{align-items:center}.result-number{font-size:clamp(70px,17vw,130px)}.case{min-height:145vh}.case-sticky{height:100svh;grid-template-columns:1fr;grid-template-rows:45% 55%;gap:0;padding-top:75px}.case-media{height:100%;align-items:flex-start;padding-top:10px}.media-main{width:68%;height:85%;object-fit:cover}.media-small{width:31%;max-height:45%;right:2%;bottom:3%}.case-title{font-size:clamp(50px,13vw,85px)}.case-result strong{font-size:55px}.edu-grid{grid-template-columns:1fr 1fr}.edu{border-bottom:1px solid #2b2c30}.slider{aspect-ratio:4/5}.slider img{object-fit:cover}.contact{min-height:auto}.hero-top{font-size:10px}}
-@media(pointer:fine){.cursor{display:block}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Kamronbek Mamajonov — Digital Marketolog. Content, SMM, Target (Meta Ads) va Performance Marketing bo‘yicha professional portfolio va amaliy keyslar.">
+  <meta name="author" content="Kamronbek Mamajonov">
+  <title>Kamronbek Mamajonov — Digital Marketolog | Content × SMM × Performance</title>
 
-/* ===== 2026 LIGHT-BLUE ART DIRECTION OVERRIDES ===== */
-:root{
-  --bg:#edf6ff;
-  --paper:#f8fbff;
-  --ink:#0b1b35;
-  --muted:#63738a;
-  --line:rgba(11,27,53,.12);
-  --blue:#2d7ff2;
-  --blue2:#68a5ff;
-  --dark:#e4f0ff;
-  --white:#0b1b35;
-}
-body{background:var(--bg);color:var(--ink)}
-.progress{background:linear-gradient(90deg,#2d7ff2,#78b5ff)}
-.nav{mix-blend-mode:normal;background:rgba(237,246,255,.72);backdrop-filter:blur(14px);border:1px solid rgba(45,127,242,.10);border-radius:999px;padding:7px 9px 7px 18px;top:14px}
-.nav-menu a:hover{border-color:rgba(45,127,242,.18);background:rgba(255,255,255,.7)}
-.hero{background:radial-gradient(circle at 78% 34%,rgba(102,174,255,.27),transparent 28%),linear-gradient(135deg,#edf6ff 0%,#f7fbff 55%,#e7f2ff 100%)}
-.hero-title{font-size:clamp(48px,7.2vw,112px);line-height:.84;max-width:900px;letter-spacing:-.075em}
-.hero-title em{-webkit-text-stroke:1px #2d7ff2;color:#2d7ff2}
-.hero-image-wrap{right:7%;top:15%;width:min(28vw,380px);height:min(64vh,570px);border-color:rgba(45,127,242,.18);background:#dbeeff;box-shadow:0 30px 90px rgba(42,112,190,.16);transform:rotate(1.5deg)}
-.hero-image-wrap:after{border-color:rgba(255,255,255,.75)}
-.hero-image-wrap img{filter:none;mix-blend-mode:normal;object-position:center top}
-.hero-mark{border-color:rgba(45,127,242,.2);color:#2d7ff2}
-.hero-mark:before{background:#2d7ff2}
-.intro{background:#f7fbff}
-.results{background:linear-gradient(135deg,#e1f0ff,#edf7ff 55%,#d9ecff);color:var(--ink);border-top:1px solid rgba(45,127,242,.12)}
-.results-head p{color:#62748d}.result-word,.result-index{color:#70839b}.result-unit{color:#59708e}.result-blue{color:#2d7ff2}.result-line{background:rgba(11,27,53,.13)}
-.capabilities{background:#f7fbff}
-.projects{background:#eaf4ff}
-.projects-intro{background:linear-gradient(180deg,#eaf4ff,#edf7ff)}
-.case-bg{background:#eef6ff}.case-bg:after{background:radial-gradient(circle at 80% 50%,rgba(45,127,242,.14),transparent 30%)}
-.case-type{color:#2d7ff2}.case-desc{color:#526984}.case-num{color:#68809e}.case-label{color:#6c8099}
-/* Each project has its own art-directed color system. */
-.scene-mm .case-bg{background:linear-gradient(135deg,#e9f3ff,#dcecff)}
-.scene-mm .case-bg:after{background:radial-gradient(circle at 80% 50%,rgba(45,127,242,.25),transparent 34%)}
-.scene-mm .case-type,.scene-mm .case-result strong{color:#2477ed}
-.scene-ustoz .case-bg{background:linear-gradient(135deg,#e8faf5,#d7f1ea)}
-.scene-ustoz .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(26,166,132,.20),transparent 34%)}
-.scene-ustoz .case-type,.scene-ustoz .case-result strong{color:#159b7a}
-.scene-engora .case-bg{background:linear-gradient(135deg,#fff1eb,#ffe1d7)}
-.scene-engora .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(245,103,67,.18),transparent 34%)}
-.scene-engora .case-type,.scene-engora .case-result strong{color:#e85f3d}
-.scene-muxsinzada .case-bg{background:linear-gradient(135deg,#fff0f4,#f7dfe7)}
-.scene-muxsinzada .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(167,56,91,.17),transparent 34%)}
-.scene-muxsinzada .case-type,.scene-muxsinzada .case-result strong{color:#a7375b}
-.scene-zetrik .case-bg{background:linear-gradient(135deg,#eef1f5,#dfe5ec)}
-.scene-zetrik .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(68,84,105,.17),transparent 34%)}
-.scene-zetrik .case-type,.scene-zetrik .case-result strong{color:#43566f}
-.scene-iqibla .case-bg{background:linear-gradient(135deg,#e6fbff,#d5f0f6)}
-.scene-iqibla .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(0,155,184,.20),transparent 34%)}
-.scene-iqibla .case-type,.scene-iqibla .case-result strong{color:#008faa}
-.scene-zamona .case-bg{background:linear-gradient(135deg,#fff7e8,#f4e2bb)}
-.scene-zamona .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(180,120,28,.18),transparent 34%)}
-.scene-zamona .case-type,.scene-zamona .case-result strong{color:#a56d13}
-.scene-water .case-bg{background:linear-gradient(135deg,#e5fbff,#d2f1f7)}
-.scene-water .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(0,157,187,.20),transparent 34%)}
-.scene-water .case-type,.scene-water .case-result strong{color:#008ca9}
-.scene-ibtido .case-bg{background:linear-gradient(135deg,#f1edff,#e2dcff)}
-.scene-ibtido .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(99,72,208,.18),transparent 34%)}
-.scene-ibtido .case-type,.scene-ibtido .case-result strong{color:#684bd4}
-/* no black scenes: keep text dark and backgrounds airy */
-.case.dark .case-title,.case.dark .case-num,.case.dark .case-desc{color:var(--ink)}
-.case.dark .case-desc{color:#526984}.case.dark .case-bg{background:#e6f1ff}.case.dark .case-type{color:#2d7ff2}.case.dark .case-label{color:#6c8099}
-.before-after{background:linear-gradient(135deg,#dcecff,#eaf5ff);color:var(--ink)}
-.ba-head p{color:#61758e}.slider{box-shadow:0 30px 80px rgba(38,94,151,.15)}
-.ba-label{background:rgba(11,27,53,.72)}
-.timeline{background:#f7fbff}.education{background:linear-gradient(135deg,#dfeeff,#eaf5ff);color:var(--ink)}
-.edu-grid{border-color:rgba(11,27,53,.13)}.edu{border-color:rgba(11,27,53,.13)}.edu span{color:#71849b}
-.contact{background:#f7fbff}.send{background:#0b1b35;color:#fff}.send:hover{background:#2d7ff2}
-footer{background:#f7fbff}
-@media(max-width:900px){.nav{left:10px;right:10px}.hero-title{font-size:clamp(50px,14vw,100px)}.hero-image-wrap{right:-5%;top:25%;width:55vw;height:58vh;opacity:.72}.hero-bottom{position:relative;z-index:5}.results{background:#e5f2ff}}
+  <!-- Google Fonts: Plus Jakarta Sans & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
-.scene-hilol .case-bg{background:linear-gradient(135deg,#eefaf0,#d9f0dd)}
-.scene-hilol .case-bg:after{background:radial-gradient(circle at 82% 48%,rgba(46,160,90,.20),transparent 34%)}
-.scene-hilol .case-type,.scene-hilol .case-result strong{color:#2a9457}
-.scene-hilol .media-small.s2{bottom:auto;top:6%;right:auto;left:2%;transform:rotate(4deg)}
-.result-stack{height:600vh}
-@media(max-width:900px){.result-stack{height:500vh}}
-</style>
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & SYSTEM VARIABLES
+       ========================================================================== */
+    :root {
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --card-bg: #ffffff;
+      --card-border: rgba(15, 23, 42, 0.08);
+      --card-hover-border: rgba(37, 99, 235, 0.28);
+      --ink: #0f172a;
+      --ink-muted: #475569;
+      --ink-subtle: #64748b;
+      --blue-primary: #2563eb;
+      --blue-hover: #1d4ed8;
+      --blue-subtle: #dbeafe;
+      --blue-glow: rgba(37, 99, 235, 0.16);
+      --emerald: #059669;
+      --emerald-subtle: #d1fae5;
+      --amber: #d97706;
+      --amber-subtle: #fef3c7;
+      --purple: #7c3aed;
+      --purple-subtle: #ede9fe;
+      --rose: #e11d48;
+      --rose-subtle: #ffe4e6;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.1), 0 12px 18px -8px rgba(15, 23, 42, 0.05);
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s var(--ease);
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 48px);
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #38bdf8);
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* Badges & Pills */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-family: var(--font-display);
+      background: var(--blue-subtle);
+      color: var(--blue-primary);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+    }
+
+    .badge.emerald {
+      background: var(--emerald-subtle);
+      color: var(--emerald);
+      border-color: rgba(5, 150, 105, 0.2);
+    }
+
+    .badge.amber {
+      background: var(--amber-subtle);
+      color: var(--amber);
+      border-color: rgba(217, 119, 6, 0.2);
+    }
+
+    .badge.purple {
+      background: var(--purple-subtle);
+      color: var(--purple);
+      border-color: rgba(124, 58, 237, 0.2);
+    }
+
+    .badge.rose {
+      background: var(--rose-subtle);
+      color: var(--rose);
+      border-color: rgba(225, 29, 72, 0.2);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #10b981;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: clamp(36px, 6vw, 64px);
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--blue-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      display: inline-block;
+      font-family: var(--font-display);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .section-desc {
+      color: var(--ink-muted);
+      font-size: clamp(1rem, 1.3vw, 1.15rem);
+      max-width: 680px;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s var(--ease);
+      border: 1px solid transparent;
+      outline: none;
+    }
+
+    .btn-primary {
+      background: var(--blue-primary);
+      color: #ffffff;
+      box-shadow: 0 6px 20px var(--blue-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-alt);
+      border-color: rgba(15, 23, 42, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 8px 18px;
+      font-size: 0.85rem;
+    }
+
+    /* ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== */
+    .header-nav {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .nav-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+      pointer-events: auto;
+    }
+
+    .nav-inner {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 12px 35px -8px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+      border-radius: var(--radius-full);
+      padding: 8px 16px 8px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+    }
+
+    .brand-logo .dot { color: var(--blue-primary); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      transition: all 0.2s var(--ease);
+    }
+
+    .nav-links a:hover {
+      color: var(--blue-primary);
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--ink);
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 20px;
+      right: 20px;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      z-index: 999;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.3s var(--ease);
+      pointer-events: none;
+    }
+
+    .mobile-menu.active {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .mobile-menu a:hover {
+      background: var(--bg-alt);
+      color: var(--blue-primary);
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero {
+      position: relative;
+      padding-top: clamp(120px, 16vh, 160px);
+      padding-bottom: clamp(60px, 10vh, 100px);
+      background: radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.09) 0%, transparent 45%),
+                  radial-gradient(circle at 10% 80%, rgba(56, 189, 248, 0.07) 0%, transparent 45%),
+                  linear-gradient(180deg, #edf6ff 0%, #f7fbff 60%, #edf6ff 100%);
+      overflow: hidden;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: clamp(36px, 6vw, 64px);
+    }
+
+    .hero-kicker-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .hero-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4.3rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+      color: var(--ink-muted);
+      line-height: 1.6;
+      max-width: 580px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    /* Hero Quick KPI Ribbon */
+    .hero-stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    .hero-stat-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+      font-weight: 800;
+      color: var(--blue-primary);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-stat-item span {
+      font-size: 0.85rem;
+      color: var(--ink-subtle);
+      font-weight: 600;
+      line-height: 1.35;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Hero Portrait / Showcase Card */
+    .hero-card-showcase {
+      position: relative;
+    }
+
+    .hero-card-frame {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      padding: 16px;
+      box-shadow: 0 25px 60px -15px rgba(37, 99, 235, 0.16), 0 10px 20px -5px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    .hero-img-container {
+      width: 100%;
+      height: 480px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+
+    .hero-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .hero-card-frame:hover .hero-img-container img {
+      transform: scale(1.02);
+    }
+
+    /* Floating badges */
+    .floating-badge {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    .floating-badge.badge-top {
+      top: 32px;
+      right: -15px;
+    }
+
+    .floating-badge.badge-bottom {
+      bottom: 24px;
+      left: -15px;
+    }
+
+    .floating-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .floating-icon.blue { background: var(--blue-subtle); color: var(--blue-primary); }
+    .floating-icon.green { background: var(--emerald-subtle); color: var(--emerald); }
+
+    .floating-text .badge-val {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .floating-text .badge-lbl {
+      font-size: 0.75rem;
+      color: var(--ink-subtle);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .hero-fallback-avatar {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+    }
+
+    .avatar-icon-circle {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    /* ==========================================================================
+       SECTION 01: RAQAMLAR GAPIRADI (METRICS DASHBOARD)
+       ========================================================================== */
+    .section-metrics {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .metric-card {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      transition: all 0.35s var(--ease);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-4px);
+      background: #ffffff;
+      border-color: var(--card-hover-border);
+      box-shadow: 0 15px 35px -5px rgba(37, 99, 235, 0.12);
+    }
+
+    .metric-card.featured {
+      grid-column: span 2;
+      background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%);
+      border-color: rgba(37, 99, 235, 0.25);
+    }
+
+    .metric-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .metric-category-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-subtle);
+      font-family: var(--font-display);
+    }
+
+    .metric-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--blue-primary);
+    }
+
+    .metric-number-wrap {
+      margin-bottom: 12px;
+    }
+
+    .metric-val {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 3.2vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .metric-card.featured .metric-val {
+      color: var(--blue-primary);
+    }
+
+    .metric-unit {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink-subtle);
+      margin-left: 4px;
+    }
+
+    .metric-label {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .metric-desc {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .metric-source-chip {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--blue-primary);
+      padding: 4px 10px;
+      background: rgba(37, 99, 235, 0.08);
+      border-radius: var(--radius-full);
+      width: fit-content;
+    }
+
+    /* ==========================================================================
+       SECTION 02: CAPABILITIES / NIMA QILAMAN?
+       ========================================================================== */
+    .section-capabilities {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .cap-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: all 0.3s var(--ease);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cap-card:hover {
+      border-color: var(--card-hover-border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cap-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .cap-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--blue-subtle);
+      color: var(--blue-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .cap-number {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--ink-subtle);
+      opacity: 0.4;
+    }
+
+    .cap-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .cap-desc {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .cap-deliverables {
+      list-style: none;
+      border-top: 1px dashed rgba(15, 23, 42, 0.1);
+      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cap-deliverables li {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cap-deliverables li::before {
+      content: '✓';
+      color: var(--blue-primary);
+      font-weight: 800;
+    }
+
+    /* ==========================================================================
+       SECTION 03: CASE STUDIES (10 TA LOYIHA — BRIEF TARTIBI)
+       ========================================================================== */
+    .section-projects {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .filter-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.25s var(--ease);
+    }
+
+    .filter-btn:hover {
+      background: var(--bg-alt);
+      color: var(--ink);
+    }
+
+    .filter-btn.active {
+      background: var(--blue-primary);
+      color: #ffffff;
+      border-color: var(--blue-primary);
+      box-shadow: 0 4px 14px var(--blue-glow);
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .case-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.35s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--card-hover-border);
+    }
+
+    .case-card.featured-case {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      background: linear-gradient(145deg, #f8fbff 0%, #eef6ff 100%);
+    }
+
+    .case-visual-frame {
+      position: relative;
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 280px;
+    }
+
+    .case-card.featured-case .case-visual-frame {
+      min-height: 440px;
+      height: 100%;
+      padding: 32px;
+      background: linear-gradient(135deg, #eefaf0 0%, #dcfce7 100%);
+    }
+
+    /* Mockup Display Card */
+    .mockup-display {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.15);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      overflow: hidden;
+      transition: transform 0.4s var(--ease);
+      cursor: pointer;
+    }
+
+    .case-card:hover .mockup-display {
+      transform: scale(1.02);
+    }
+
+    .mockup-header {
+      background: #f8fafc;
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mockup-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e1;
+    }
+    .mockup-dot.red { background: #f87171; }
+    .mockup-dot.yellow { background: #fbbf24; }
+    .mockup-dot.green { background: #34d399; }
+
+    .mockup-header-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--ink-subtle);
+      margin-left: 6px;
+    }
+
+    .mockup-body {
+      position: relative;
+      width: 100%;
+      min-height: 220px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mockup-body img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Hilol Med Multi-Asset Showcase inside Featured Case */
+    .featured-multi-assets {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+
+    .f-asset-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .f-asset-card:hover { transform: translateY(-2px); }
+    .f-asset-card.span2 { grid-column: span 2; }
+    .f-asset-card img { width: 100%; height: 160px; object-fit: cover; }
+    .f-asset-card.span2 img { height: 210px; }
+    .f-asset-pill {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .case-content {
+      padding: clamp(24px, 4vw, 36px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .case-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .case-index {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ink-subtle);
+    }
+
+    .case-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .case-desc {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .case-outcome-box {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .outcome-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      font-weight: 800;
+      color: var(--blue-primary);
+      line-height: 1;
+    }
+
+    .outcome-stat span {
+      font-size: 0.78rem;
+      color: var(--ink-subtle);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .case-zoom-btn {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-full);
+      padding: 8px 16px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s var(--ease);
+    }
+
+    .case-zoom-btn:hover {
+      background: var(--blue-primary);
+      color: #ffffff;
+      border-color: var(--blue-primary);
+    }
+
+    /* ==========================================================================
+       SECTION 04: DUAL BEFORE / AFTER SLIDER
+       ========================================================================== */
+    .section-before-after {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .slider-card-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .ba-tab-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .ba-tab-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+    }
+
+    .ba-tab-btn.active {
+      background: var(--blue-primary);
+      color: #ffffff;
+      border-color: var(--blue-primary);
+      box-shadow: 0 4px 12px var(--blue-glow);
+    }
+
+    .comparison-container {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #0f172a;
+      user-select: none;
+    }
+
+    .comparison-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .comparison-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .comparison-slide.slide-after {
+      clip-path: inset(0 0 0 50%);
+    }
+
+    .comparison-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #ffffff;
+      z-index: 10;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
+    .comparison-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      font-size: 1.1rem;
+      font-weight: 800;
+      z-index: 11;
+      pointer-events: none;
+    }
+
+    .comparison-label {
+      position: absolute;
+      top: 20px;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 9;
+      pointer-events: none;
+    }
+
+    .comparison-label.label-before {
+      left: 20px;
+      background: rgba(15, 23, 42, 0.75);
+      color: #ffffff;
+      backdrop-filter: blur(8px);
+    }
+
+    .comparison-label.label-after {
+      right: 20px;
+      background: rgba(37, 99, 235, 0.85);
+      color: #ffffff;
+      backdrop-filter: blur(8px);
+    }
+
+    .ba-range-input {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 20;
+    }
+
+    .slider-caption {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--ink-subtle);
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================================================
+       SECTION 05: TIMELINE / TAJRIBA
+       ========================================================================== */
+    .section-timeline {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .timeline-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 140px;
+      width: 2px;
+      background: rgba(15, 23, 42, 0.08);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 36px;
+      padding: 32px 0;
+      position: relative;
+    }
+
+    .timeline-year {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--blue-primary);
+      text-align: right;
+      padding-right: 20px;
+      position: relative;
+    }
+
+    .timeline-year::after {
+      content: '';
+      position: absolute;
+      right: -7px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid var(--blue-primary);
+    }
+
+    .timeline-content-card {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      transition: all 0.3s var(--ease);
+    }
+
+    .timeline-content-card:hover {
+      background: #ffffff;
+      border-color: rgba(37, 99, 235, 0.25);
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+
+    .timeline-role-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SECTION 06: EDUCATION (8 TA MALAKA VA AKADEMIK ASOS)
+       ========================================================================== */
+    .section-education {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .edu-bento-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .edu-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s var(--ease);
+    }
+
+    .edu-card:hover {
+      border-color: rgba(37, 99, 235, 0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .edu-card.highlight {
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      border-color: #334155;
+    }
+
+    .edu-card.highlight .edu-tag { color: #38bdf8; }
+    .edu-card.highlight .edu-sub { color: #94a3b8; }
+
+    .edu-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue-primary);
+      font-family: var(--font-display);
+      margin-bottom: 14px;
+    }
+
+    .edu-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .edu-sub {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+    }
+
+    /* ==========================================================================
+       SECTION 07: FAQ ACCORDION
+       ========================================================================== */
+    .section-faq {
+      padding: clamp(70px, 12vh, 120px) 0;
+      background: #ffffff;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      background: var(--bg);
+      overflow: hidden;
+      transition: all 0.25s var(--ease);
+    }
+
+    .faq-item.open {
+      background: #ffffff;
+      border-color: rgba(37, 99, 235, 0.3);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      color: var(--blue-primary);
+      transition: transform 0.3s var(--ease);
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 22px 24px;
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ==========================================================================
+       SECTION 08: CONTACT & NETLIFY FORM
+       ========================================================================== */
+    .section-contact {
+      padding: clamp(80px, 14vh, 140px) 0;
+      background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                  var(--bg);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: flex-start;
+    }
+
+    .contact-info-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 4vw, 42px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .quick-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .channel-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      transition: all 0.2s var(--ease);
+    }
+
+    .channel-row:hover {
+      background: #ffffff;
+      border-color: rgba(37, 99, 235, 0.3);
+      transform: translateX(4px);
+    }
+
+    .channel-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .channel-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .channel-icon.tg { background: #e0f2fe; color: #0284c7; }
+    .channel-icon.mail { background: #fee2e2; color: #ef4444; }
+    .channel-icon.phone { background: #dcfce7; color: #16a34a; }
+
+    .channel-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .channel-value {
+      font-size: 0.85rem;
+      color: var(--ink-subtle);
+    }
+
+    .copy-btn {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: var(--blue-primary);
+      color: #ffffff;
+      border-color: var(--blue-primary);
+    }
+
+    .contact-form-box {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 4vw, 42px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+      font-family: var(--font-display);
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: all 0.25s var(--ease);
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      background: #ffffff;
+      border-color: var(--blue-primary);
+      box-shadow: 0 0 0 4px var(--blue-glow);
+    }
+
+    .form-textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-status {
+      display: none;
+      margin-top: 16px;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .form-status.success {
+      display: block;
+      background: var(--emerald-subtle);
+      color: var(--emerald);
+      border: 1px solid rgba(5, 150, 105, 0.3);
+    }
+
+    /* ==========================================================================
+       LIGHTBOX MODAL & TOAST
+       ========================================================================== */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s var(--ease);
+    }
+
+    .lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content {
+      background: #ffffff;
+      max-width: 860px;
+      width: 100%;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transform: scale(0.95);
+      transition: transform 0.3s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lightbox-modal.active .lightbox-content { transform: scale(1); }
+
+    .lightbox-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .lightbox-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .lightbox-close {
+      background: transparent;
+      border: 0;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--ink-subtle);
+      line-height: 1;
+    }
+
+    .lightbox-body {
+      padding: 24px;
+      max-height: 75vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .lightbox-body img {
+      max-height: 480px;
+      width: auto;
+      max-width: 100%;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+
+    .lightbox-details {
+      width: 100%;
+      background: var(--bg);
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+    }
+
+    .lightbox-details strong {
+      display: block;
+      color: var(--blue-primary);
+      font-size: 1.4rem;
+      font-family: var(--font-display);
+      margin-bottom: 4px;
+    }
+
+    .lightbox-details p {
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      z-index: 10001;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s var(--ease);
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Site Footer */
+    .site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 60px 0 36px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a:hover { color: #ffffff; }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-card-showcase { max-width: 520px; margin: 0 auto; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .metric-card.featured { grid-column: span 2; }
+      .cap-grid { grid-template-columns: repeat(2, 1fr); }
+      .case-card.featured-case { grid-template-columns: 1fr; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .edu-bento-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta .btn { display: none; }
+      .mobile-toggle { display: block; }
+      .hero-stats-ribbon { grid-template-columns: 1fr; gap: 18px; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .metric-card.featured { grid-column: span 1; }
+      .cap-grid { grid-template-columns: 1fr; }
+      .edu-bento-grid { grid-template-columns: 1fr; }
+      .timeline-wrap::before { left: 20px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 12px; padding-left: 36px; }
+      .timeline-year { text-align: left; padding-right: 0; }
+      .timeline-year::after { left: -22px; right: auto; }
+      .comparison-container { height: 340px; }
+      .floating-badge { display: none; }
+      .featured-multi-assets { grid-template-columns: 1fr; }
+      .f-asset-card.span2 { grid-column: span 1; }
+    }
+  </style>
 </head>
 <body>
-<div class="cursor"></div><div class="progress"></div>
-<nav class="nav"><a class="nav-logo" href="#top">KM.</a><div class="nav-menu"><a href="#work">Loyihalar</a><a href="#about">Men haqimda</a><a href="#contact">Bog‘lanish</a></div></nav>
-<main id="top">
-<section class="hero">
-  <div class="hero-top"><div class="hero-kicker mono">Personal portfolio / 2026<br>Content × SMM × Performance</div><div class="hero-year mono">Tashkent / Uzbekistan</div></div>
-  <div><h1 class="hero-title"><span>KAMRONBEK</span><span><em>MAMAJONOV</em></span></h1></div>
-  <div class="hero-image-wrap"><img src="portrait.png" alt="Kamronbek Mamajonov"></div>
-  <div class="hero-mark">CONTENT<br>→<br>PERFORMANCE</div>
-  <div class="hero-bottom"><div class="role">Digital Marketolog</div><p class="hero-copy">Marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Bugungi kunda esa Kontent, SMM va Performance Marketing yo‘nalishlarini birlashtirib, biznes uchun marketingni tizimli ravishda boshqarish ustida ishlayman.</p></div>
-</section>
-<section class="intro" id="about"><div class="mono">01 / Positioning</div><div><div class="intro-big reveal">Bu shunchaki Instagram yuritish emas.<br><span class="blue">Kontent → SMM → Target → Performance → Business result.</span></div><p class="intro-text reveal">Men marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Keyinchalik Project Manager va Target yo‘nalishlarida ishlab, marketingni faqat kontent emas, balki biznes maqsadi bilan bog‘lashga fokuslandim.</p></div></section>
-<section class="results" id="results"><div class="results-head"><h2>Raqamlar<br>gapiradi.</h2><p>Portfolio ichidagi eng muhim ko‘rsatkichlar. Ular turli loyihalarda turli vazifalar va jamoalar bilan erishilgan natijalarni ko‘rsatadi.</p></div><div class="result-stack"><div class="result-stage"><div class="result-word">NATIJA / 01</div><div><span class="result-number result-blue">239K+<span class="result-unit">VIEWS</span></span></div><div class="result-index">01 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 02</div><div><span class="result-number">322K<span class="result-unit">VIEWS</span></span></div><div class="result-index">02 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 03</div><div><span class="result-number result-blue">5.4M<span class="result-unit">VIEWS</span></span></div><div class="result-index">03 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 04</div><div><span class="result-number">1,006<span class="result-unit">FOLLOWERS</span></span></div><div class="result-index">04 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 05</div><div><span class="result-number result-blue">754<span class="result-unit">LEADS</span></span></div><div class="result-index">05 / 06</div><div class="result-line"></div></div><div class="result-stage"><div class="result-word">NATIJA / 06</div><div><span class="result-number">$0.22<span class="result-unit">CPL</span></span></div><div class="result-index">06 / 06</div><div class="result-line"></div></div></div></section>
-<section class="capabilities"><div class="cap-title">Nima<br>qilaman?</div><div class="cap-list"><div class="cap-item"><span class="mono">01</span><strong>Content Marketing</strong><span>Strategiya / Script</span></div><div class="cap-item"><span class="mono">02</span><strong>SMM</strong><span>Content / Stories / Reels</span></div><div class="cap-item"><span class="mono">03</span><strong>Target</strong><span>Meta Ads / Lead Gen</span></div><div class="cap-item"><span class="mono">04</span><strong>Performance Marketing</strong><span>Offer / Funnel / Analytics</span></div><div class="cap-item"><span class="mono">05</span><strong>Project Management</strong><span>Team / Reporting</span></div></div></section>
-<section class="projects" id="work"><div class="projects-intro"><h2>Tanlangan<br>loyihalar.</h2><p>Har bir loyiha alohida vazifa, alohida kontekst va alohida visual story sifatida qurilgan.</p></div>
-<!-- 01 -->
-<!-- 01 Hilol Med -->
-<article class="case scene-hilol" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">01 / 10</div><div class="case-type">Content Manager / SMM</div><h3 class="case-title">Hilol<br>Med</h3><p class="case-desc">Kontent strategiyasi, Reels va Stories, YouTube, shooting jarayonlari, ekspert kontenti va auditoriya pain-pointlariga asoslangan rubrikalar ustida ishladim. 2026-yildagi eng uzoq davom etgan asosiy loyihalardan biri.</p><div class="case-result"><strong>239K+</strong><small>Reels<br>views</small></div></div><div class="case-media"><img class="media-main" src="hilol-building.jpg" alt="Hilol Med klinikasi"><img class="media-small" src="hilol-profile.png" alt="Hilol Med Instagram profili"><img class="media-small s2" src="hilol-youtube.png" alt="Hilol Med YouTube analytics"></div><div class="case-label">Healthcare / content production · 7+ oy</div></div></article>
-<article class="case scene-mm" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">02 / 10</div><div class="case-type">SMM / Content Marketing</div><h3 class="case-title">Marketing<br>Maximum</h3><p class="case-desc">Profilni qayta packaging qilish, kontent yo‘nalishlarini ishlab chiqish, Stories va Reels tizimini kuchaytirish hamda ekspert kontentini formatlash.</p><div class="case-result"><strong>322K</strong><small>views<br>Reels</small></div></div><div class="case-media"><img class="media-main" src="mm-reel.png" alt="Marketing Maximum Reels analytics"><img class="media-small" src="mm-profile.png" alt="Marketing Maximum Instagram profile"></div><div class="case-label">Transformation / content system</div></div></article>
-<!-- 02 -->
-<article class="case scene-ustoz" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">03 / 10</div><div class="case-type">Content Marketing</div><h3 class="case-title">Ustoz<br>Akademiyasi</h3><p class="case-desc">Kontent yo‘nalishini qayta ishlab, rubrikalar, Stories va ekspertga asoslangan Reels formatlarini test qilish.</p><div class="case-result"><strong>5.4M</strong><small>views<br>Reels</small></div></div><div class="case-media"><img class="media-main" src="ustoz-reel.png" alt="Ustoz Akademiyasi Reels analytics"></div><div class="case-label">Organic content / reach</div></div></article>
-<!-- 03 -->
-<article class="case scene-engora" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">04 / 10</div><div class="case-type">Content Manager</div><h3 class="case-title">Engora</h3><p class="case-desc">Noldan content direction, competitor analysis, rubrikalar, lead magnetlar va Stories tizimini ishlab chiqish.</p><div class="case-result"><strong>0 → 1,006</strong><small>followers<br>in the project</small></div></div><div class="case-media"><img class="media-main" src="engora-after.png" alt="Engora after profile"><img class="media-small" src="engora-before.png" alt="Engora before profile"></div><div class="case-label">0 → 1,006 / profile transformation</div></div></article>
-<!-- 04 -->
-<article class="case scene-muxsinzada" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">05 / 10</div><div class="case-type">Content Manager</div><h3 class="case-title">Muxsinzada<br>Perfumes</h3><p class="case-desc">Competitor analysis, values-aligned scripts, content plan, Stories va Reels formatlarini test qilish.</p><div class="case-result"><strong>01</strong><small>content<br>direction</small></div></div><div class="case-media"><img class="media-main" src="muxsinzada.png" alt="Muxsinzada Perfumes profile"></div><div class="case-label">Positioning / content direction</div></div></article>
-<!-- 05 -->
-<article class="case scene-zetrik" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">06 / 10</div><div class="case-type">Content Manager</div><h3 class="case-title">Zetric</h3><p class="case-desc">Industrial loyiha uchun yangi content direction, rubrikalar, lead magnetlar va production jarayonini kontentga aylantirish.</p><div class="case-result"><strong>1–2K</strong><small>followers / month<br>including target</small></div></div><div class="case-media"><img class="media-main" src="zetrik.png" alt="Zetric Instagram profile"></div><div class="case-label">B2B / production storytelling</div></div></article>
-<!-- 06 -->
-<article class="case scene-iqibla" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">07 / 10</div><div class="case-type">SMM / Product Content</div><h3 class="case-title">IQibla</h3><p class="case-desc">Product content, carousel formats, shooting va product positioning orqali smart device brendining Instagram kommunikatsiyasini rivojlantirish.</p><div class="case-result"><strong>284K</strong><small>profile views<br>30 days</small></div></div><div class="case-media"><img class="media-main" src="iqibla.png" alt="IQibla Instagram profile"><img class="media-small" src="iqibla-carousel.png" alt="IQibla product carousel"></div><div class="case-label">Product / visual storytelling</div></div></article>
-<!-- 07 -->
-<article class="case scene-zamona" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">08 / 10</div><div class="case-type">Target / Lead Generation</div><h3 class="case-title">Zamona</h3><p class="case-desc">Target orqali restoran uchun lead va buyurtmalarni jalb qilish, creative testlar va reklama kommunikatsiyasini boshqarish.</p><div class="case-result"><strong>10–15</strong><small>orders<br>during campaign</small></div></div><div class="case-media"><img class="media-main" src="zamona.png" alt="Zamona Restaurant profile"></div><div class="case-label">Performance / acquisition</div></div></article>
-<!-- 08 -->
-<article class="case scene-water" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">09 / 10</div><div class="case-type">SMM / Target</div><h3 class="case-title">Suv filtri<br>loyihasi</h3><p class="case-desc">Mahsulot foydasini kontent orqali tushuntirish, audience pain asosidagi Reels va Target kommunikatsiyasini birlashtirish.</p><div class="case-result"><strong>102+</strong><small>sales<br>1st month</small></div></div><div class="case-media"><img class="media-main" src="water.png" alt="Suv filtri loyihasi content"></div><div class="case-label">Content × Performance</div></div></article>
-<!-- 09 -->
-<article class="case scene-ibtido" data-case><div class="case-sticky"><div class="case-bg"></div><div class="case-copy"><div class="case-num mono">10 / 10</div><div class="case-type">Target / Lead Generation</div><h3 class="case-title">Ibtido<br>Ta’lim</h3><p class="case-desc">Noldan Target loyihasi: audience research, offer, creative testlar va lead generation orqali birinchi sotuvlarni yo‘lga qo‘yish.</p><div class="case-result"><strong>754</strong><small>leads<br>$0.22 CPL</small></div></div><div class="case-media"><img class="media-main" src="ibtido-ads.png" alt="Ibtido Ta'lim Ads Manager"><img class="media-small" src="ibtido-profile.png" alt="Ibtido Ta'lim Instagram profile"></div><div class="case-label">Lead generation / Meta Ads</div></div></article>
-</section>
-<section class="before-after"><div class="ba-head"><h2>Before.<br>After.</h2><p>Marketing Maximum uchun real profil materiallari asosida transformationni slider orqali ko‘ring.</p></div><div class="slider"><img src="mm-before.png" alt="Before profile"><img class="after" src="mm-profile.png" alt="After profile"><input class="slider-range" type="range" min="0" max="100" value="50" aria-label="Before va After slider"><div class="slider-line"></div><div class="slider-knob">↔</div><span class="ba-label ba-before">Before</span><span class="ba-label ba-after">After</span></div></section>
-<section class="timeline" id="experience"><div><div class="mono">02 / Experience</div><h2>Yo‘l.<br>Tizim.<br>Tajriba.</h2></div><div class="timeline-list"><div class="timeline-row"><div class="timeline-year">2026</div><div><h3>Obsess Marketing — Content Manager</h3><p>Content direction, Reels, Stories, project communication, shooting va marketing loyihalari bilan ishlash.</p></div></div><div class="timeline-row"><div class="timeline-year">2025–26</div><div><h3>Mohir Marketing — Project Manager / SMM / Target</h3><p>Target, SMM, Project Management, reporting, creative testing va Performance Marketing loyihalari.</p></div></div><div class="timeline-row"><div class="timeline-year">2024–25</div><div><h3>ScholarHUB — SMM / Content</h3><p>Kontent, Stories, Reels, blogger collaborations va SAT platformasi uchun marketing kommunikatsiyasi.</p></div></div><div class="timeline-row"><div class="timeline-year">2022–23</div><div><h3>Otlichno — Account Manager → Content Manager</h3><p>Real loyihalar, audience pain research, content va jamoa bilan ishlash. Faoliyatning katta qismi jamoa bilan bajarilgan.</p></div></div></div></section>
-<section class="education"><h2>Ta’lim &amp;<br>professional growth.</h2><div class="edu-grid"><div class="edu"><span>UNIVERSITY</span><b>TATU</b><span>Iqtisodiyot va menejment · 2024</span></div><div class="edu"><span>01</span><b>Najot Ta’lim</b><span>SMM Pro</span></div><div class="edu"><span>02</span><b>Xayot Sharapov</b><span>Target Pro</span></div><div class="edu"><span>03</span><b>Mikhail Timochko</b><span>Kontent va Zapusk</span></div><div class="edu"><span>04</span><b>Danil Matukhno</b><span>Zapusk · Product</span></div><div class="edu"><span>05</span><b>Aziz Abdumajitov</b><span>Performance Marketing + Media Production</span></div><div class="edu"><span>06</span><b>Aziz Axtamov</b><span>Tujjor Akademiyasi</span></div><div class="edu"><span>07</span><b>Altair Abduraxmonov</b><span>Kreativ va Strategik Kontent</span></div></div></section>
-<section class="contact" id="contact"><div><div class="mono">03 / Contact</div><h2>Biror<br>loyiha<br>bormi?</h2><p class="contact-copy">Kontent, SMM, Target yoki Performance Marketing bo‘yicha loyiha haqida gaplashmoqchi bo‘lsangiz, xabar qoldiring.</p></div><form class="form" name="contact" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="contact"><div class="field"><label>Ism</label><input name="name" placeholder="Ismingiz" required></div><div class="field"><label>Email</label><input type="email" name="email" placeholder="email@example.com" required></div><div class="field"><label>Loyiha</label><textarea name="message" placeholder="Qanday loyiha ustida ishlamoqchisiz?" required></textarea></div><button class="send" type="submit">Xabar yuborish ↗</button></form></section>
-<footer><span>© 2026 Kamronbek Mamajonov</span><span>Digital Marketolog / Tashkent</span></footer>
-</main>
-<script>
-const cursor=document.querySelector('.cursor');
-if(cursor&&matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,button,.slider-range').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
-const progress=document.querySelector('.progress');window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(scrollY/h*100)+'%'},{passive:true});
-const revealObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>revealObs.observe(e));
-const caseObs=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting)),{threshold:.42});document.querySelectorAll('[data-case]').forEach(e=>caseObs.observe(e));
-const stack=document.querySelector('.result-stack');const stages=[...document.querySelectorAll('.result-stage')];window.addEventListener('scroll',()=>{if(!stack)return;const r=stack.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight-r.top)/(r.height)));const i=Math.min(stages.length-1,Math.floor(p*stages.length));stages.forEach((s,k)=>{const active=k===i;s.style.opacity=active?'1':(Math.abs(k-i)===1?'.2':'0');s.querySelector('.result-number').style.transform=active?'translateY(0) scale(1)':'translateY(35px) scale(.96)'})},{passive:true});
-const range=document.querySelector('.slider-range'),after=document.querySelector('.slider .after'),line=document.querySelector('.slider-line'),knob=document.querySelector('.slider-knob');function slide(){const v=range.value;after.style.clipPath=`inset(0 0 0 ${v}%)`;line.style.left=v+'%';knob.style.left=v+'%'}range?.addEventListener('input',slide);slide();
 
-/* Rasm topilmasa: boshqa kengaytma yoki assets/ papkani sinab ko'radi */
-document.querySelectorAll('img').forEach(img=>{
-  const orig=img.getAttribute('src');if(!orig)return;
-  const base=orig.replace(/\.[^.]+$/,''),ext=orig.split('.').pop().toLowerCase();
-  const q=[];[ext,'png','jpg','jpeg','webp'].filter((e,k,a)=>a.indexOf(e)===k).forEach(e=>['','assets/'].forEach(d=>q.push(d+base+'.'+e)));
-  const queue=q.filter(t=>t!==orig);let i=0;
-  img.addEventListener('error',()=>{if(i<queue.length)img.src=queue[i++];else console.warn('Rasm topilmadi:',orig)});
-});
-</script>
-</body></html>
+  <!-- Top Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="nav-wrap">
+      <div class="nav-inner">
+        <a href="#top" class="brand-logo">
+          <span>KM</span><span class="dot">.</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#results">Raqamlar</a></li>
+          <li><a href="#capabilities">Xizmatlar</a></li>
+          <li><a href="#work">Loyihalar</a></li>
+          <li><a href="#transformation">Transformatsiya</a></li>
+          <li><a href="#experience">Tajriba</a></li>
+          <li><a href="#education">Ta’lim</a></li>
+          <li><a href="#contact">Aloqa</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary btn-sm">Loyiha bo‘yicha suhbat ↗</a>
+          <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Menyu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#results" class="mob-link">01. Raqamlar va Natijalar</a></li>
+      <li><a href="#capabilities" class="mob-link">02. Nima qilaman? (Xizmatlar)</a></li>
+      <li><a href="#work" class="mob-link">03. Tanlangan Loyihalar (10 ta)</a></li>
+      <li><a href="#transformation" class="mob-link">04. Before / After Profil</a></li>
+      <li><a href="#experience" class="mob-link">05. Tajriba va Yo‘l</a></li>
+      <li><a href="#education" class="mob-link">06. Ta’lim & Malaka</a></li>
+      <li><a href="#contact" class="mob-link">07. Bog‘lanish</a></li>
+    </ul>
+  </div>
+
+  <main id="top">
+
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-kicker-bar">
+              <span class="badge">Digital Marketolog</span>
+              <div class="hero-status-pill">
+                <span class="pulse-dot"></span>
+                <span>Yangi loyihalar uchun ochiq · 2026</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title">
+              Biznes natijasiga ishlaydigan <span class="gradient-text">tizimli marketing.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Marketingdagi faoliyatimni SMM va kontentdan boshlaganman. Bugun esa <strong>Kontent</strong>, <strong>SMM</strong>, <strong>Meta Ads Target</strong>, <strong>Performance Marketing</strong> va <strong>Project Management</strong> yo‘nalishlarini yagona tizimga birlashtirib, biznes maqsadlariga erishish ustida ishlayman.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-primary">10 ta keysni ko‘rish ↓</a>
+              <a href="#contact" class="btn btn-secondary">Bog‘lanish ↗</a>
+            </div>
+
+            <div class="hero-stats-ribbon">
+              <div class="hero-stat-item">
+                <strong class="counter" data-target="5400000" data-suffix="M+" data-format="million">5.4M+</strong>
+                <span>Maksimal Organik Reels</span>
+              </div>
+              <div class="hero-stat-item">
+                <strong class="counter" data-target="754" data-suffix="+">754+</strong>
+                <span>Target Orqali Leadlar</span>
+              </div>
+              <div class="hero-stat-item">
+                <strong>$0.22</strong>
+                <span>O‘rtacha CPL Narxi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card-showcase">
+            <div class="hero-card-frame">
+              <div class="hero-img-container">
+                <img src="assets/portrait.png" alt="Kamronbek Mamajonov" onerror="handleImageFallback(this, 'Kamronbek Mamajonov', 'Digital Marketolog', 'portrait')">
+              </div>
+
+              <div class="floating-badge badge-top">
+                <div class="floating-icon blue">⚡</div>
+                <div class="floating-text">
+                  <div class="badge-val">5.4M Views</div>
+                  <div class="badge-lbl">Ustoz Akademiyasi</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom">
+                <div class="floating-icon green">🎯</div>
+                <div class="floating-text">
+                  <div class="badge-val">754 Leads</div>
+                  <div class="badge-lbl">Ibtido Ta’lim ($0.22 CPL)</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 01: RAQAMLAR GAPIRADI (METRICS DASHBOARD)
+         ====================================================================== -->
+    <section class="section-metrics" id="results">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">01 / Proof & Performance</span>
+          <h2 class="section-title">Raqamlar gapiradi.</h2>
+          <p class="section-desc">
+            Portfolio ichidagi eng muhim ko‘rsatkichlar. Ular turli loyihalarda turli vazifalar va jamoalar bilan erishilgan real amaliy natijalarni ko‘rsatadi.
+          </p>
+        </div>
+
+        <div class="metrics-grid">
+          
+          <!-- Metric 01: Hilol Med -->
+          <div class="metric-card featured">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Healthcare / Content Production (7+ oy)</span>
+              <div class="metric-icon">🏥</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val counter" data-target="239099" data-suffix="" data-format="comma">239,099</span>
+                <span class="metric-unit">VIEWS</span>
+              </div>
+              <div class="metric-label">Tanlangan Reels Organik Qamrovi</div>
+              <p class="metric-desc">7 oy davomida Instagram auditoriyasi ~63–65K dan 100K gacha o‘sdi. YouTube ekspert videolari 10K+ ko‘rish, Shorts esa 600K views va 1,000+ obunachi keltirdi.</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: Hilol Med Klinika</div>
+          </div>
+
+          <!-- Metric 02: Ustoz Akademiyasi -->
+          <div class="metric-card featured">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Viral Reach / Reels</span>
+              <div class="metric-icon">🚀</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val counter" data-target="5400000" data-suffix="M" data-format="million">5.4M</span>
+                <span class="metric-unit">VIEWS</span>
+              </div>
+              <div class="metric-label">Asosiy Viral Reels Rekordi</div>
+              <p class="metric-desc">Ekspertga asoslangan video format va to‘g‘ri ssenariy orqali mutlaqo organik auditoriya oqimini jalb qilish natijasi.</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: Ustoz Akademiyasi</div>
+          </div>
+
+          <!-- Metric 03: Ibtido Ta'lim -->
+          <div class="metric-card">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Lead Generation / Target</span>
+              <div class="metric-icon">🎯</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val counter" data-target="754" data-suffix="">754</span>
+                <span class="metric-unit">LEADS</span>
+              </div>
+              <div class="metric-label">Sifatli Zayavkalar Soni</div>
+              <p class="metric-desc">Meta Ads reklamasi orqali sotuv bo‘limiga yetkazib berilgan arizalar.</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: Ibtido Ta’lim</div>
+          </div>
+
+          <!-- Metric 04: Unit Economics -->
+          <div class="metric-card">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Unit Economics / CPL</span>
+              <div class="metric-icon">💰</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val">$0.22</span>
+                <span class="metric-unit">CPL</span>
+              </div>
+              <div class="metric-label">Eng Past Lead Narxi</div>
+              <p class="metric-desc">Ta’lim sohasida yuqori konversiyali taklif va gipotezalarni testlash orqali minimal narx.</p>
+            </div>
+            <div class="metric-source-chip">Optimizatsiya: Meta Ads</div>
+          </div>
+
+          <!-- Metric 05: Marketing Maximum -->
+          <div class="metric-card">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">B2B Content Packaging</span>
+              <div class="metric-icon">🔥</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val counter" data-target="322" data-suffix="K">322K</span>
+                <span class="metric-unit">VIEWS</span>
+              </div>
+              <div class="metric-label">Ekspert Reels Ko‘rishlari</div>
+              <p class="metric-desc">2 oyda profil 500–600 dan 2,500+ obunachiga ko‘tarildi (jamoaviy tizimli packaging natijasi).</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: Marketing Maximum</div>
+          </div>
+
+          <!-- Metric 06: Suv filtri -->
+          <div class="metric-card">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Direct Sales / E-commerce</span>
+              <div class="metric-icon">📈</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val counter" data-target="102" data-suffix="+">102+</span>
+                <span class="metric-unit">SALES</span>
+              </div>
+              <div class="metric-label">1-Oydagi To‘g‘ridan-To‘g‘ri Sotuv</div>
+              <p class="metric-desc">693 ta murojaat va $436.39 reklama sarfi bilan birinchi oyning o‘zidayoq qayd etilgan savdo.</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: Suv filtri</div>
+          </div>
+
+          <!-- Metric 07: Engora -->
+          <div class="metric-card">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Audience Growth</span>
+              <div class="metric-icon">👥</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val">0 → 1,006</span>
+                <span class="metric-unit">SUBS</span>
+              </div>
+              <div class="metric-label">Noldan Maqsadli Obunachilar</div>
+              <p class="metric-desc">Lead magnetlar, raqobatchilar tahlili va to‘g‘ri Stories tizimi orqali toza o‘sish.</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: Engora</div>
+          </div>
+
+          <!-- Metric 08: IQibla -->
+          <div class="metric-card">
+            <div class="metric-card-top">
+              <span class="metric-category-tag">Brand Visibility</span>
+              <div class="metric-icon">👁️</div>
+            </div>
+            <div>
+              <div class="metric-number-wrap">
+                <span class="metric-val counter" data-target="284" data-suffix="K">284K</span>
+                <span class="metric-unit">VIEWS</span>
+              </div>
+              <div class="metric-label">30 Kunlik Profil Qamrovi</div>
+              <p class="metric-desc">Smart gadjetlar brendi uchun karusel formatlari va visual storytelling samarasi.</p>
+            </div>
+            <div class="metric-source-chip">Loyiha: IQibla</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 02: CAPABILITIES / NIMA QILAMAN?
+         ====================================================================== -->
+    <section class="section-capabilities" id="capabilities">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">02 / Capabilities</span>
+          <h2 class="section-title">Nima qilaman va biznesingizga qanday foyda keltiraman?</h2>
+          <p class="section-desc">
+            Har bir loyihada marketingni alohida bo‘laklar sifatida emas, balki bir-birini to‘ldiruvchi yagona tizim sifatida quramiz.
+          </p>
+        </div>
+
+        <div class="cap-grid">
+          
+          <div class="cap-card">
+            <div>
+              <div class="cap-header">
+                <div class="cap-icon-box">✍️</div>
+                <span class="cap-number">01</span>
+              </div>
+              <h3 class="cap-title">Content Marketing</h3>
+              <p class="cap-desc">
+                Auditoriya muammolari va og‘riqlariga asoslangan kontent strategiyasi, viral Reels ssenariylari va ekspert rubrikalari.
+              </p>
+            </div>
+            <ul class="cap-deliverables">
+              <li>Auditoriya psixologiyasi & og‘riqlari tahlili</li>
+              <li>Reels va TikTok uchun virusli ssenariylar</li>
+              <li>Lead magnetlar va qimmatli qo‘llanmalar</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <div class="cap-header">
+                <div class="cap-icon-box">📱</div>
+                <span class="cap-number">02</span>
+              </div>
+              <h3 class="cap-title">SMM & Packaging</h3>
+              <p class="cap-desc">
+                Instagram profilini konversiyaga moslab noldan qadoqlash, Stories tizimi, vizual estetika va muntazam kontent.
+              </p>
+            </div>
+            <ul class="cap-deliverables">
+              <li>Bio va profil navigatsiyasini to‘liq qayta qadoqlash</li>
+              <li>Har kuni sotuvga ishlaydigan Stories tizimi</li>
+              <li>Vizual standartlar va estetika</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <div class="cap-header">
+                <div class="cap-icon-box">🎯</div>
+                <span class="cap-number">03</span>
+              </div>
+              <h3 class="cap-title">Meta Ads Targeting</h3>
+              <p class="cap-desc">
+                Facebook & Instagram Ads orqali maqsadli xaridorlarni arzon narxda jalb qilish, A/B testlar va past CPL.
+              </p>
+            </div>
+            <ul class="cap-deliverables">
+              <li>Auditoriya segmentatsiyasi va gipotezalar</li>
+              <li>Yuqori CTR'li video va rasm kreativalar</li>
+              <li>Piksel, hodisalar va CPL optimizatsiyasi</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <div class="cap-header">
+                <div class="cap-icon-box">⚡</div>
+                <span class="cap-number">04</span>
+              </div>
+              <h3 class="cap-title">Performance Marketing</h3>
+              <p class="cap-desc">
+                Marketing xarajatlarini to‘g‘ridan-to‘g‘ri sof foydaga aylantirish: sotuv voronkalari (funnels), offerlar va ROI nazorati.
+              </p>
+            </div>
+            <ul class="cap-deliverables">
+              <li>Rad etib bo‘lmaydigan kuchli Offer (taklif)</li>
+              <li>Ko‘rishdan to xaridgacha bo‘lgan Funnel</li>
+              <li>Unit-iqtisodiyot va konversiya auditlari</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <div class="cap-header">
+                <div class="cap-icon-box">💼</div>
+                <span class="cap-number">05</span>
+              </div>
+              <h3 class="cap-title">Project Management</h3>
+              <p class="cap-desc">
+                Kopirayter, mobilograf, dizayner va targetologlar ishini yagona yo‘nalishda muvofiqlashtirish va hisobotlar yuritish.
+              </p>
+            </div>
+            <ul class="cap-deliverables">
+              <li>Jamoa vazifalarini rejalashtirish</li>
+              <li>Haftalik va oylik shaffof hisobotlar</li>
+              <li>Biznes egasi bilan to‘g‘ridan-to‘g‘ri kommunikatsiya</li>
+            </ul>
+          </div>
+
+          <div class="cap-card" style="background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%); border-color: rgba(37,99,235,0.25);">
+            <div>
+              <div class="cap-header">
+                <div class="cap-icon-box" style="background:#ffffff;">🤝</div>
+                <span class="cap-number" style="color:var(--blue-primary); opacity:1;">06</span>
+              </div>
+              <h3 class="cap-title">Kompleks Hamkorlik</h3>
+              <p class="cap-desc">
+                Biznesingiz uchun noldan boshlab yoki amaldagi marketingni to‘liq audit qilib, daromadni oshirish bo‘yicha individual strategiya.
+              </p>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm" style="margin-top: 14px;">Loyiha tahlilini olish →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 03: CASE STUDIES (10 TA LOYIHA — BRIEF TARTIBIDA)
+         ====================================================================== -->
+    <section class="section-projects" id="work">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">03 / Case Studies</span>
+          <h2 class="section-title">Tanlangan loyihalar va amaliy natijalar.</h2>
+          <p class="section-desc">
+            Har bir loyiha alohida biznes vazifasi, sinovdan o‘tgan strategiya va ishonchli vizual dalillar asosida ko‘rsatilgan.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-wrapper">
+          <button class="filter-btn active" data-filter="all">Barchasi (10)</button>
+          <button class="filter-btn" data-filter="smm">SMM & Content (5)</button>
+          <button class="filter-btn" data-filter="target">Target & Lead Gen (3)</button>
+          <button class="filter-btn" data-filter="performance">Performance & B2B (2)</button>
+        </div>
+
+        <!-- 10 Case Studies Grid -->
+        <div class="cases-grid">
+
+          <!-- CASE 01: Hilol Med (Asosiy va 1-o‘rinda) -->
+          <article class="case-card featured-case" data-category="smm">
+            <div class="case-visual-frame">
+              <div class="featured-multi-assets">
+                <div class="f-asset-card span2" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'assets/hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
+                  <img src="assets/hilol-reel.png" alt="Hilol Med Reels" onerror="handleImageFallback(this, 'Hilol Med', '239,099 Views Reels', 'reel')">
+                  <div class="f-asset-pill"><span>Tanlangan Reels</span><span>239,099 views 🔍</span></div>
+                </div>
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Instagram Profili', 'assets/hilol-profile.png', '63K → 100K Obunachi', '7 oy davomida qadoqlash, Stories va organik + target o‘sishi')">
+                  <img src="assets/hilol-profile.png" alt="Hilol Med Instagram" onerror="handleImageFallback(this, 'Hilol Med', 'Instagram 100K', 'profile')">
+                  <div class="f-asset-pill"><span>Instagram 100K</span><span>🔍</span></div>
+                </div>
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — YouTube Analytics', 'assets/hilol-youtube.png', '10K+ Views & Shorts 600K', 'Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600-1,200)')">
+                  <img src="assets/hilol-youtube.png" alt="Hilol Med YouTube" onerror="handleImageFallback(this, 'Hilol Med', 'YouTube Analytics', 'youtube')">
+                  <div class="f-asset-pill"><span>YouTube 10K+</span><span>🔍</span></div>
+                </div>
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Shifokor Jarayoni', 'assets/hilol-doctor-process.png', 'Shooting & Ekspert Jarayoni', 'Shifokorlar bilan ishonchli vizual va video production')">
+                  <img src="assets/hilol-doctor-process.png" alt="Hilol Med Doctor" onerror="handleImageFallback(this, 'Hilol Med', 'Doctor Process', 'process')">
+                  <div class="f-asset-pill"><span>Ekspert jarayoni</span><span>🔍</span></div>
+                </div>
+                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Klinika Binosi', 'assets/hilol-building.jpg', 'Klinika Binosi', 'Toshkentdagi zamonaviy ko‘p tarmoqli klinika')">
+                  <img src="assets/hilol-building.jpg" alt="Hilol Med Binosi" onerror="handleImageFallback(this, 'Hilol Med', 'Klinika Binosi', 'building')">
+                  <div class="f-asset-pill"><span>Klinika binosi</span><span>🔍</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge emerald">Content Manager / SMM · 7+ oy</span>
+                  <span class="case-index">01 / 10 · Asosiy Keys</span>
+                </div>
+                <h3 class="case-title">Hilol Med</h3>
+                <p class="case-desc">
+                  Kontent strategiyasi, Reels va Stories, YouTube, shooting jarayonlari, ekspert kontenti va auditoriya pain-pointlariga asoslangan rubrikalar ustida ishladim. 2026-yildagi eng uzoq davom etgan asosiy loyihalardan biri (7+ oylik faoliyat).
+                </p>
+                <div style="font-size:0.88rem; color:var(--ink-muted); margin-bottom:20px; line-height:1.55;">
+                  • Instagram auditoriyasi ~63–65K dan 100K gacha o‘sdi (target ham bo‘lgan).<br>
+                  • Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600–1,200).<br>
+                  • Shorts videosi taxminan 600K views va 1,000+ obunachi keltirdi.
+                </div>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>239,099</strong>
+                  <span>Tanlangan Reels Ko‘rishi</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'assets/hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
+                  Kattaroq ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 02: Marketing Maximum -->
+          <article class="case-card" data-category="smm">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Marketing Maximum', 'assets/mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">Reels Analytics · Marketing Maximum</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/mm-reel.png" alt="Marketing Maximum Reel" onerror="handleImageFallback(this, 'Marketing Maximum', '322K Views Reel', 'reel')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge">SMM / Content Marketing</span>
+                  <span class="case-index">02 / 10</span>
+                </div>
+                <h3 class="case-title">Marketing Maximum</h3>
+                <p class="case-desc">
+                  Profilni qayta packaging qilish, kontent yo‘nalishlarini ishlab chiqish, Stories va Reels tizimini kuchaytirish hamda ekspert kontentini formatlash. 2 oy ichida profil 500–600 dan 2,500+ obunachiga chiqqan (jamoaviy natija sifatida erishilgan).
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>322K Views</strong>
+                  <span>Selected Expert Reel</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Marketing Maximum', 'assets/mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 03: Ustoz Akademiyasi -->
+          <article class="case-card" data-category="smm">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Ustoz Akademiyasi', 'assets/ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">Instagram Reels · Ustoz Akademiyasi</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/ustoz-reel.png" alt="Ustoz Akademiyasi Reels" onerror="handleImageFallback(this, 'Ustoz Akademiyasi', '5.4M Views Reel', 'reel')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge emerald">Content Marketing</span>
+                  <span class="case-index">03 / 10</span>
+                </div>
+                <h3 class="case-title">Ustoz Akademiyasi</h3>
+                <p class="case-desc">
+                  Kontent yo‘nalishini qayta ishlab, rubrikalar, Stories va ekspertga asoslangan Reels formatlarini test qilish. Bitta tanlangan video orqali millionlab organik reach qayd etildi.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>5.4M</strong>
+                  <span>Asosiy Reels Qamrovi</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Ustoz Akademiyasi', 'assets/ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 04: Engora -->
+          <article class="case-card" data-category="smm">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Engora', 'assets/engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">Profile Growth · Engora</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/engora-after.png" alt="Engora After Profile" onerror="handleImageFallback(this, 'Engora', '1,006 Followers (After)', 'profile')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge">Content Manager</span>
+                  <span class="case-index">04 / 10</span>
+                </div>
+                <h3 class="case-title">Engora</h3>
+                <p class="case-desc">
+                  Noldan content direction, competitor analysis, rubrikalar, lead magnetlar va Stories tizimini ishlab chiqish orqali toza organik auditoriya yig‘ish.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>0 → 1,006</strong>
+                  <span>Loyihada Noldan O‘sish</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Engora', 'assets/engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 05: Muxsinzada Perfumes -->
+          <article class="case-card" data-category="smm">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Muxsinzada Perfumes', 'assets/muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">Brand Aesthetics · Muxsinzada</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/muxsinzada.png" alt="Muxsinzada Perfumes Profile" onerror="handleImageFallback(this, 'Muxsinzada Perfumes', 'Brand Profile & Aesthetics', 'profile')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge rose">Content Manager · Parfyumeriya</span>
+                  <span class="case-index">05 / 10</span>
+                </div>
+                <h3 class="case-title">Muxsinzada Perfumes</h3>
+                <p class="case-desc">
+                  Competitor analysis, brend qadriyatlariga mos ssenariylar, kontent-reja, Stories va mahsulotni estetik namoyish qiluvchi Reels formatlarini sinovdan o‘tkazish.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>01</strong>
+                  <span>Content Direction & Aesthetics</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Muxsinzada Perfumes', 'assets/muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 06: Zetric -->
+          <article class="case-card" data-category="performance">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Zetric Industrial', 'assets/zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">B2B Production · Zetric</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/zetrik.png" alt="Zetric Instagram" onerror="handleImageFallback(this, 'Zetric Industrial', 'B2B Production Content', 'profile')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge purple">Content Manager · B2B</span>
+                  <span class="case-index">06 / 10</span>
+                </div>
+                <h3 class="case-title">Zetric</h3>
+                <p class="case-desc">
+                  Industrial ishlab chiqarish loyihasi uchun yangi content direction, rubrikalar, lead magnetlar va murakkab ishlab chiqarish jarayonini tomoshabop kontentga aylantirish.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>1–2K / oy</strong>
+                  <span>Target Bilan Birga O‘sish</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Zetric Industrial', 'assets/zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 07: IQibla -->
+          <article class="case-card" data-category="smm">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('IQibla Smart Devices', 'assets/iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">Smart Devices · IQibla</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/iqibla.png" alt="IQibla Profile" onerror="handleImageFallback(this, 'IQibla', '284K Profile Views', 'profile')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge">SMM / Product Content</span>
+                  <span class="case-index">07 / 10</span>
+                </div>
+                <h3 class="case-title">IQibla</h3>
+                <p class="case-desc">
+                  Product content, carousel formatlari, shooting va product positioning orqali smart device brendining Instagram kommunikatsiyasini rivojlantirish.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>284K</strong>
+                  <span>30 Kunlik Profil Qamrovi</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('IQibla Smart Devices', 'assets/iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 08: Zamona To‘yxonasi -->
+          <article class="case-card" data-category="target">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Zamona To‘yxonasi', 'assets/zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">HoReCa Target · Zamona</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/zamona.png" alt="Zamona To'yxonasi" onerror="handleImageFallback(this, 'Zamona To‘yxonasi', 'Targeting & Orders', 'profile')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge amber">Target / Lead Generation</span>
+                  <span class="case-index">08 / 10</span>
+                </div>
+                <h3 class="case-title">Zamona To‘yxonasi</h3>
+                <p class="case-desc">
+                  Target orqali tantanalar saroyi va restoran uchun lead va buyurtmalarni jalb qilish, creative testlar va reklama kommunikatsiyasini boshqarish.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>10–15</strong>
+                  <span>Kampaniyadagi Buyurtmalar</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Zamona To‘yxonasi', 'assets/zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 09: Suv filtri loyihasi (NO EVORA NAME!) -->
+          <article class="case-card" data-category="performance">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Suv filtri loyihasi', 'assets/water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">E-commerce Funnel · Suv Filtri</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/water.png" alt="Suv filtri loyihasi" onerror="handleImageFallback(this, 'Suv filtri loyihasi', '102+ Sales / $436.39 Spend', 'sales')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge emerald">SMM / Target · Direct Sales</span>
+                  <span class="case-index">09 / 10</span>
+                </div>
+                <h3 class="case-title">Suv filtri loyihasi</h3>
+                <p class="case-desc">
+                  Mahsulot foydasini kontent orqali tushuntirish, audience pain asosidagi Reels va Target kommunikatsiyasini birlashtirish orqali to‘g‘ridan-to‘g‘ri sotuvlarni amalga oshirish.
+                </p>
+                <div style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:16px;">
+                  Reklama xarajati: <strong>$436.39</strong> | Qabul qilingan arizalar: <strong>693 inquiries</strong>.
+                </div>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>102+</strong>
+                  <span>1-Oydagi To‘g‘ridan-To‘g‘ri Sotuv</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Suv filtri loyihasi', 'assets/water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 10: Ibtido Ta’lim -->
+          <article class="case-card" data-category="target">
+            <div class="case-visual-frame">
+              <div class="mockup-display" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'assets/ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-header-title">Meta Ads Manager · Ibtido Ta’lim</span>
+                </div>
+                <div class="mockup-body">
+                  <img src="assets/ibtido-ads.png" alt="Ibtido Ta'lim Ads" onerror="handleImageFallback(this, 'Ibtido Ta’lim', '754 Leads @ $0.22 CPL', 'ads')">
+                </div>
+              </div>
+            </div>
+            <div class="case-content">
+              <div>
+                <div class="case-header-row">
+                  <span class="badge purple">Target / Lead Generation</span>
+                  <span class="case-index">10 / 10</span>
+                </div>
+                <h3 class="case-title">Ibtido Ta’lim</h3>
+                <p class="case-desc">
+                  Noldan Target loyihasi: audience research, offer, creative testlar va lead generation orqali birinchi sotuvlarni minimal xarajat bilan yo‘lga qo‘yish.
+                </p>
+              </div>
+              <div class="case-outcome-box">
+                <div class="outcome-stat">
+                  <strong>754 Leads</strong>
+                  <span>$0.22 O‘rtacha CPL Narxi</span>
+                </div>
+                <button class="case-zoom-btn" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'assets/ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
+                  Ko‘rish 🔍
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 04: DUAL BEFORE / AFTER SLIDER
+         ====================================================================== -->
+    <section class="section-before-after" id="transformation">
+      <div class="container">
+        
+        <div class="section-header" style="text-align: center; max-width:750px; margin-left:auto; margin-right:auto;">
+          <span class="section-tag">04 / Visual Proof</span>
+          <h2 class="section-title">Before & After: Profil qanday o‘zgaradi?</h2>
+          <p class="section-desc" style="margin-left:auto; margin-right:auto;">
+            Haqiqiy profil materiallari asosida qadoqlash (packaging) transformatsiyasini interaktiv slayder orqali ko‘ring.
+          </p>
+        </div>
+
+        <div class="slider-card-wrap">
+          <div class="ba-tab-controls">
+            <button class="ba-tab-btn active" id="tabMM" onclick="switchBATab('mm')">Marketing Maximum (500 → 2,500+)</button>
+            <button class="ba-tab-btn" id="tabEngora" onclick="switchBATab('engora')">Engora (0 → 1,006 obunachi)</button>
+          </div>
+
+          <div class="comparison-container" id="comparisonSlider">
+            <div class="comparison-slide slide-before">
+              <img id="baBeforeImg" src="assets/mm-before.png" alt="Before profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Avvalgi Profil (500 sub)', 'profile')">
+            </div>
+
+            <div class="comparison-slide slide-after" id="afterSlide">
+              <img id="baAfterImg" src="assets/mm-profile.png" alt="After profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Yangi Profil (2,500+ sub)', 'profile')">
+            </div>
+
+            <span class="comparison-label label-before" id="baLabelBefore">Eski Holat</span>
+            <span class="comparison-label label-after" id="baLabelAfter">Yangi Qadoqlash</span>
+
+            <div class="comparison-divider" id="sliderDivider"></div>
+            <div class="comparison-handle" id="sliderHandle">↔</div>
+
+            <input type="range" min="0" max="100" value="50" class="ba-range-input" id="sliderRange" aria-label="Before va After taqqoslash slayderi">
+          </div>
+
+          <div class="slider-caption">
+            <span>← Slayderni suring</span>
+            <strong id="baCaptionTitle">Marketing Maximum Profil Transformatsiyasi</strong>
+            <span id="baCaptionResult">Natija: 322K Views →</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 05: TIMELINE / TAJRIBA
+         ====================================================================== -->
+    <section class="section-timeline" id="experience">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">05 / Experience</span>
+          <h2 class="section-title">Yo‘l. Tizim. Amaliy tajriba.</h2>
+          <p class="section-desc">
+            Har bir bosqich marketingning turli qirralarini (kopirayting, target, tahlil, loyiha boshqaruvi) amalda charxlash maydoni bo‘ldi.
+          </p>
+        </div>
+
+        <div class="timeline-wrap">
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-content-card">
+              <h3 class="timeline-role-title">Obsess Marketing — Content Manager</h3>
+              <p class="timeline-desc">
+                Content direction, Reels ssenariylari, Stories, loyihalar kommunikatsiyasi, shooting (tasvirga olish) jarayonlari va yirik marketing loyihalarida jamoa bilan ishlash.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2025–26</div>
+            <div class="timeline-content-card">
+              <h3 class="timeline-role-title">Mohir Marketing — Project Manager / SMM / Target</h3>
+              <p class="timeline-desc">
+                Target kampaniyalari, SMM strategiyasi, Project Management, haftalik/oylik hisobotlar, kreativlarni testlash va Performance Marketing yechimlari.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2024–25</div>
+            <div class="timeline-content-card">
+              <h3 class="timeline-role-title">ScholarHUB — SMM / Content</h3>
+              <p class="timeline-desc">
+                Ta’lim va xalqaro SAT platformasi uchun marketing kommunikatsiyasi: kontent yaratish, Stories tizimi, bloggerlar bilan kollaboratsiyalar va maqsadli qamrovni oshirish.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">2022–23</div>
+            <div class="timeline-content-card">
+              <h3 class="timeline-role-title">Otlichno — Account Manager → Content Manager</h3>
+              <p class="timeline-desc">
+                Real loyihalar bilan ishlash, auditoriya muammolari va og‘riqlarini chuqur o‘rganish, kontent ishlab chiqish va agentlik jamoasi bilan samarali faoliyat yuritish. Faoliyatning katta qismi jamoa bilan bajarilgan.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 06: TA’LIM VA PROFESSIONAL MALAKA (8 TA PUNKT)
+         ====================================================================== -->
+    <section class="section-education" id="education">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">06 / Qualifications</span>
+          <h2 class="section-title">Ta’lim va professional o‘sish.</h2>
+          <p class="section-desc">
+            Akademik iqtisodiy asos va yetakchi marketing ekspertlarining xalqaro amaliy dasturlari.
+          </p>
+        </div>
+
+        <div class="edu-bento-grid">
+          
+          <div class="edu-card highlight">
+            <div>
+              <span class="edu-tag">Oliy Ta’lim / University</span>
+              <h3 class="edu-name">Toshkent Axborot Texnologiyalari Universiteti (TATU)</h3>
+              <p class="edu-sub">Iqtisodiyot va menejment fakulteti · 2024</p>
+            </div>
+            <span class="badge" style="margin-top:20px; width:fit-content; background:rgba(255,255,255,0.15); color:#fff; border-color:transparent;">Bakalavr Diplom</span>
+          </div>
+
+          <div class="edu-card">
+            <div>
+              <span class="edu-tag">01 · SMM Akademiyasi</span>
+              <h3 class="edu-name">Najot Ta’lim</h3>
+              <p class="edu-sub">SMM Pro — Professional SMM mutaxassisi kursi</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div>
+              <span class="edu-tag">02 · Targeting</span>
+              <h3 class="edu-name">Xayot Sharapov</h3>
+              <p class="edu-sub">Target Pro — Meta Ads chuqurlashtirilgan kursi</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div>
+              <span class="edu-tag">03 · Zapusk & Kontent</span>
+              <h3 class="edu-name">Mikhail Timochko</h3>
+              <p class="edu-sub">Kontent va Zapusk kursi</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div>
+              <span class="edu-tag">04 · Product & Launch</span>
+              <h3 class="edu-name">Danil Matukhno</h3>
+              <p class="edu-sub">Zapusk, Product arxitekturasi</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div>
+              <span class="edu-tag">05 · Performance</span>
+              <h3 class="edu-name">Aziz Abdumajitov</h3>
+              <p class="edu-sub">Performance Marketing + Media Production</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div>
+              <span class="edu-tag">06 · Biznes Maktabi</span>
+              <h3 class="edu-name">Aziz Axtamov</h3>
+              <p class="edu-sub">Tujjor Akademiyasi (Digital Marketolog)</p>
+            </div>
+          </div>
+
+          <div class="edu-card" style="grid-column: span 2;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+              <div>
+                <span class="edu-tag">07 · Strategiya va Kreativ</span>
+                <h3 class="edu-name">Altair Abduraxmonov</h3>
+                <p class="edu-sub">Kreativ va Strategik Kontent kursi</p>
+              </div>
+              <span class="badge emerald">Amaliy Natija</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 07: FAQ ACCORDION
+         ====================================================================== -->
+    <section class="section-faq">
+      <div class="container">
+        
+        <div class="section-header" style="text-align:center; max-width:700px; margin-left:auto; margin-right:auto;">
+          <span class="section-tag">07 / FAQ</span>
+          <h2 class="section-title">Ko‘p beriladigan savollar.</h2>
+          <p class="section-desc" style="margin-left:auto; margin-right:auto;">
+            Mijozlar hamkorlik oldidan eng ko‘p qiziqadigan asosiy jihatlar.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          
+          <div class="faq-item open">
+            <button class="faq-question">
+              <span>Hamkorlikni qanday tartibda boshlaymiz?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Dastlab loyihangiz, joriy ko‘rsatkichlaringiz va biznes maqsadlaringiz bilan tanishamiz. So‘ngra auditoriya va raqobatchilarni tahlil qilib, 1 oylik strategiya va kontent rejasini tasdiqlaymiz. Shundan keyin amaliy ishlar (suratga olish, qadoqlash, target reklamasi) boshlanadi.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Birinchi natijalar qancha vaqtda ko‘rinadi?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Target reklamasi orqali dastlabki arizalar (leadlar) kampaniya ishga tushganidan so‘ng 24-48 soat ichida kela boshlaydi. Organik SMM va kontent orqali barqaror o‘sish esa 2-4 hafta davomida to‘liq tizimlashadi.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Target reklama uchun qancha byudjet tavsiya qilasiz?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Bu soha va maqsadga bog‘liq. Sinov bosqichi (testing) uchun odatda kuniga $10-$20 yetarli bo‘ladi. Samarali kreativalar aniqlangach, byudjetni natija berayotgan yo‘nalishlarga ko‘paytiramiz (masshtablashtirish).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Boshqa viloyat yoki xorijdagi loyihalar bilan ishlay olasizmi?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Ha, albatta. Zamonaviy marketingda barcha tahliliy, strategik, target va kontent boshqaruvi masofadan (remote) to‘liq va sifatli olib boriladi. Video tasvirga olish zarur bo‘lsa, joylardagi jamoalar bilan masofaviy koordinatsiya yo‘lga qo‘yiladi.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 08: BOG'LANISH (CONTACT & INQUIRY)
+         ====================================================================== -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        
+        <div class="contact-grid">
+          
+          <div class="contact-info-card">
+            <span class="section-tag">08 / Get In Touch</span>
+            <h2 class="section-title" style="margin-bottom: 16px;">Biror loyiha bormi?</h2>
+            <p class="section-desc" style="margin-top: 0;">
+              Kontent, SMM, Target yoki Performance Marketing bo‘yicha loyihangizni birgalikda muhokama qilamiz va natija keltiradigan strategiya tuzamiz.
+            </p>
+
+            <div class="quick-channels">
+              <div class="channel-row">
+                <div class="channel-info">
+                  <div class="channel-icon tg">✈️</div>
+                  <div>
+                    <div class="channel-name">Telegram</div>
+                    <div class="channel-value">@kamronbek_mamajonov</div>
+                  </div>
+                </div>
+                <button class="copy-btn" onclick="copyText('@kamronbek_mamajonov', 'Telegram username nusxalandi!')">Nusxa olish</button>
+              </div>
+
+              <div class="channel-row">
+                <div class="channel-info">
+                  <div class="channel-icon phone">📞</div>
+                  <div>
+                    <div class="channel-name">Telefon</div>
+                    <div class="channel-value">+998 (90) 000-00-00</div>
+                  </div>
+                </div>
+                <button class="copy-btn" onclick="copyText('+998900000000', 'Telefon raqam nusxalandi!')">Nusxa olish</button>
+              </div>
+
+              <div class="channel-row">
+                <div class="channel-info">
+                  <div class="channel-icon mail">✉️</div>
+                  <div>
+                    <div class="channel-name">Email</div>
+                    <div class="channel-value">kamronbek.marketing@gmail.com</div>
+                  </div>
+                </div>
+                <button class="copy-btn" onclick="copyText('kamronbek.marketing@gmail.com', 'Email nusxalandi!')">Nusxa olish</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-box">
+            <form id="portfolioContactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
+              <input type="hidden" name="form-name" value="contact">
+              <p style="display:none;"><input name="bot-field"></p>
+
+              <div class="form-group">
+                <label class="form-label" for="clientName">Ismingiz *</label>
+                <input type="text" id="clientName" name="name" class="form-input" placeholder="Ismingiz yoki kompaniya nomi" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="clientContact">Telefon raqamingiz yoki Telegram *</label>
+                <input type="text" id="clientContact" name="contact" class="form-input" placeholder="+998 (90) ... yoki @username" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="projectType">Xizmat turi</label>
+                <select id="projectType" name="service" class="form-input">
+                  <option value="Kompleks Marketing">Kompleks Marketing (Kontent + SMM + Target)</option>
+                  <option value="Target & Lead Gen">Target & Lead Generation (Meta Ads)</option>
+                  <option value="SMM & Packaging">SMM & Profilni Qadoqlash</option>
+                  <option value="Konsultatsiya / Audit">Loyiha Auditi va Konsultatsiya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="clientMessage">Loyiha haqida qisqacha</label>
+                <textarea id="clientMessage" name="message" class="form-textarea" placeholder="Biznesingiz yo‘nalishi, maqsadi yoki kutilayotgan natijalar haqida yozing..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Xabarni yuborish ↗
+              </button>
+
+              <div class="form-status success" id="formSuccess">
+                ✓ Rahmat! Xabaringiz qabul qilindi. Tez orada siz bilan bog‘lanaman.
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          Kamronbek Mamajonov<span style="color:var(--blue-primary)">.</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#results">Raqamlar</a></li>
+          <li><a href="#capabilities">Xizmatlar</a></li>
+          <li><a href="#work">Loyihalar</a></li>
+          <li><a href="#experience">Tajriba</a></li>
+          <li><a href="#education">Ta’lim</a></li>
+          <li><a href="#contact">Aloqa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Kamronbek Mamajonov. Barcha huquqlar himoyalangan.</span>
+        <span>Toshkent, O‘zbekiston · Digital Marketing × Performance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h4 class="lightbox-title" id="lightboxTitle">Keys Ko‘rinishi</h4>
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightboxImg" src="" alt="Case Proof">
+        <div class="lightbox-details">
+          <strong id="lightboxStat">Statistika</strong>
+          <p id="lightboxDesc">Tavsif</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotice">Nusxalandi!</div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Scroll Progress
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    }, { passive: true });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mob-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // 3. Animated Number Counter
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-target'), 10);
+          const suffix = el.getAttribute('data-suffix') || '';
+          const format = el.getAttribute('data-format');
+          let current = 0;
+          const duration = 1600;
+          const stepTime = 20;
+          const totalSteps = duration / stepTime;
+          const increment = target / totalSteps;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            if (format === 'million') {
+              el.innerText = (current / 1000000).toFixed(1) + suffix;
+            } else if (format === 'comma') {
+              el.innerText = Math.floor(current).toLocaleString('en-US') + suffix;
+            } else {
+              el.innerText = Math.floor(current).toLocaleString('en-US') + suffix;
+            }
+          }, stepTime);
+
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // 4. Projects Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const caseCards = document.querySelectorAll('.case-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        caseCards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 5. Dual Before & After Slider Logic
+    const sliderRange = document.getElementById('sliderRange');
+    const afterSlide = document.getElementById('afterSlide');
+    const sliderDivider = document.getElementById('sliderDivider');
+    const sliderHandle = document.getElementById('sliderHandle');
+
+    function updateSlider() {
+      const val = sliderRange.value;
+      afterSlide.style.clipPath = `inset(0 0 0 ${val}%)`;
+      sliderDivider.style.left = `${val}%`;
+      sliderHandle.style.left = `${val}%`;
+    }
+
+    if (sliderRange && afterSlide) {
+      sliderRange.addEventListener('input', updateSlider);
+    }
+
+    function switchBATab(project) {
+      const tabMM = document.getElementById('tabMM');
+      const tabEngora = document.getElementById('tabEngora');
+      const beforeImg = document.getElementById('baBeforeImg');
+      const afterImg = document.getElementById('baAfterImg');
+      const lBefore = document.getElementById('baLabelBefore');
+      const lAfter = document.getElementById('baLabelAfter');
+      const capTitle = document.getElementById('baCaptionTitle');
+      const capRes = document.getElementById('baCaptionResult');
+
+      if (project === 'mm') {
+        tabMM.classList.add('active');
+        tabEngora.classList.remove('active');
+        beforeImg.src = 'assets/mm-before.png';
+        afterImg.src = 'assets/mm-profile.png';
+        lBefore.innerText = 'Marketing Max · Avval (500)';
+        lAfter.innerText = 'Marketing Max · Yangi (2,500+)';
+        capTitle.innerText = 'Marketing Maximum Profil Transformatsiyasi';
+        capRes.innerText = 'Natija: 322K Views →';
+      } else {
+        tabEngora.classList.add('active');
+        tabMM.classList.remove('active');
+        beforeImg.src = 'assets/engora-before.png';
+        afterImg.src = 'assets/engora-after.png';
+        lBefore.innerText = 'Engora · Avval (0 sub)';
+        lAfter.innerText = 'Engora · Yangi (1,006 sub)';
+        capTitle.innerText = 'Engora Profil Transformatsiyasi';
+        capRes.innerText = 'Natija: 0 → 1,006 Followers →';
+      }
+      sliderRange.value = 50;
+      updateSlider();
+    }
+
+    // 6. FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // 7. Lightbox Zoom
+    function openLightbox(title, imgSrc, stat, desc) {
+      document.getElementById('lightboxTitle').innerText = title;
+      document.getElementById('lightboxImg').src = imgSrc;
+      document.getElementById('lightboxStat').innerText = stat;
+      document.getElementById('lightboxDesc').innerText = desc;
+      document.getElementById('lightboxModal').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+
+    // 8. Copy to Clipboard & Toast
+    function copyText(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg);
+      }).catch(() => {
+        showToast('Nusxalandi: ' + text);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotice');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // 9. Contact Form Submit Simulation
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const successBox = document.getElementById('formSuccess');
+      successBox.style.display = 'block';
+      showToast('Xabaringiz muvaffaqiyatli yuborildi!');
+      document.getElementById('portfolioContactForm').reset();
+      setTimeout(() => {
+        successBox.style.display = 'none';
+      }, 5000);
+    }
+
+    // 10. Fallback SVG for images
+    function handleImageFallback(img, project, label, type) {
+      img.onerror = null;
+      const colors = {
+        reel: ['#2563eb', '#1d4ed8'],
+        profile: ['#059669', '#047857'],
+        youtube: ['#dc2626', '#b91c1c'],
+        ads: ['#7c3aed', '#6d28d9'],
+        sales: ['#0891b2', '#0e7490'],
+        portrait: ['#1e293b', '#0f172a']
+      };
+      const [c1, c2] = colors[type] || ['#2563eb', '#1d4ed8'];
+      
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+        <defs>
+          <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${c1}"/>
+            <stop offset="100%" stop-color="${c2}"/>
+          </linearGradient>
+        </defs>
+        <rect width="600" height="400" fill="url(#g)" rx="16"/>
+        <circle cx="300" cy="150" r="44" fill="rgba(255,255,255,0.18)"/>
+        <text x="300" y="160" font-family="system-ui,sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">KM</text>
+        <text x="300" y="230" font-family="system-ui,sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">${project}</text>
+        <text x="300" y="265" font-family="system-ui,sans-serif" font-size="16" fill="rgba(255,255,255,0.85)" text-anchor="middle">${label}</text>
+        <rect x="200" y="300" width="200" height="32" rx="16" fill="rgba(255,255,255,0.2)"/>
+        <text x="300" y="322" font-family="system-ui,sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">ASSET PROOF</text>
+      </svg>`;
+      img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+  </script>
+</body>
+</html>
