@@ -372,7 +372,7 @@
     }
 
     /* ==========================================================================
-       HERO SECTION — CLEAN PORTRAIT DISPLAY (NO CLUTTER / NO FLOATING BADGES)
+       HERO SECTION — BALANCED RESPONSIVE FLOW
        ========================================================================== */
     .hero {
       position: relative;
@@ -392,12 +392,17 @@
       gap: clamp(36px, 6vw, 64px);
     }
 
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+    }
+
     .hero-kicker-bar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .hero-status-pill {
@@ -436,14 +441,14 @@
       color: var(--ink-muted);
       line-height: 1.6;
       max-width: 580px;
-      margin-bottom: 34px;
+      margin-bottom: 32px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
 
     .hero-stats-ribbon {
@@ -473,7 +478,7 @@
       margin-top: 4px;
     }
 
-    /* Pure, Clean Portrait Showcase Card (No floating badges!) */
+    /* Hero Portrait Card — Clean & Proportional */
     .hero-card-showcase {
       position: relative;
     }
@@ -483,7 +488,7 @@
       background: #ffffff;
       border: 1px solid var(--card-border);
       border-radius: var(--radius-xl);
-      padding: 16px;
+      padding: 14px;
       box-shadow: 0 25px 60px -15px rgba(37, 99, 235, 0.16), 0 10px 20px -5px rgba(15, 23, 42, 0.06);
       overflow: hidden;
     }
@@ -755,7 +760,7 @@
     }
 
     /* ==========================================================================
-       SECTION 03: CASE STUDIES (10 TA LOYIHA)
+       SECTION 03: CASE STUDIES (UNIFIED HARMONIOUS HIERARCHY)
        ========================================================================== */
     .section-projects {
       padding: clamp(70px, 12vh, 120px) 0;
@@ -802,6 +807,7 @@
       gap: 32px;
     }
 
+    /* Clean Card Layout with Consistent Header & Top Alignment */
     .case-card {
       background: #ffffff;
       border: 1px solid var(--card-border);
@@ -811,6 +817,7 @@
       transition: all 0.35s var(--ease);
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
     }
 
     .case-card:hover {
@@ -819,51 +826,59 @@
       border-color: var(--card-hover-border);
     }
 
+    /* Case 01 Hilol Med: Full-width Banner with Balanced 2-Column Split */
     .case-card.featured-case {
       grid-column: span 2;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      align-items: start; /* Fix: Top align content so text doesn't sag down! */
       background: linear-gradient(145deg, #f8fbff 0%, #eef6ff 100%);
     }
 
+    /* Visual Frame — Uncropped, Clean Proportions */
     .case-visual-frame {
       position: relative;
       background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-      padding: 24px;
+      padding: 20px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      min-height: 280px;
     }
 
     .case-card.featured-case .case-visual-frame {
-      min-height: 440px;
-      height: 100%;
-      padding: 32px;
+      padding: 28px;
       background: linear-gradient(135deg, #eefaf0 0%, #dcfce7 100%);
+      height: 100%;
     }
 
+    /* Device Mockup Display Container */
     .mockup-display {
       position: relative;
       width: 100%;
-      max-width: 480px;
+      max-width: 440px;
       background: #ffffff;
       border-radius: var(--radius-md);
-      box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.15);
+      box-shadow: 0 15px 35px -8px rgba(15, 23, 42, 0.12);
       border: 1px solid rgba(15, 23, 42, 0.1);
       overflow: hidden;
-      transition: transform 0.4s var(--ease);
+      transition: transform 0.3s var(--ease);
       cursor: pointer;
     }
 
-    .case-card:hover .mockup-display { transform: scale(1.02); }
+    .mockup-display:hover { transform: scale(1.015); }
 
     .mockup-header {
       background: #f8fafc;
       padding: 10px 14px;
       border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mockup-dots {
       display: flex;
       align-items: center;
       gap: 6px;
@@ -879,68 +894,103 @@
     .mockup-dot.yellow { background: #fbbf24; }
     .mockup-dot.green { background: #34d399; }
 
-    .mockup-header-title {
-      font-size: 0.75rem;
+    .mockup-zoom-tag {
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--ink-subtle);
-      margin-left: 6px;
+      color: var(--blue-primary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
+    /* Uncropped image body — object-fit: contain ensures NO crop! */
     .mockup-body {
       position: relative;
       width: 100%;
-      min-height: 220px;
-      background: #ffffff;
+      height: 380px;
+      max-height: 420px;
+      background: #f8fafc;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 8px;
     }
 
     .mockup-body img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Hilol Med Multi-Asset Collage */
-    .featured-multi-assets {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      width: 100%;
-    }
-
-    .f-asset-card {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-      position: relative;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .f-asset-card:hover { transform: translateY(-2px); }
-    .f-asset-card.span2 { grid-column: span 2; }
-    .f-asset-card img { width: 100%; height: 160px; object-fit: cover; }
-    .f-asset-card.span2 img { height: 210px; }
-    .f-asset-pill {
-      position: absolute;
-      bottom: 8px;
-      left: 8px;
-      right: 8px;
-      background: rgba(15, 23, 42, 0.78);
-      backdrop-filter: blur(6px);
-      color: #ffffff;
-      padding: 4px 10px;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
       border-radius: 6px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
     }
 
+    /* Thumbnail switchers for multi-image cases */
+    .case-thumbs-bar {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      width: 100%;
+      max-width: 440px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .case-thumb-btn {
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .case-thumb-btn:hover {
+      border-color: var(--blue-primary);
+      color: var(--blue-primary);
+    }
+
+    .case-thumb-btn.active {
+      background: var(--blue-primary);
+      color: #ffffff;
+      border-color: var(--blue-primary);
+    }
+
+    /* Hilol Med Showcase */
+    .hilol-main-display {
+      width: 100%;
+      max-width: 460px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      box-shadow: 0 15px 35px -8px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .hilol-body-wrap {
+      width: 100%;
+      height: 380px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .hilol-body-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    /* Case Content */
     .case-content {
       padding: clamp(24px, 4vw, 36px);
       display: flex;
@@ -1030,7 +1080,7 @@
     }
 
     /* ==========================================================================
-       SECTION 04: DUAL BEFORE / AFTER SLIDER
+       SECTION 04: FULL SMARTPHONE SCREENSHOT BEFORE / AFTER SLIDER
        ========================================================================== */
     .section-before-after {
       padding: clamp(70px, 12vh, 120px) 0;
@@ -1039,20 +1089,22 @@
     }
 
     .slider-card-wrap {
-      max-width: 980px;
+      max-width: 900px;
       margin: 0 auto;
       background: #ffffff;
       border: 1px solid var(--card-border);
       border-radius: var(--radius-xl);
-      padding: 24px;
+      padding: clamp(24px, 4vw, 40px);
       box-shadow: var(--shadow-lg);
+      text-align: center;
     }
 
     .ba-tab-controls {
       display: flex;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .ba-tab-btn {
@@ -1075,14 +1127,49 @@
       box-shadow: 0 4px 12px var(--blue-glow);
     }
 
+    /* Realistic Smartphone Device Mockup (Full Vertical Screenshot!) */
+    .phone-mockup-outer {
+      position: relative;
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto;
+      background: #0f172a;
+      border: 10px solid #0f172a;
+      border-radius: 44px;
+      box-shadow: 0 30px 80px -15px rgba(15, 23, 42, 0.25), 0 10px 20px -5px rgba(15, 23, 42, 0.1);
+      overflow: hidden;
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 22px;
+      background: #0f172a;
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone-speaker {
+      width: 44px;
+      height: 4px;
+      background: #334155;
+      border-radius: 2px;
+    }
+
     .comparison-container {
       position: relative;
       width: 100%;
-      height: 480px;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: #0f172a;
+      height: 680px;
+      background: #000000;
       user-select: none;
+      overflow: hidden;
     }
 
     .comparison-slide {
@@ -1092,10 +1179,13 @@
       height: 100%;
     }
 
+    /* Full uncropped profile screenshot */
     .comparison-slide img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: top center;
+      background: #000000;
     }
 
     .comparison-slide.slide-after {
@@ -1110,7 +1200,7 @@
       width: 2px;
       background: #ffffff;
       z-index: 10;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       pointer-events: none;
     }
 
@@ -1119,15 +1209,15 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: #ffffff;
       color: var(--ink);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
       font-size: 1.1rem;
       font-weight: 800;
       z-index: 11;
@@ -1136,11 +1226,11 @@
 
     .comparison-label {
       position: absolute;
-      top: 20px;
-      padding: 8px 16px;
+      top: 30px;
+      padding: 6px 14px;
       border-radius: var(--radius-full);
       font-family: var(--font-display);
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -1149,15 +1239,15 @@
     }
 
     .comparison-label.label-before {
-      left: 20px;
-      background: rgba(15, 23, 42, 0.75);
+      left: 14px;
+      background: rgba(15, 23, 42, 0.8);
       color: #ffffff;
       backdrop-filter: blur(8px);
     }
 
     .comparison-label.label-after {
-      right: 20px;
-      background: rgba(37, 99, 235, 0.85);
+      right: 14px;
+      background: rgba(37, 99, 235, 0.9);
       color: #ffffff;
       backdrop-filter: blur(8px);
     }
@@ -1173,7 +1263,7 @@
     }
 
     .slider-caption {
-      margin-top: 18px;
+      margin-top: 22px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1556,8 +1646,8 @@
     .lightbox-modal {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(14px);
       z-index: 10000;
       display: flex;
       align-items: center;
@@ -1575,12 +1665,12 @@
 
     .lightbox-content {
       background: #ffffff;
-      max-width: 860px;
+      max-width: 900px;
       width: 100%;
       border-radius: var(--radius-xl);
       overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      transform: scale(0.95);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+      transform: scale(0.96);
       transition: transform 0.3s var(--ease);
       display: flex;
       flex-direction: column;
@@ -1594,6 +1684,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #f8fafc;
     }
 
     .lightbox-title {
@@ -1606,28 +1697,33 @@
     .lightbox-close {
       background: transparent;
       border: 0;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       cursor: pointer;
       color: var(--ink-subtle);
       line-height: 1;
+      padding: 4px 8px;
     }
+
+    .lightbox-close:hover { color: var(--rose); }
 
     .lightbox-body {
       padding: 24px;
-      max-height: 75vh;
+      max-height: 78vh;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 18px;
       align-items: center;
+      background: #ffffff;
     }
 
     .lightbox-body img {
-      max-height: 480px;
+      max-height: 520px;
       width: auto;
       max-width: 100%;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-md);
+      object-fit: contain;
     }
 
     .lightbox-details {
@@ -1635,12 +1731,13 @@
       background: var(--bg);
       padding: 18px 20px;
       border-radius: var(--radius-md);
+      border: 1px solid var(--card-border);
     }
 
     .lightbox-details strong {
       display: block;
       color: var(--blue-primary);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-family: var(--font-display);
       margin-bottom: 4px;
     }
@@ -1648,6 +1745,7 @@
     .lightbox-details p {
       color: var(--ink-muted);
       font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     .toast {
@@ -1717,11 +1815,10 @@
     }
 
     /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
+       RESPONSIVE BREAKPOINTS (FIXING MOBILE HERO & DISCONNECTED PHOTO)
        ========================================================================== */
     @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-      .hero-card-showcase { max-width: 520px; margin: 0 auto; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); }
       .metric-card.featured { grid-column: span 2; }
       .cap-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1731,10 +1828,34 @@
       .contact-grid { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      /* Mobile Hero: Arrange portrait right after title so it doesn't appear disconnected at the bottom! */
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-kicker-bar { order: 1; }
+      .hero-title { order: 2; margin-bottom: 16px; }
+      
+      /* Mobile Portrait: Placed directly after the title, perfectly balanced! */
+      .hero-card-showcase {
+        order: 3;
+        width: 100%;
+        max-width: 290px;
+        margin: 10px auto 24px;
+      }
+      .hero-img-container { height: 320px; }
+
+      .hero-subtitle { order: 4; margin-bottom: 24px; }
+      .hero-actions { order: 5; margin-bottom: 30px; }
+      .hero-stats-ribbon {
+        order: 6;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
       .nav-links, .nav-cta .btn { display: none; }
       .mobile-toggle { display: block; }
-      .hero-stats-ribbon { grid-template-columns: 1fr; gap: 18px; }
       .metrics-grid { grid-template-columns: 1fr; }
       .metric-card.featured { grid-column: span 1; }
       .cap-grid { grid-template-columns: 1fr; }
@@ -1743,9 +1864,9 @@
       .timeline-item { grid-template-columns: 1fr; gap: 12px; padding-left: 36px; }
       .timeline-year { text-align: left; padding-right: 0; }
       .timeline-year::after { left: -22px; right: auto; }
-      .comparison-container { height: 340px; }
-      .featured-multi-assets { grid-template-columns: 1fr; }
-      .f-asset-card.span2 { grid-column: span 1; }
+      
+      .phone-mockup-outer { max-width: 320px; }
+      .comparison-container { height: 560px; }
     }
   </style>
 </head>
@@ -1798,7 +1919,7 @@
   <main id="top">
 
     <!-- ======================================================================
-         HERO SECTION — CLEAN PORTRAIT DISPLAY (NO CLUTTER / NO FLOATING BADGES)
+         HERO SECTION
          ====================================================================== -->
     <section class="hero">
       <div class="container">
@@ -1842,10 +1963,10 @@
             </div>
           </div>
 
-          <!-- Clean Portrait Card (Floating badges removed as requested) -->
+          <!-- Clean Portrait Card (Positioned naturally beside on desktop, directly after title on mobile) -->
           <div class="hero-card-showcase">
             <div class="hero-card-frame">
-              <div class="hero-img-container">
+              <div class="hero-img-container" onclick="openLightbox('Kamronbek Mamajonov', 'portrait.png', 'Digital Marketolog', 'Tizimli marketing mutaxassisi')" style="cursor:pointer;" title="Kattalashtirib ko‘rish uchun bosing">
                 <img src="portrait.png" data-file="portrait.png" alt="Kamronbek Mamajonov" onerror="handleImageFallback(this, 'Kamronbek Mamajonov', 'Digital Marketolog', 'portrait')">
               </div>
             </div>
@@ -2138,7 +2259,7 @@
     </section>
 
     <!-- ======================================================================
-         SECTION 03: CASE STUDIES (10 TA LOYIHA)
+         SECTION 03: CASE STUDIES (10 TA LOYIHA — BRIEF TARTIBIDA)
          ====================================================================== -->
     <section class="section-projects" id="work">
       <div class="container">
@@ -2147,10 +2268,11 @@
           <span class="section-tag">03 / Case Studies</span>
           <h2 class="section-title">Tanlangan loyihalar va amaliy natijalar.</h2>
           <p class="section-desc">
-            Har bir loyiha alohida biznes vazifasi, sinovdan o‘tgan strategiya va ishonchli vizual dalillar asosida ko‘rsatilgan.
+            Har bir loyiha alohida biznes vazifasi, sinovdan o‘tgan strategiya va ishonchli vizual dalillar asosida ko‘rsatilgan. Rasmlarni to‘liq hajmda ochish uchun ustiga bosing.
           </p>
         </div>
 
+        <!-- Filter Buttons -->
         <div class="filter-wrapper">
           <button class="filter-btn active" data-filter="all">Barchasi (10)</button>
           <button class="filter-btn" data-filter="smm">SMM & Content (5)</button>
@@ -2158,34 +2280,11 @@
           <button class="filter-btn" data-filter="performance">Performance & B2B (2)</button>
         </div>
 
+        <!-- 10 Case Studies Grid (Top aligned, unified, harmonious) -->
         <div class="cases-grid">
 
-          <!-- CASE 01: Hilol Med (Asosiy va 1-o‘rinda) -->
+          <!-- CASE 01: Hilol Med (Asosiy va 1-o‘rinda, Balanced 2-Column Banner) -->
           <article class="case-card featured-case" data-category="smm">
-            <div class="case-visual-frame">
-              <div class="featured-multi-assets">
-                <div class="f-asset-card span2" onclick="openLightbox('Hilol Med — Reels Qamrovi', 'hilol-reel.png', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi')">
-                  <img src="hilol-reel.png" data-file="hilol-reel.png" alt="Hilol Med Reels" onerror="handleImageFallback(this, 'Hilol Med', '239,099 Views Reels', 'reel')">
-                  <div class="f-asset-pill"><span>Tanlangan Reels</span><span>239,099 views 🔍</span></div>
-                </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Instagram Profili', 'hilol-profile.png', '63K → 100K Obunachi', '7 oy davomida qadoqlash, Stories va organik + target o‘sishi')">
-                  <img src="hilol-profile.png" data-file="hilol-profile.png" alt="Hilol Med Instagram" onerror="handleImageFallback(this, 'Hilol Med', 'Instagram 100K', 'profile')">
-                  <div class="f-asset-pill"><span>Instagram 100K</span><span>🔍</span></div>
-                </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — YouTube Analytics', 'hilol-youtube.png', '10K+ Views & Shorts 600K', 'Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600-1,200)')">
-                  <img src="hilol-youtube.png" data-file="hilol-youtube.png" alt="Hilol Med YouTube" onerror="handleImageFallback(this, 'Hilol Med', 'YouTube Analytics', 'youtube')">
-                  <div class="f-asset-pill"><span>YouTube 10K+</span><span>🔍</span></div>
-                </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Shifokor Jarayoni', 'hilol-doctor-process.png', 'Shooting & Ekspert Jarayoni', 'Shifokorlar bilan ishonchli vizual va video production')">
-                  <img src="hilol-doctor-process.png" data-file="hilol-doctor-process.png" alt="Hilol Med Doctor" onerror="handleImageFallback(this, 'Hilol Med', 'Doctor Process', 'process')">
-                  <div class="f-asset-pill"><span>Ekspert jarayoni</span><span>🔍</span></div>
-                </div>
-                <div class="f-asset-card" onclick="openLightbox('Hilol Med — Klinika Binosi', 'hilol-building.jpg', 'Klinika Binosi', 'Toshkentdagi zamonaviy ko‘p tarmoqli klinika')">
-                  <img src="hilol-building.jpg" data-file="hilol-building.jpg" alt="Hilol Med Binosi" onerror="handleImageFallback(this, 'Hilol Med', 'Klinika Binosi', 'building')">
-                  <div class="f-asset-pill"><span>Klinika binosi</span><span>🔍</span></div>
-                </div>
-              </div>
-            </div>
             <div class="case-content">
               <div>
                 <div class="case-header-row">
@@ -2196,7 +2295,7 @@
                 <p class="case-desc">
                   Kontent strategiyasi, Reels va Stories, YouTube, shooting jarayonlari, ekspert kontenti va auditoriya pain-pointlariga asoslangan rubrikalar ustida ishladim. 2026-yildagi eng uzoq davom etgan asosiy loyihalardan biri (7+ oylik faoliyat).
                 </p>
-                <div style="font-size:0.88rem; color:var(--ink-muted); margin-bottom:20px; line-height:1.55;">
+                <div style="font-size:0.88rem; color:var(--ink-muted); margin-bottom:20px; line-height:1.6;">
                   • Instagram auditoriyasi ~63–65K dan 100K gacha o‘sdi (target ham bo‘lgan).<br>
                   • Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600–1,200).<br>
                   • Shorts videosi taxminan 600K views va 1,000+ obunachi keltirdi.
@@ -2212,21 +2311,49 @@
                 </button>
               </div>
             </div>
+
+            <div class="case-visual-frame">
+              <!-- Hilol Med Interactive Multi-Asset Frame -->
+              <div class="hilol-main-display" onclick="openActiveHilolModal()">
+                <div class="mockup-header">
+                  <div class="mockup-dots">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                  </div>
+                  <span class="mockup-zoom-tag" id="hilolAssetLabel">Reels Tahlili (239K) 🔍</span>
+                </div>
+                <div class="hilol-body-wrap">
+                  <img id="hilolMainImg" src="hilol-reel.png" data-file="hilol-reel.png" alt="Hilol Med Showcase" onerror="handleImageFallback(this, 'Hilol Med', '239,099 Views Reels', 'reel')">
+                </div>
+              </div>
+
+              <!-- 5 Clickable Pills to switch Hilol Med asset -->
+              <div class="case-thumbs-bar">
+                <button class="case-thumb-btn active" onclick="switchHilolAsset('hilol-reel.png', 'Reels Tahlili (239K) 🔍', 'Hilol Med — Reels Qamrovi', '239,099 Ko‘rishlar', 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi', this)">Reels 239K</button>
+                <button class="case-thumb-btn" onclick="switchHilolAsset('hilol-profile.png', 'Instagram 100K 🔍', 'Hilol Med — Instagram Profili', '63K → 100K Obunachi', '7 oy davomida qadoqlash, Stories va organik + target o‘sishi', this)">Instagram 100K</button>
+                <button class="case-thumb-btn" onclick="switchHilolAsset('hilol-youtube.png', 'YouTube 10K+ 🔍', 'Hilol Med — YouTube Analytics', '10K+ Views & Shorts 600K', 'Ekspert YouTube videolari 10K+ ko‘rish oldi (avval 600-1,200)', this)">YouTube 10K+</button>
+                <button class="case-thumb-btn" onclick="switchHilolAsset('hilol-doctor-process.png', 'Shooting Jarayoni 🔍', 'Hilol Med — Shifokor Jarayoni', 'Shooting & Ekspert Jarayoni', 'Shifokorlar bilan ishonchli vizual va video production', this)">Ekspert Jarayoni</button>
+                <button class="case-thumb-btn" onclick="switchHilolAsset('hilol-building.jpg', 'Klinika Binosi 🔍', 'Hilol Med — Klinika Binosi', 'Klinika Binosi', 'Toshkentdagi zamonaviy ko‘p tarmoqli klinika', this)">Klinika</button>
+              </div>
+            </div>
           </article>
 
           <!-- CASE 02: Marketing Maximum -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Marketing Maximum', 'mm-reel.png', '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
+              <div class="mockup-display" onclick="openLightbox('Marketing Maximum — Reels', document.getElementById('mmMainImg').getAttribute('src'), '322K Ko‘rishlar', 'B2B agentligi uchun profilni qayta packaging qilish va ekspert videolari')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">Reels Analytics · Marketing Maximum</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag" id="mmTag">Reels 322K 🔍</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="mm-reel.png" data-file="mm-reel.png" alt="Marketing Maximum Reel" onerror="handleImageFallback(this, 'Marketing Maximum', '322K Views Reel', 'reel')">
+                  <img id="mmMainImg" src="mm-reel.png" data-file="mm-reel.png" alt="Marketing Maximum Reel" onerror="handleImageFallback(this, 'Marketing Maximum', '322K Views Reel', 'reel')">
                 </div>
+              </div>
+              <div class="case-thumbs-bar">
+                <button class="case-thumb-btn active" onclick="switchCaseImage('mmMainImg', 'mm-reel.png', 'mmTag', 'Reels 322K 🔍', this)">Reels 322K</button>
+                <button class="case-thumb-btn" onclick="switchCaseImage('mmMainImg', 'mm-profile.png', 'mmTag', 'Profil (2,500+) 🔍', this)">Profil (2,500+)</button>
               </div>
             </div>
             <div class="case-content">
@@ -2257,10 +2384,8 @@
             <div class="case-visual-frame">
               <div class="mockup-display" onclick="openLightbox('Ustoz Akademiyasi', 'ustoz-reel.png', '5.4M Ko‘rishlar', 'Ta’lim yo‘nalishida rekord organik Reels qamrovi')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">Instagram Reels · Ustoz Akademiyasi</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag">Viral Reels 5.4M 🔍</span>
                 </div>
                 <div class="mockup-body">
                   <img src="ustoz-reel.png" data-file="ustoz-reel.png" alt="Ustoz Akademiyasi Reels" onerror="handleImageFallback(this, 'Ustoz Akademiyasi', '5.4M Views Reel', 'reel')">
@@ -2293,16 +2418,18 @@
           <!-- CASE 04: Engora -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div class="mockup-display" onclick="openLightbox('Engora', 'engora-after.png', '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
+              <div class="mockup-display" onclick="openLightbox('Engora', document.getElementById('engoraMainImg').getAttribute('src'), '0 → 1,006 Followers', 'Noldan sifatli va maqsadli auditoriyani shakllantirish keysi')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">Profile Growth · Engora</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag" id="engoraTag">Yangi Profil (1,006) 🔍</span>
                 </div>
                 <div class="mockup-body">
-                  <img src="engora-after.png" data-file="engora-after.png" alt="Engora After Profile" onerror="handleImageFallback(this, 'Engora', '1,006 Followers (After)', 'profile')">
+                  <img id="engoraMainImg" src="engora-after.png" data-file="engora-after.png" alt="Engora After Profile" onerror="handleImageFallback(this, 'Engora', '1,006 Followers (After)', 'profile')">
                 </div>
+              </div>
+              <div class="case-thumbs-bar">
+                <button class="case-thumb-btn active" onclick="switchCaseImage('engoraMainImg', 'engora-after.png', 'engoraTag', 'Yangi Profil (1,006) 🔍', this)">Yangi (1,006)</button>
+                <button class="case-thumb-btn" onclick="switchCaseImage('engoraMainImg', 'engora-before.png', 'engoraTag', 'Avvalgi (0 sub) 🔍', this)">Avvalgi (0 sub)</button>
               </div>
             </div>
             <div class="case-content">
@@ -2333,10 +2460,8 @@
             <div class="case-visual-frame">
               <div class="mockup-display" onclick="openLightbox('Muxsinzada Perfumes', 'muxsinzada.png', 'Brand Positioning', 'Parfyumeriya brendi uchun estetik kontent va ssenariylar')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">Brand Aesthetics · Muxsinzada</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag">Aesthetics 🔍</span>
                 </div>
                 <div class="mockup-body">
                   <img src="muxsinzada.png" data-file="muxsinzada.png" alt="Muxsinzada Perfumes Profile" onerror="handleImageFallback(this, 'Muxsinzada Perfumes', 'Brand Profile & Aesthetics', 'profile')">
@@ -2371,10 +2496,8 @@
             <div class="case-visual-frame">
               <div class="mockup-display" onclick="openLightbox('Zetric Industrial', 'zetrik.png', '1–2K Obunachi/oy', 'B2B ishlab chiqarish jarayonini kontentga aylantirish')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">B2B Production · Zetric</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag">B2B Content 🔍</span>
                 </div>
                 <div class="mockup-body">
                   <img src="zetrik.png" data-file="zetrik.png" alt="Zetric Instagram" onerror="handleImageFallback(this, 'Zetric Industrial', 'B2B Production Content', 'profile')">
@@ -2407,22 +2530,18 @@
           <!-- CASE 07: IQibla -->
           <article class="case-card" data-category="smm">
             <div class="case-visual-frame">
-              <div style="width:100%; display:flex; flex-direction:column; gap:12px;">
-                <div class="mockup-display" onclick="openLightbox('IQibla Smart Devices — Profil', 'iqibla.png', '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
-                  <div class="mockup-header">
-                    <span class="mockup-dot red"></span>
-                    <span class="mockup-dot yellow"></span>
-                    <span class="mockup-dot green"></span>
-                    <span class="mockup-header-title">Smart Devices · IQibla Profil 🔍</span>
-                  </div>
-                  <div class="mockup-body">
-                    <img src="iqibla.png" data-file="iqibla.png" alt="IQibla Profile" onerror="handleImageFallback(this, 'IQibla', '284K Profile Views', 'profile')">
-                  </div>
+              <div class="mockup-display" onclick="openLightbox('IQibla Smart Devices', document.getElementById('iqiblaMainImg').getAttribute('src'), '284K Profil Ko‘rishlar', 'Smart gadjetlar brendining sahifasi')">
+                <div class="mockup-header">
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag" id="iqiblaTag">Profil (284K) 🔍</span>
                 </div>
-                <div style="background:#ffffff; padding:10px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.08); display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:var(--shadow-sm);" onclick="openLightbox('IQibla — Mahsulot Karuseli', 'iqibla-carousel.png', 'Mahsulot Karuseli', 'Konversiyani oshiruvchi vizual karusel formati')">
-                  <span style="font-size:0.82rem; font-weight:700; color:var(--ink);">📱 Mahsulot Karusel Posti</span>
-                  <span style="font-size:0.75rem; font-weight:700; color:var(--blue-primary);">Ko‘rish 🔍</span>
+                <div class="mockup-body">
+                  <img id="iqiblaMainImg" src="iqibla.png" data-file="iqibla.png" alt="IQibla Profile" onerror="handleImageFallback(this, 'IQibla', '284K Profile Views', 'profile')">
                 </div>
+              </div>
+              <div class="case-thumbs-bar">
+                <button class="case-thumb-btn active" onclick="switchCaseImage('iqiblaMainImg', 'iqibla.png', 'iqiblaTag', 'Profil (284K) 🔍', this)">Profil (284K)</button>
+                <button class="case-thumb-btn" onclick="switchCaseImage('iqiblaMainImg', 'iqibla-carousel.png', 'iqiblaTag', 'Karusel Post 🔍', this)">Mahsulot Karuseli</button>
               </div>
             </div>
             <div class="case-content">
@@ -2453,10 +2572,8 @@
             <div class="case-visual-frame">
               <div class="mockup-display" onclick="openLightbox('Zamona To‘yxonasi', 'zamona.png', '10–15 Katta Buyurtmalar', 'To‘yxona va banket xizmatlari uchun lokal Meta Ads reklamasi')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">HoReCa Target · Zamona</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag">To‘yxona Target 🔍</span>
                 </div>
                 <div class="mockup-body">
                   <img src="zamona.png" data-file="zamona.png" alt="Zamona To'yxonasi" onerror="handleImageFallback(this, 'Zamona To‘yxonasi', 'Targeting & Orders', 'profile')">
@@ -2491,10 +2608,8 @@
             <div class="case-visual-frame">
               <div class="mockup-display" onclick="openLightbox('Suv filtri loyihasi', 'water.png', '102+ Sotuv & 693 Inquiries', 'Audience pain asosidagi kontent va to‘g‘ridan-to‘g‘ri savdo voronkasi')">
                 <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-header-title">E-commerce Funnel · Suv Filtri</span>
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag">Sales Funnel 🔍</span>
                 </div>
                 <div class="mockup-body">
                   <img src="water.png" data-file="water.png" alt="Suv filtri loyihasi" onerror="handleImageFallback(this, 'Suv filtri loyihasi', '102+ Sales / $436.39 Spend', 'sales')">
@@ -2530,22 +2645,18 @@
           <!-- CASE 10: Ibtido Ta’lim -->
           <article class="case-card" data-category="target">
             <div class="case-visual-frame">
-              <div style="width:100%; display:flex; flex-direction:column; gap:12px;">
-                <div class="mockup-display" onclick="openLightbox('Ibtido Ta’lim — Ads Manager', 'ibtido-ads.png', '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
-                  <div class="mockup-header">
-                    <span class="mockup-dot red"></span>
-                    <span class="mockup-dot yellow"></span>
-                    <span class="mockup-dot green"></span>
-                    <span class="mockup-header-title">Meta Ads Manager · Ibtido Ta’lim 🔍</span>
-                  </div>
-                  <div class="mockup-body">
-                    <img src="ibtido-ads.png" data-file="ibtido-ads.png" alt="Ibtido Ta'lim Ads" onerror="handleImageFallback(this, 'Ibtido Ta’lim', '754 Leads @ $0.22 CPL', 'ads')">
-                  </div>
+              <div class="mockup-display" onclick="openLightbox('Ibtido Ta’lim — Meta Ads', document.getElementById('ibtidoMainImg').getAttribute('src'), '754 Leads / $0.22 CPL', 'Ta’lim loyihasi bo‘yicha Meta Ads Manager hisoboti')">
+                <div class="mockup-header">
+                  <div class="mockup-dots"><span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span class="mockup-dot green"></span></div>
+                  <span class="mockup-zoom-tag" id="ibtidoTag">Ads Manager 🔍</span>
                 </div>
-                <div style="background:#ffffff; padding:10px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.08); display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:var(--shadow-sm);" onclick="openLightbox('Ibtido Ta’lim — Instagram Profili', 'ibtido-profile.png', 'Instagram Profili', 'Reklama orqali kelgan auditoriyani qabul qiluvchi sahifa')">
-                  <span style="font-size:0.82rem; font-weight:700; color:var(--ink);">📸 Instagram Sahifasi</span>
-                  <span style="font-size:0.75rem; font-weight:700; color:var(--blue-primary);">Ko‘rish 🔍</span>
+                <div class="mockup-body">
+                  <img id="ibtidoMainImg" src="ibtido-ads.png" data-file="ibtido-ads.png" alt="Ibtido Ta'lim Ads" onerror="handleImageFallback(this, 'Ibtido Ta’lim', '754 Leads @ $0.22 CPL', 'ads')">
                 </div>
+              </div>
+              <div class="case-thumbs-bar">
+                <button class="case-thumb-btn active" onclick="switchCaseImage('ibtidoMainImg', 'ibtido-ads.png', 'ibtidoTag', 'Ads Manager 🔍', this)">Ads Manager ($0.22)</button>
+                <button class="case-thumb-btn" onclick="switchCaseImage('ibtidoMainImg', 'ibtido-profile.png', 'ibtidoTag', 'Instagram 🔍', this)">Instagram Profil</button>
               </div>
             </div>
             <div class="case-content">
@@ -2577,16 +2688,16 @@
     </section>
 
     <!-- ======================================================================
-         SECTION 04: DUAL BEFORE / AFTER SLIDER
+         SECTION 04: FULL SMARTPHONE SCREENSHOT BEFORE / AFTER SLIDER
          ====================================================================== -->
     <section class="section-before-after" id="transformation">
       <div class="container">
         
         <div class="section-header" style="text-align: center; max-width:750px; margin-left:auto; margin-right:auto;">
           <span class="section-tag">04 / Visual Proof</span>
-          <h2 class="section-title">Before & After: Profil qanday o‘zgaradi?</h2>
+          <h2 class="section-title">Before & After: To‘liq Profil Skrinshoti</h2>
           <p class="section-desc" style="margin-left:auto; margin-right:auto;">
-            Haqiqiy profil materiallari asosida qadoqlash (packaging) transformatsiyasini interaktiv slayder orqali ko‘ring.
+            Haqiqiy mobil skrinshotlar formatida qadoqlash (packaging) transformatsiyasini to‘liq o‘lchamda, kesilmasdan ko‘ring.
           </p>
         </div>
 
@@ -2596,27 +2707,32 @@
             <button class="ba-tab-btn" id="tabEngora" onclick="switchBATab('engora')">Engora (0 → 1,006 obunachi)</button>
           </div>
 
-          <div class="comparison-container" id="comparisonSlider">
-            <div class="comparison-slide slide-before">
-              <img id="baBeforeImg" src="mm-before.png" data-file="mm-before.png" alt="Before profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Avvalgi Profil (500 sub)', 'profile')">
+          <!-- Phone Device Bezel Frame -->
+          <div class="phone-mockup-outer">
+            <div class="phone-notch"><div class="phone-speaker"></div></div>
+            
+            <div class="comparison-container" id="comparisonSlider">
+              <div class="comparison-slide slide-before">
+                <img id="baBeforeImg" src="mm-before.png" data-file="mm-before.png" alt="Before profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Avvalgi Profil (500 sub)', 'profile')">
+              </div>
+
+              <div class="comparison-slide slide-after" id="afterSlide">
+                <img id="baAfterImg" src="mm-profile.png" data-file="mm-profile.png" alt="After profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Yangi Profil (2,500+ sub)', 'profile')">
+              </div>
+
+              <span class="comparison-label label-before" id="baLabelBefore">Eski Holat</span>
+              <span class="comparison-label label-after" id="baLabelAfter">Yangi Qadoqlash</span>
+
+              <div class="comparison-divider" id="sliderDivider"></div>
+              <div class="comparison-handle" id="sliderHandle">↔</div>
+
+              <input type="range" min="0" max="100" value="50" class="ba-range-input" id="sliderRange" aria-label="Before va After taqqoslash slayderi">
             </div>
-
-            <div class="comparison-slide slide-after" id="afterSlide">
-              <img id="baAfterImg" src="mm-profile.png" data-file="mm-profile.png" alt="After profile" onerror="handleImageFallback(this, 'Marketing Maximum', 'Yangi Profil (2,500+ sub)', 'profile')">
-            </div>
-
-            <span class="comparison-label label-before" id="baLabelBefore">Eski Holat</span>
-            <span class="comparison-label label-after" id="baLabelAfter">Yangi Qadoqlash</span>
-
-            <div class="comparison-divider" id="sliderDivider"></div>
-            <div class="comparison-handle" id="sliderHandle">↔</div>
-
-            <input type="range" min="0" max="100" value="50" class="ba-range-input" id="sliderRange" aria-label="Before va After taqqoslash slayderi">
           </div>
 
           <div class="slider-caption">
             <span>← Slayderni suring</span>
-            <strong id="baCaptionTitle">Marketing Maximum Profil Transformatsiyasi</strong>
+            <strong id="baCaptionTitle">Marketing Maximum To‘liq Profil Transformatsiyasi</strong>
             <span id="baCaptionResult">Natija: 322K Views →</span>
           </div>
         </div>
@@ -2957,7 +3073,7 @@
     </div>
   </footer>
 
-  <!-- LIGHTBOX MODAL -->
+  <!-- LIGHTBOX MODAL (100% FIXED IDs AND CONTROLS) -->
   <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
     <div class="lightbox-content" onclick="event.stopPropagation()">
       <div class="lightbox-header">
@@ -3058,7 +3174,7 @@
       });
     });
 
-    // 5. Dual Before & After Slider Logic
+    // 5. Dual Before & After Slider Logic (Full Smartphone Screenshot!)
     const sliderRange = document.getElementById('sliderRange');
     const afterSlide = document.getElementById('afterSlide');
     const sliderDivider = document.getElementById('sliderDivider');
@@ -3094,7 +3210,7 @@
         afterImg.setAttribute('data-file', 'mm-profile.png');
         lBefore.innerText = 'Marketing Max · Avval (500)';
         lAfter.innerText = 'Marketing Max · Yangi (2,500+)';
-        capTitle.innerText = 'Marketing Maximum Profil Transformatsiyasi';
+        capTitle.innerText = 'Marketing Maximum To‘liq Profil Transformatsiyasi';
         capRes.innerText = 'Natija: 322K Views →';
       } else {
         tabEngora.classList.add('active');
@@ -3105,37 +3221,80 @@
         afterImg.setAttribute('data-file', 'engora-after.png');
         lBefore.innerText = 'Engora · Avval (0 sub)';
         lAfter.innerText = 'Engora · Yangi (1,006 sub)';
-        capTitle.innerText = 'Engora Profil Transformatsiyasi';
+        capTitle.innerText = 'Engora To‘liq Profil Transformatsiyasi';
         capRes.innerText = 'Natija: 0 → 1,006 Followers →';
       }
       sliderRange.value = 50;
       updateSlider();
     }
 
-    // 6. FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) {
-          item.classList.add('open');
-        }
-      });
-    });
+    // 6. Case Card Thumbnail Switcher
+    function switchCaseImage(imgId, newSrc, tagId, newTagText, btnEl) {
+      const img = document.getElementById(imgId);
+      const tag = document.getElementById(tagId);
+      if (img) {
+        img.src = newSrc;
+        img.setAttribute('data-file', newSrc);
+      }
+      if (tag) tag.innerText = newTagText;
+      if (btnEl && btnEl.parentElement) {
+        btnEl.parentElement.querySelectorAll('.case-thumb-btn').forEach(b => b.classList.remove('active'));
+        btnEl.classList.add('active');
+      }
+    }
 
-    // 7. Lightbox Zoom
+    // Hilol Med Specific Switcher
+    let currentHilolData = {
+      src: 'hilol-reel.png',
+      title: 'Hilol Med — Reels Qamrovi',
+      stat: '239,099 Ko‘rishlar',
+      desc: 'Ekspert shifokor bilan tayyorlangan Reels organik ko‘rishi'
+    };
+
+    function switchHilolAsset(src, label, title, stat, desc, btnEl) {
+      const img = document.getElementById('hilolMainImg');
+      const tag = document.getElementById('hilolAssetLabel');
+      if (img) {
+        img.src = src;
+        img.setAttribute('data-file', src);
+      }
+      if (tag) tag.innerText = label;
+      currentHilolData = { src, title, stat, desc };
+      if (btnEl && btnEl.parentElement) {
+        btnEl.parentElement.querySelectorAll('.case-thumb-btn').forEach(b => b.classList.remove('active'));
+        btnEl.classList.add('active');
+      }
+    }
+
+    function openActiveHilolModal() {
+      openLightbox(currentHilolData.title, currentHilolData.src, currentHilolData.stat, currentHilolData.desc);
+    }
+
+    // 7. Lightbox Zoom (100% Robust ID matching!)
     function openLightbox(title, imgSrc, stat, desc) {
-      document.getElementById('lbTitle').innerText = title;
-      document.getElementById('lbImg').src = imgSrc;
-      document.getElementById('lbStat').innerText = stat;
-      document.getElementById('lbText').innerText = desc;
-      document.getElementById('lightboxModal').classList.add('active');
+      const modal = document.getElementById('lightboxModal');
+      const t = document.getElementById('lightboxTitle');
+      const img = document.getElementById('lightboxImg');
+      const s = document.getElementById('lightboxStat');
+      const d = document.getElementById('lightboxDesc');
+      if (t) t.innerText = title || 'Keys Ko‘rinishi';
+      if (img) img.src = imgSrc;
+      if (s) s.innerText = stat || '';
+      if (d) d.innerText = desc || '';
+      if (modal) modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
-      document.getElementById('lightboxModal').classList.remove('active');
+      const modal = document.getElementById('lightboxModal');
+      if (modal) modal.classList.remove('active');
+      document.body.style.overflow = '';
     }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
 
     // 8. Copy to Clipboard & Toast
     function copyText(text, msg) {
